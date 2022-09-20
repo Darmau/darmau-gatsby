@@ -1,0 +1,30 @@
+{
+  "name": "gatsby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gatsby",
+  "author": "李大毛",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.1.3",
+    "gatsby": "^4.23.0",
+    "gatsby-plugin-google-analytics": "^4.23.0",
+    "gatsby-plugin-image": "^2.23.0",
+    "gatsby-plugin-mdx": "^4.2.0",
+    "gatsby-plugin-sharp": "^4.23.0",
+    "gatsby-plugin-sitemap": "^5.23.0",
+    "gatsby-source-filesystem": "^4.23.0",
+    "gatsby-transformer-sharp": "^4.23.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
