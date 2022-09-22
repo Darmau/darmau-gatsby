@@ -36,8 +36,9 @@ module.exports = {
       },
       __key: "pages"
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig,
-    },]
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: strapiConfig,
+    // },
+  ]
 };
