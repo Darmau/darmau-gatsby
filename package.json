@@ -24,6 +24,7 @@
     "gatsby-plugin-sitemap": "^5.23.0",
     "gatsby-source-filesystem": "^4.23.0",
     "gatsby-source-strapi": "^2.0.0",
+    "gatsby-source-strapi-graphql": "^4.6.2",
     "gatsby-transformer-remark": "^5.23.0",
     "gatsby-transformer-sharp": "^4.23.0",
     "react": "^18.1.0",

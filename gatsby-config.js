@@ -5,14 +5,15 @@ require('dotenv').config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ['Article', 'Photograph', 'Video', 'CategoryArticle', 'CategoryPhoto', 'Tag'],
+  collectionTypes: ['article', 'photograph', 'video', 'category-article', 'category-photo', 'tag'],
   singleTypes: [],
 };
 
 module.exports = {
   siteMetadata: {
     title: `可可托海没有海`,
-    siteUrl: `https://darmau.design`
+    siteUrl: `https://darmau.design`,
+    description: "李大毛的个人网站",
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -39,5 +40,6 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
-    },]
+    },
+  ]
 };
