@@ -1,5 +1,4 @@
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 
 function IndexPage({ data }) {
@@ -8,12 +7,11 @@ function IndexPage({ data }) {
       {data.allStrapiVideo.nodes.map(
         node => (
           <div>
-            <GatsbyImage src={node.cover} />
             <h3>{node.title}</h3>
           </div>
         )
       )}
-    </div>\
+    </div>
   )
 }
 
@@ -25,16 +23,6 @@ export const allVideos = graphql`
     edges {
       node {
         title
-        cover {
-          url
-          children {
-            id
-            ... on ImageSharp {
-              id
-              gatsbyImageData(width: 300)
-            }
-          }
-        }
       }
     }
   }
