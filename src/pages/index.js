@@ -17,13 +17,12 @@ function IndexPage({ data }) {
 
 export default IndexPage
 
-export const allVideos = graphql`
+export const data = graphql`
 {
   allStrapiVideo(sort: {order: DESC, fields: date}) {
-    edges {
-      node {
-        title
-      }
+    nodes {
+      title
+      iframe_bilibili
     }
   }
 }`
