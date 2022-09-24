@@ -5,7 +5,7 @@ require('dotenv').config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ['article', 'photograph', 'video', 'category-article', 'category-photo', 'tag'],
+  collectionTypes: ['article', 'album', 'video', 'category-article', 'category-album', 'tag'],
   singleTypes: [],
 };
 
