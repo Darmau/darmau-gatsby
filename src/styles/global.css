@@ -25,3 +25,9 @@
     font-style: normal;
     src: local('Roboto Mono'), url(../../static/fonts/roboto-mono-400.woff2) format("woff2");
 }
+
+@layer base {
+    html {
+      font-family: 'Noto Serif SC', serif;
+    }
+  }

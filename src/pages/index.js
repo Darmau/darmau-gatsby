@@ -1,28 +1,12 @@
-import { graphql } from "gatsby"
-import React from "react"
+import React from "react";
+import Layout from "../components/Layout";
 
-function IndexPage({ data }) {
+function IndexPage() {
   return (
-    <div>
-      {data.allStrapiVideo.nodes.map(
-        node => (
-          <div>
-            <h3>{node.title}</h3>
-          </div>
-        )
-      )}
-    </div>
+    <Layout>
+      <h3 className="h-80">首页</h3>
+    </Layout>
   )
 }
 
-export default IndexPage
-
-export const data = graphql`
-{
-  allStrapiVideo(sort: {order: DESC, fields: date}) {
-    nodes {
-      title
-      iframe_bilibili
-    }
-  }
-}`
+export default IndexPage;

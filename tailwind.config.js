@@ -1,6 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
@@ -8,10 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'serif': ['"Noto Serif SC"', ...defaultTheme.fontFamily.serif],
-        'mono': ['"Roboto Mono"', ...defaultTheme.fontFamily.mono]
-      },
+      colors: {
+        'theme': '#B23D2B',
+      }
     },
   },
   plugins: [],

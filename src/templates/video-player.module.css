@@ -1,0 +1,21 @@
+.video-container {
+    width: 840px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.video-date {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.video-description {
+    font-size: 16px;
+}
