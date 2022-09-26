@@ -5,8 +5,8 @@ require('dotenv').config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ['article', 'photograph', 'video', 'category-article', 'category-photo', 'tag'],
-  singleTypes: [],
+  collectionTypes: ['article', 'album', 'video', 'category-article', 'category-album', 'tag'],
+  singleTypes: ['author'],
 };
 
 module.exports = {
@@ -22,14 +22,21 @@ module.exports = {
       options: {
         "trackingId": "G-ZS3N1LGHWZ"
       }
-    }, "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    }, 
+    "gatsby-plugin-image", 
+    "gatsby-plugin-sitemap", 
+    "gatsby-plugin-mdx", 
+    "gatsby-plugin-sharp", 
+    "gatsby-transformer-sharp", 
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "images",
         "path": "./src/images/"
       },
       __key: "images"
-    }, {
+    }, 
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",
