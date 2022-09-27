@@ -28,6 +28,12 @@
 
 @layer base {
     html {
-      font-family: 'Noto Serif SC', serif;
+        font-family: 'Noto Serif SC', serif;
     }
-  }
+}
+
+iframe {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 100%;
+}
