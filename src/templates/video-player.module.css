@@ -1,7 +1,11 @@
 .video-container {
-    width: 840px;
-    margin-top: 48px;
-    margin-bottom: 32px;
+    max-width: 840px;
+    margin: 32px auto 32px auto;
+    width: 100%;
+}
+
+.video-frame {
+    width: 100%;
 }
 
 .video-title {

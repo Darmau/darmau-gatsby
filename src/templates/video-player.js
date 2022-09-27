@@ -10,12 +10,16 @@ export default function VideoPlayer({ data }) {
 
     return (
         <Layout>
-            <main className="flex justify-center mt-16">
+            <main className="flex justify-center w-full">
                 <div className={playerStyle.videoContainer}>
-                    <VideoFrame src={video.source.bilibili} />
-                    <h4 className={playerStyle.videoTitle}>{video.basic.title}</h4>
-                    <p className={playerStyle.videoDate}>{video.basic.date}</p>
-                    <p className={playerStyle.videoDescription}>{video.basic.description}</p>
+                    <div className={playerStyle.videoFrame}>
+                        <VideoFrame src={video.source.bilibili} title={video.basic.title} />
+                    </div>
+                    <div className="px-4 sm:px-0">
+                        <h4 className={playerStyle.videoTitle}>{video.basic.title}</h4>
+                        <p className={playerStyle.videoDate}>{video.basic.date}</p>
+                        <p className={playerStyle.videoDescription}>{video.basic.description}</p>
+                    </div>
                 </div>
             </main>
         </Layout>
