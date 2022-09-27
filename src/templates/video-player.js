@@ -3,26 +3,30 @@ import React from "react"
 import Layout from "../components/Layout";
 import VideoFrame from "../components/VideoFrame";
 import * as playerStyle from "./video-player.module.css"
+import Head from "../components/Head"
 
 export default function VideoPlayer({ data }) {
 
     const video = data.allStrapiVideo.nodes[0]
 
     return (
-        <Layout>
-            <main className="flex justify-center w-full">
-                <div className={playerStyle.videoContainer}>
-                    <div className={playerStyle.videoFrame}>
-                        <VideoFrame src={video.source.bilibili} title={video.basic.title} />
+        <>
+            <Head title={video.basic.title} />
+            <Layout>
+                <main className="flex justify-center w-full">
+                    <div className={playerStyle.videoContainer}>
+                        <div className={playerStyle.videoFrame}>
+                            <VideoFrame src={video.source.bilibili} title={video.basic.title} />
+                        </div>
+                        <div className="px-4 sm:px-0">
+                            <h4 className={playerStyle.videoTitle}>{video.basic.title}</h4>
+                            <p className={playerStyle.videoDate}>{video.basic.date}</p>
+                            <p className={playerStyle.videoDescription}>{video.basic.description}</p>
+                        </div>
                     </div>
-                    <div className="px-4 sm:px-0">
-                        <h4 className={playerStyle.videoTitle}>{video.basic.title}</h4>
-                        <p className={playerStyle.videoDate}>{video.basic.date}</p>
-                        <p className={playerStyle.videoDescription}>{video.basic.description}</p>
-                    </div>
-                </div>
-            </main>
-        </Layout>
+                </main>
+            </Layout>
+        </>
     )
 }
 

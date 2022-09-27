@@ -22,20 +22,20 @@ module.exports = {
       options: {
         "trackingId": "G-ZS3N1LGHWZ"
       }
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/images/"
+      },
+      __key: "images"
     }, 
-    "gatsby-plugin-image", 
-    "gatsby-plugin-sitemap", 
-    "gatsby-plugin-mdx", 
-    "gatsby-plugin-sharp", 
-    "gatsby-transformer-sharp", 
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     "name": "images",
-    //     "path": "./src/images/"
-    //   },
-    //   __key: "images"
-    // }, 
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -47,6 +47,18 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `可可托海没有海`,
+        short_name: `可可托海没有海`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#B23D2B`,
+        display: `standalone`,
+        icon: `./src/images/favicon.svg`, 
+      },
     },
   ]
 };

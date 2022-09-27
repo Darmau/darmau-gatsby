@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const Navbar = () => {
   return (
-    <nav className="w-full sticky top-0 left-0 right-0 z-50 flex px-4 justify-between items-center drop-shadow bg-white sm:h-20">
+    <nav className="w-full fixed top-0 left-0 right-0 z-50 flex px-4 justify-between items-center drop-shadow bg-white sm:h-20">
       <Link to="/">
         <svg className="hidden sm:block" width="190" height="80" viewBox="0 0 190 80">
           <path
