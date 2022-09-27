@@ -34,3 +34,38 @@ exports.createPages = async ({ actions, graphql }) => {
     });
 
 }
+
+exports.createPages = async ({ actions, graphql }) => {
+    const { createPage } = actions
+
+    const albumViewerTemplete = path.resolve(`./src/templates/album-viewer.js`)
+
+    const result = await graphql(`
+         {
+            allStrapiAlbum {
+            edges {
+                node {
+                strapi_id
+                slug
+                }
+            }
+            }
+        } 
+    `)
+
+    if (result.errors) {
+        reporter.panicOnBuild(`Error while running GraphQL query.`)
+        return
+    }
+
+    const albums = result.data.allStrapiAlbum.edges
+
+    albums.forEach((album) => {
+        createPage({
+            path: `/album/${album.node.slug}`,
+            component: albumViewerTemplete,
+            context: {strapi_id: album.node.strapi_id},
+        })
+    });
+
+}

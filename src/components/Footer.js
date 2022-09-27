@@ -55,13 +55,13 @@ const Footer = () => {
             <h5 className="font-bold text-xl">博客</h5>
             <ul className="text-base">
               <Link to="/article">
-                <li className="mt-4">文章</li>
+                <li className="mt-4 link">文章</li>
               </Link>
               <Link to="/album">
-                <li className="mt-4">摄影</li>
+                <li className="mt-4 link">摄影</li>
               </Link>
               <Link to="/video">
-                <li className="mt-4">视频</li>
+                <li className="mt-4 link">视频</li>
               </Link>
             </ul>
           </div>
@@ -69,10 +69,10 @@ const Footer = () => {
             <h5 className="font-bold text-xl">关于</h5>
             <ul className="text-base">
               <Link to="/changelog">
-                <li className="mt-4">本站</li>
+                <li className="mt-4 link">本站</li>
               </Link>
-              <li className="mt-4">简历</li>
-              <li className="mt-4">联系我</li>
+              <li className="mt-4 link">简历</li>
+              <li className="mt-4 link">联系我</li>
             </ul>
           </div>
         </div>

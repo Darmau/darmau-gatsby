@@ -32,6 +32,12 @@
     }
 }
 
+@layer components {
+    .link {
+        @apply transition ease-in delay-100 hover:text-theme focus:underline;
+    }
+}
+
 iframe {
     aspect-ratio: 16 / 9;
     height: 100%;
