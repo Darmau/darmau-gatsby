@@ -1,19 +1,18 @@
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react"
 import Layout from "../components/Layout";
+import VideoFrame from "../components/VideoFrame";
 import * as playerStyle from "./video-player.module.css"
 
 export default function VideoPlayer({ data }) {
 
     const video = data.allStrapiVideo.nodes[0]
-    const image = getImage(video.cover.localFile)
 
     return (
         <Layout>
             <main className="flex justify-center mt-16">
                 <div className={playerStyle.videoContainer}>
-                    <GatsbyImage image={image} ></GatsbyImage>
+                    <VideoFrame src={video.source.bilibili} />
                     <h4 className={playerStyle.videoTitle}>{video.basic.title}</h4>
                     <p className={playerStyle.videoDate}>{video.basic.date}</p>
                     <p className={playerStyle.videoDescription}>{video.basic.description}</p>
