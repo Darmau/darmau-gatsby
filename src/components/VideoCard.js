@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+
 export default function VideoCard() {
   const { allStrapiVideo } = useStaticQuery(graphql`
     query {
@@ -27,14 +28,15 @@ export default function VideoCard() {
 
 
   return (
-    <main className="flex flex-wrap px-20 mb-16 justify-center">
+    <main className="flex justify-center w-full">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap px-4 md:px-20 mb-16 justify-center">
       {
         allStrapiVideo.nodes.map(
           node => {
             const image = getImage(node.cover.localFile)
             return (
               <Link to={node.slug}>
-                <div className="flex flex-col shrink-0 grow-0 justify-start m-3 w-80">
+                <div className="flex flex-col justify-start m-3 w-auto sm:w-80">
                   <GatsbyImage className="rounded-lg" image={image} alt={node.basic.title}></GatsbyImage>
                   <h6 className="text-lg font-bold my-2 hover:text-theme">{node.basic.title}</h6>
                   <p className="text-sm">{node.basic.date}</p>
@@ -44,6 +46,7 @@ export default function VideoCard() {
           }
         )
       }
+      </div>
     </main>
   )
 }

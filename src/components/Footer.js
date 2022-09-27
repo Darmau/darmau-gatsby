@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const Footer = () => {
   return (
     <footer className="border-t border-gray-300">
-      <div className="my-8 px-20 flex justify-between items-center">
+      <div className="my-8 px-8 flex flex-col justify-between items-center md:flex-row md:px-20">
         <div className="basis-1/2">
           <Link to="/">
             <svg width="190" height="80" viewBox="0 0 190 80">
@@ -50,32 +50,34 @@ const Footer = () => {
             </svg>
           </Link>
         </div>
-        <div className="p-4">
-          <h5 className="font-bold text-xl">博客</h5>
-          <ul className="text-base">
-            <Link to="/article">
-              <li className="mt-4">文章</li>
-            </Link>
-            <Link to="/album">
-              <li className="mt-4">摄影</li>
-            </Link>
-            <Link to="/video">
-              <li className="mt-4">视频</li>
-            </Link>
-          </ul>
-        </div>
-        <div className="p-4">
-          <h5 className="font-bold text-xl">关于</h5>
-          <ul className="text-base">
-            <Link to="/changelog">
-              <li className="mt-4">本站</li>
-            </Link>
-            <li className="mt-4">简历</li>
-            <li className="mt-4">联系我</li>
-          </ul>
+        <div className="flex w-full justify-evenly md:grow-0">
+          <div className="p-4">
+            <h5 className="font-bold text-xl">博客</h5>
+            <ul className="text-base">
+              <Link to="/article">
+                <li className="mt-4">文章</li>
+              </Link>
+              <Link to="/album">
+                <li className="mt-4">摄影</li>
+              </Link>
+              <Link to="/video">
+                <li className="mt-4">视频</li>
+              </Link>
+            </ul>
+          </div>
+          <div className="p-4">
+            <h5 className="font-bold text-xl">关于</h5>
+            <ul className="text-base">
+              <Link to="/changelog">
+                <li className="mt-4">本站</li>
+              </Link>
+              <li className="mt-4">简历</li>
+              <li className="mt-4">联系我</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="flex justify-between px-20 items-center h-20">
+      <div className="flex flex-col-reverse items-center mb-4 md:flex-row md:px-20 md:h-20 md:justify-between">
         <p>2022 © All Right Reserved</p>
         <p>备案信息</p>
         <ul className="flex p-2">
