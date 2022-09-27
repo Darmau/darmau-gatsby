@@ -55,7 +55,7 @@ module.exports = {
         short_name: `可可托海没有海`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#B23D2B`,
+        theme_color: `#fff`,
         display: `standalone`,
         icon: `./src/images/favicon.svg`, 
       },
