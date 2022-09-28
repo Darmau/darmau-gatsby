@@ -53,13 +53,13 @@ const Navbar = () => {
 
       </Link>
       <ul className="flex text-base sm:text-xl font-bold mr-auto ml-auto">
-        <li className="mx-2 md:mx-5">
+        <li className="mx-2 md:mx-5 link">
           <Link to="/article">文章</Link>
         </li>
-        <li className="mx-2 md:mx-5">
+        <li className="mx-2 md:mx-5 link">
           <Link to="/album">摄影</Link>
         </li>
-        <li className="mx-2 md:mx-5">
+        <li className="mx-2 md:mx-5 link">
           <Link to="/video">视频</Link>
         </li>
       </ul>

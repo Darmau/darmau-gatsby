@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 export default function VideoCard() {
   const { allStrapiVideo } = useStaticQuery(graphql`
     query {
-      allStrapiVideo(limit: 16, sort: {fields: basic___date, order: DESC}) {
+      allStrapiVideo(sort: {fields: basic___date, order: DESC}) {
         nodes {
           basic {
             title
@@ -37,7 +37,7 @@ export default function VideoCard() {
             return (
               <Link to={node.slug}>
                 <div className="flex flex-col justify-start m-3 w-auto sm:w-80">
-                  <GatsbyImage className="rounded-lg" image={image} alt={node.basic.title}></GatsbyImage>
+                  <GatsbyImage className="rounded-lg object-cover" image={image} alt={node.basic.title}></GatsbyImage>
                   <h6 className="text-lg font-bold my-2 hover:text-theme">{node.basic.title}</h6>
                   <p className="text-sm">{node.basic.date}</p>
                 </div>

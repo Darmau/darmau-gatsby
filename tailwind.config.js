@@ -10,7 +10,11 @@ module.exports = {
     extend: {
       colors: {
         'theme': '#B23D2B',
-      }
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '3/2': '3 / 2',
+      },
     },
   },
   plugins: [],

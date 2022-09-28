@@ -1,14 +1,17 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Head from "../components/Head"
+import AlbumGrid from "../components/AlbumGrid";
 
-export default function Album() {
+const Album = () => {
     return (
         <>
-            <Head title="所有摄影" />
+            <Head title="所有视频" />
             <Layout>
-                <h1>开发中</h1>
+                <AlbumGrid />
             </Layout>
         </>
     )
-}
+    }
+    
+    export default Album
