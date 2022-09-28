@@ -11,7 +11,10 @@ const Head = ({ title }) => {
                 htmlAttributes={{
                     lang: 'zh',
                 }}
-            />
+            >
+                <meta charSet="utf-8" />
+                <meta name="description" content="设计师、开发者李大毛的个人网站"/>
+            </Helmet>
         </>
     )
 }
