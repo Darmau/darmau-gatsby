@@ -8,6 +8,9 @@ const Head = ({ title }) => {
                 defaultTitle="可可托海没有海"
                 title={title}
                 titleTemplate="%s | 可可托海没有海"
+                htmlAttributes={{
+                    lang: 'zh',
+                }}
             />
         </>
     )
