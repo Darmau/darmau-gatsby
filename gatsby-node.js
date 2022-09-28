@@ -3,9 +3,9 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions
 
+    // 创建视频详情页
     const videoPlayerTemplete = path.resolve(`./src/templates/video-player.js`)
-
-    const result = await graphql(`
+    const resultVideo = await graphql(`
          {
             allStrapiVideo {
             edges {
@@ -17,14 +17,11 @@ exports.createPages = async ({ actions, graphql }) => {
             }
         } 
     `)
-
-    if (result.errors) {
+    if (resultVideo.errors) {
         reporter.panicOnBuild(`Error while running GraphQL query.`)
         return
     }
-
-    const videos = result.data.allStrapiVideo.edges
-
+    const videos = resultVideo.data.allStrapiVideo.edges
     videos.forEach((video) => {
         createPage({
             path: `/video/${video.node.slug}`,
@@ -33,14 +30,10 @@ exports.createPages = async ({ actions, graphql }) => {
         })
     });
 
-}
-
-exports.createPages = async ({ actions, graphql }) => {
-    const { createPage } = actions
-
+    // 创建相册详情页
     const albumViewerTemplete = path.resolve(`./src/templates/album-viewer.js`)
 
-    const result = await graphql(`
+    const resultAlbum = await graphql(`
          {
             allStrapiAlbum {
             edges {
@@ -53,12 +46,12 @@ exports.createPages = async ({ actions, graphql }) => {
         } 
     `)
 
-    if (result.errors) {
+    if (resultAlbum.errors) {
         reporter.panicOnBuild(`Error while running GraphQL query.`)
         return
     }
 
-    const albums = result.data.allStrapiAlbum.edges
+    const albums = resultAlbum.data.allStrapiAlbum.edges
 
     albums.forEach((album) => {
         createPage({
