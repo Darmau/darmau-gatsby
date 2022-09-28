@@ -1,10 +1,37 @@
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react"
 import Layout from "../components/Layout";
 import Head from "../components/Head"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function AlbumViewer({ data }) {
+
+    const albumQuery = useStaticQuery(graphql`
+    query AlbumViewerById($strapi_id: Int) {
+        allStrapiAlbum(filter: {strapi_id: {eq: $strapi_id}}) {
+        nodes {
+            strapi_id
+            slug
+            basic {
+                date
+                description
+                isTop
+                title
+            }
+            gallery {
+                localFile {
+                    childImageSharp {
+                    gatsbyImageData(width: 960)
+                    }
+                }
+                alternativeText
+            }
+            category_album {
+                title
+            }
+        }
+        }
+    }`)
 
     const album = data.allStrapiAlbum.nodes[0]
 
@@ -32,30 +59,3 @@ export default function AlbumViewer({ data }) {
         </>
     )
 }
-
-export const albumQuery = graphql`
-    query AlbumViewerById($strapi_id: Int) {
-        allStrapiAlbum(filter: {strapi_id: {eq: $strapi_id}}) {
-        nodes {
-            strapi_id
-            slug
-            basic {
-                date
-                description
-                isTop
-                title
-            }
-            gallery {
-                localFile {
-                    childImageSharp {
-                    gatsbyImageData(width: 960)
-                    }
-                }
-                alternativeText
-            }
-            category_album {
-                title
-            }
-        }
-        }
-    }`
