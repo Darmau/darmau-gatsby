@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-    src: local('Noto Serif SC'), url(../../static/fonts/noto-serif-sc-400.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-    src: local('Noto Serif SC'), url(../../static/fonts/noto-serif-sc-700.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-    src: local('Roboto Mono'), url(../../static/fonts/roboto-mono-400.woff2) format("woff2");
-}
-
 @layer base {
     html {
         font-family: 'Noto Serif SC', serif;
