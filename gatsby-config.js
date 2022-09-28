@@ -70,10 +70,6 @@ module.exports = {
             name: `Noto Serif SC`,
             file: `https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap`,
           },
-          {
-            name: `JetBrains Mono`,
-            file: `https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap`,
-          },
         ],
       },
     },
