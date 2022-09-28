@@ -8,16 +8,25 @@ export default function AlbumViewer({ data }) {
 
     const album = data.allStrapiAlbum.nodes[0]
 
+    // 默认展示gallery第一张
+    const [activePhoto, setActivePhoto] = React.useState(getImage(album.gallery[0].localFile))
+
+    // 获取点击列表项的index，并set相应state
+    const switchActive = (index) => (event) => {
+        setActivePhoto(getImage(album.gallery[index].localFile))
+    }
+
     return (
         <>
             <Head title={album.basic.title} />
             <Layout>
-                <ul>
+                <GatsbyImage image={activePhoto} />
+                <ul className="flex h-28">
                     {album.gallery.map(
-                        photo => {
+                        (photo, index) => {
                             const image = getImage(photo.localFile)
                             return (
-                                <li><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></li>
+                                <li onClick={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></li>
                             )
                         }
                     )}
@@ -33,6 +42,7 @@ export default function AlbumViewer({ data }) {
     )
 }
 
+// 查询指定id的相册
 export const albumQuery = graphql`
 query AlbumViewerById($strapi_id: Int) {
     allStrapiAlbum(filter: {strapi_id: {eq: $strapi_id}}) {
@@ -50,6 +60,7 @@ query AlbumViewerById($strapi_id: Int) {
                     childImageSharp {
                     gatsbyImageData(width: 960)
                     }
+                    id
                 }
                 alternativeText
             }

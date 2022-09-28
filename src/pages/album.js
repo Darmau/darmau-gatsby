@@ -6,7 +6,7 @@ import AlbumGrid from "../components/AlbumGrid";
 const Album = () => {
     return (
         <>
-            <Head title="所有视频" />
+            <Head title="所有摄影" />
             <Layout>
                 <AlbumGrid />
             </Layout>
