@@ -1,6 +1,5 @@
 :root {
     --theme-color: #B23D2B;
-    --logo-color: #B23D2B;
     --background-color: #F6F6F6;
     --navbar-color: #ffffff; 
     --primary-text-color: rgba(0,0,0,0.85);
@@ -11,7 +10,6 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --theme-color: #983323;
-        --logo-color: #ffffff;
         --background-color: #171717;
         --navbar-color: #1f1f1f;
         --primary-text-color: rgba(255,255,255,0.9);

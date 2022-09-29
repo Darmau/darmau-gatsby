@@ -22,13 +22,10 @@
     display: block;
 }
 
-.logo-mini path, .logo-full path {
-    fill: var(--logo-color);
-}
-
 .connect-list {
     display: flex;
     justify-content: center;
+    margin-right: 24px;
     list-style: none;
     font-size: 16px;
     font-weight: 700;
@@ -51,7 +48,7 @@
     justify-content: end;
 }
 
-.action > svg path {
+.action>svg path {
     fill: var(--primary-text-color);
 }
 
@@ -60,7 +57,7 @@
         padding: 0 64px 0 64px;
         height: 80px;
     }
-    
+
     .connect-list {
         font-size: 20px;
         margin-right: 140px;
@@ -72,5 +69,13 @@
 
     .logo-mini {
         display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .logo-mini path,
+    .logo-full path {
+        fill: #ffffff;
     }
 }

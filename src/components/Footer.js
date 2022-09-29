@@ -5,10 +5,10 @@ import * as style from "../styles/Footer.module.css"
 const Footer = () => {
   return (
     <footer className={style.footer}>
-      <div>
-        <div>
+      <div className={style.internalLinks}>
+        <div className={style.logoFrame}>
           <Link to="/">
-            <svg width="190" height="80" viewBox="0 0 190 80">
+            <svg className={style.logo} width="190" height="80" viewBox="0 0 190 80">
               <path
                 d="M28.5696 59.029L29.5399 55.7392C30.0414 54.0385 29.9242 52.2151 29.2088 50.5927C28.3016 48.535 28.3657 46.1788 29.3835 44.1735L31.2696 40.4575L28.5696 41.0979L15.2283 50.7038C14.4871 51.1841 13.593 48.9427 13.7989 47.822C14.593 43.4993 20.4695 38.6964 20.6284 36.9353C20.7554 35.5264 20.2578 34.0001 19.9931 33.4131L15.3502 35.82C14.756 36.128 14.0771 36.2323 13.4179 36.1167C11.6962 35.8149 9.92395 36.0121 8.31063 36.685L6.17532 37.5757C5.85767 39.9772 6.39768 46.2531 11.0989 52.7851C15.8001 59.3172 24.7049 59.6694 28.5696 59.029Z"
                 fill="#B23D2B"
@@ -51,29 +51,29 @@ const Footer = () => {
             </svg>
           </Link>
         </div>
-        <div>
+        <div className={style.websiteLinks}>
           <div>
-            <h5>博客</h5>
-            <ul>
-              <li><Link to="/article">文章</Link></li>
-              <li><Link to="/album">摄影</Link></li>
-              <li><Link to="/video">视频 </Link></li>
+            <h5 className={style.catalogTitle}>博客</h5>
+            <ul className={style.catalogList}>
+              <li className={style.catalogItem}><Link to="/article">文章</Link></li>
+              <li className={style.catalogItem}><Link to="/album">摄影</Link></li>
+              <li className={style.catalogItem}><Link to="/video">视频 </Link></li>
             </ul>
           </div>
           <div>
-            <h5>关于</h5>
-            <ul>
-                <li><Link to="/changelog">本站</Link></li>
-              <li>简历</li>
-              <li>联系我</li>
+            <h5 className={style.catalogTitle}>关于</h5>
+            <ul className={style.catalogList}>
+              <li className={style.catalogItem}><Link to="/changelog">本站</Link></li>
+              <li className={style.catalogItem}>简历</li>
+              <li className={style.catalogItem}>联系我</li>
             </ul>
           </div>
         </div>
       </div>
-      <div>
-        <p>2022 © All Right Reserved</p>
-        <p>备案信息</p>
-        <ul>
+      <div className={style.externalLinks}>
+        <p className={style.websiteInfo}>2022 © All Right Reserved</p>
+        <p className={style.websiteInfo}>备案信息</p>
+        <ul className={style.socialMedia}>
           <li>
             <a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzIxOTM1NzIzNw==&hid=1&sn=173a6a61a9cafb6ac2e7d36ee0efe411&scene=18#wechat_redirect" target="_blank" rel="noreferrer">
               <svg
