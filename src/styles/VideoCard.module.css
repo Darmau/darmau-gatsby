@@ -1,0 +1,47 @@
+.grid-container {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.video-grid {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 56px auto 24px auto;
+    align-content: stretch;
+}
+
+.video-card {
+    border-radius: 8px;
+    background-color: var(--card-color);
+    padding: 16px;
+    margin: 8px;
+    max-width: 420px;
+    align-content: stretch;
+    flex: auto;
+}
+
+.video-cover {
+    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-title {
+    font-size: 20px;
+    color: var(--primary-text-color);
+    margin: 16px 0 16px 0;
+}
+
+.video-date {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .video-grid {
+        margin: 96px auto 24px auto;
+    }
+}
