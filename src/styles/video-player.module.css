@@ -49,7 +49,6 @@
 
 .platform {
     border: 1px solid var(--border-color);
-    min-width: fit-content;
     border-radius: 4px;
     margin-right: 16px;
     cursor: pointer;
