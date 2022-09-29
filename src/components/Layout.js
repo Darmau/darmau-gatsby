@@ -1,14 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import * as style from "../styles/Layout.module.css"
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className={style.mainContainer}>
       <Navbar />
-      <main className="flex-1 z-0 mt-16 sm:mt-20">
         {children}
-      </main>
       <Footer />
     </div>
   );

@@ -4,8 +4,9 @@ export default function VideoFrame(props) {
     return (
         <iframe
             src={props.src} 
-            width="840"
-            height="472"
+            key={props.key}
+            width="100%"
+            height="525"
             title={props.title}
             scrolling="no" 
             border="0" 

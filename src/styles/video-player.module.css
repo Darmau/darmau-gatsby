@@ -1,0 +1,62 @@
+.video-container {
+    width: 100%;
+    margin: 56px auto 16px auto;
+    padding: 0;
+    background-color: var(--card-color);
+}
+
+.video-frame {
+    width: 100%;
+}
+
+.video-info {
+    padding: 0 16px 24px 16px;
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--primary-text-color);
+}
+
+.video-date {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--secondary-text-color);
+}
+
+.video-description {
+    font-size: 16px;
+    color: var(--primary-text-color);
+}
+
+.video-source {
+    display: flex;
+    color: var(--primary-text-color);
+    flex-wrap: wrap;
+}
+
+.platform {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+    .video-container {
+        max-width: 840px;
+        padding: 24px;
+        margin: 96px auto 32px auto;
+        border-radius: 8px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .night-name {
+        fill: #ffffff;
+    }
+}
