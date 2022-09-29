@@ -36,7 +36,6 @@
 .video-source {
     display: flex;
     color: var(--primary-text-color);
-    flex-wrap: wrap;
     align-items: center;
 }
 
