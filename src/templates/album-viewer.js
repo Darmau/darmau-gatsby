@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/Layout";
 import Head from "../components/Head"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as style from "../styles/album-viewer.module.css"
 
 export default function AlbumViewer({ data }) {
 
@@ -20,27 +21,31 @@ export default function AlbumViewer({ data }) {
         <>
             <Head title={album.basic.title} />
             <Layout>
-                <div className="flex flex-col md:grid md:grid-cols-5">
-                    <div clsssName="md:col-span-3">
-                        <GatsbyImage image={activePhoto} />
-                        <ul className="flex h-28">
-                            {album.gallery.map(
-                                (photo, index) => {
-                                    const image = getImage(photo.localFile)
-                                    return (
-                                        <li onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></li>
-                                    )
-                                }
-                            )}
-                        </ul>
+                <main className={style.albumContainer}>
+                    <div className={style.albumMain}>
+                        <div clsssName={style.gallery}>
+                            <GatsbyImage className={style.albumActive} image={activePhoto} />
+                            <div className={style.albumList}>
+                                {album.gallery.map(
+                                    (photo, index) => {
+                                        const image = getImage(photo.localFile)
+                                        return (
+                                            <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage imgClassName={style.innerImage} image={image} alt={photo.alternativeText}></GatsbyImage></div>
+                                        )
+                                    }
+                                )}
+                            </div>
+                        </div>
+                        <div clsssName={style.albumInformation}>
+                            <h4 className={style.albumTitle}>{album.basic.title}</h4>
+                            <p className={style.albumDescription}>{album.basic.description}</p>
+                            <div className={style.albumRelative}>
+                                <p className={style.albumCategory}>{album.category_album.title}</p>
+                                <p className={style.albumDate}>{album.basic.date}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div clsssName="md:col-span-2">
-                        <h4>{album.basic.title}</h4>
-                        <p>{album.basic.description}</p>
-                        <p>{album.category_album.title}</p>
-                        <p>{album.basic.date}</p>
-                    </div>
-                </div>
+                </main>
             </Layout>
         </>
     )

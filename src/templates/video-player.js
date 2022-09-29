@@ -47,10 +47,8 @@ export default function VideoPlayer({ data }) {
 						<p className={style.videoDate}>{video.basic.date}</p>
 						<p className={style.videoDescription}>{video.basic.description}</p>
 
+						<p className={style.sourceLabel}>播放源：</p>
 						<div className={style.videoSource}>
-							<p>播放源：</p>
-
-
 							{video.source.bilibili &&
 								<div onClick={() => switchVideo("bilibili")} onKeyDown={() => switchVideo("bilibili")}><svg className={style.platform} width="68" height="36" viewBox="0 0 90 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path

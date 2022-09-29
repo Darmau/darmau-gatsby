@@ -1,0 +1,58 @@
+.album-container {
+    display: flex;
+    justify-content: center;
+}
+
+.album-main {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.album-active {
+    width: 100%;
+}
+
+.album-list {
+    display: flex;
+    height: 120px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.album-photo {
+    height: 120px;
+    width: 180px;
+    overflow: scroll;
+}
+
+.inner-image {
+    object-fit: contain;
+}
+
+
+.album-information {
+    padding: 48px;
+}
+
+@media (min-width: 768px) {
+    .album-main {
+        flex-direction: row;
+        max-width: 1280px;
+    }
+
+    .gallery {
+        flex-basis: 60%;
+        flex-grow: 1;
+    }
+
+    .album-information {
+        flex-basis: 40%;
+        flex-grow: 0;
+        padding: 48px;
+    }
+}
