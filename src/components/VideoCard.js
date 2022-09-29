@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as style from "../styles/VideoCard.module.css"
 
 
 export default function VideoCard() {
@@ -28,7 +29,7 @@ export default function VideoCard() {
 
 
   return (
-    <main className="flex justify-center w-full">
+    <main className={style.videoGrid}>
       <div className="flex flex-col sm:flex-row sm:flex-wrap px-4 md:px-20 mb-16 justify-center">
       {
         allStrapiVideo.nodes.map(

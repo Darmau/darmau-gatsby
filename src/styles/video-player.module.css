@@ -7,6 +7,7 @@
 
 .video-frame {
     width: 100%;
+    height: 256px;
 }
 
 .video-info {
@@ -36,6 +37,7 @@
     display: flex;
     color: var(--primary-text-color);
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .platform {
@@ -45,12 +47,22 @@
     margin-right: 8px;
 }
 
+@media (min-width: 600px) {
+    .video-frame {
+        height: 400px;
+    }
+}
+
 @media (min-width: 768px) {
     .video-container {
         max-width: 840px;
         padding: 24px;
         margin: 96px auto 32px auto;
         border-radius: 8px;
+    }
+
+    .video-frame {
+        height: 512px;
     }
 }
 

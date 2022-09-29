@@ -6,7 +6,7 @@ export default function VideoFrame(props) {
             src={props.src} 
             key={props.key}
             width="100%"
-            height="525"
+            height="100%"
             title={props.title}
             scrolling="no" 
             border="0" 
