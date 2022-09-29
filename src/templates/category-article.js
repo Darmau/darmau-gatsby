@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function CategoryArticle({ data }) {
 
-    const articles = data.allStrapiArticle.nodes[0]
+    const articles = data.allStrapiArticle.nodes
     const category = data.allStrapiCategoryArticle.nodes[0]
 
     return (
@@ -56,5 +56,4 @@ query ArticlesByCategory($strapi_id: Int) {
         slug
       }
     }
-  }
-`
+  }`
