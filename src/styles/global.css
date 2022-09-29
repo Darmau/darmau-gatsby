@@ -1,21 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --theme-color: #B23D2B;
+    --logo-color: #B23D2B;
+    --background-color: #F6F6F6;
+    --navbar-color: #ffffff; 
+    --primary-text-color: rgba(0,0,0,0.85);
+    --secondary-text-color: rgba(0,0,0,0.7);
+    --divider-color: #dedede;
+}
 
-@layer base {
-    html {
-        font-family: 'Noto Serif SC', serif;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-color: #983323;
+        --logo-color: #ffffff;
+        --background-color: #171717;
+        --navbar-color: #1f1f1f;
+        --primary-text-color: rgba(255,255,255,0.9);
+        --secondary-text-color: rgba(255,255,255,0.7);
+        --divider-color: #323232;
     }
 }
 
-@layer components {
-    .link {
-        @apply transition ease-in delay-100 hover:text-theme focus:underline;
-    }
+html {
+    font-family: 'Noto Serif SC', serif;
+    margin: 0;
 }
 
-iframe {
-    aspect-ratio: 16 / 9;
-    height: 100%;
-    width: 100%;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
