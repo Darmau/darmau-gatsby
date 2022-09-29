@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
+import * as style from "../styles/Footer.module.css"
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-300">
-      <div className="my-8 px-8 flex flex-col justify-between items-center md:flex-row md:px-20">
-        <div className="basis-1/2">
+    <footer className={style.footer}>
+      <div>
+        <div>
           <Link to="/">
             <svg width="190" height="80" viewBox="0 0 190 80">
               <path
@@ -50,30 +51,30 @@ const Footer = () => {
             </svg>
           </Link>
         </div>
-        <div className="flex w-full justify-evenly md:grow-0">
-          <div className="p-4">
-            <h5 className="font-bold text-xl">博客</h5>
-            <ul className="text-base">
-              <li className="mt-4 link"><Link to="/article">文章</Link></li>
-              <li className="mt-4 link"><Link to="/album">摄影</Link></li>
-              <li className="mt-4 link"><Link to="/video">视频 </Link></li>
+        <div>
+          <div>
+            <h5>博客</h5>
+            <ul>
+              <li><Link to="/article">文章</Link></li>
+              <li><Link to="/album">摄影</Link></li>
+              <li><Link to="/video">视频 </Link></li>
             </ul>
           </div>
-          <div className="p-4">
-            <h5 className="font-bold text-xl">关于</h5>
-            <ul className="text-base">
-                <li className="mt-4 link"><Link to="/changelog">本站</Link></li>
-              <li className="mt-4 link">简历</li>
-              <li className="mt-4 link">联系我</li>
+          <div>
+            <h5>关于</h5>
+            <ul>
+                <li><Link to="/changelog">本站</Link></li>
+              <li>简历</li>
+              <li>联系我</li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse items-center mb-4 md:flex-row md:px-20 md:h-20 md:justify-between">
+      <div>
         <p>2022 © All Right Reserved</p>
         <p>备案信息</p>
-        <ul className="flex p-2">
-          <li className="m-1">
+        <ul>
+          <li>
             <a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzIxOTM1NzIzNw==&hid=1&sn=173a6a61a9cafb6ac2e7d36ee0efe411&scene=18#wechat_redirect" target="_blank" rel="noreferrer">
               <svg
                 width="24"
@@ -92,7 +93,7 @@ const Footer = () => {
               </svg>
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://www.xiaohongshu.com/user/profile/5f6fea97000000000101e7d9" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#E63F4A" />
@@ -107,7 +108,7 @@ const Footer = () => {
               </svg>
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://github.com/Darmau" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#231E1B" />
@@ -116,7 +117,7 @@ const Footer = () => {
 
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://space.bilibili.com/408764400" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#00A1D6" />
@@ -125,7 +126,7 @@ const Footer = () => {
 
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://twitter.com/herac1es" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#1DA1F2" />
@@ -134,7 +135,7 @@ const Footer = () => {
 
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://www.youtube.com/channel/UCDWxwLxTQq0TmsaK1XWVYhQ" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#E63223" />
@@ -143,7 +144,7 @@ const Footer = () => {
 
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://figma.com/@darmau" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="black" />
@@ -156,7 +157,7 @@ const Footer = () => {
 
             </a>
           </li>
-          <li className="m-1">
+          <li>
             <a href="https://dribbble.com/darmau" target="_blank" rel="noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#EA4C89" />
