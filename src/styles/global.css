@@ -2,8 +2,10 @@
     --theme-color: #B23D2B;
     --background-color: #F6F6F6;
     --navbar-color: #ffffff; 
+    --card-color: #ffffff;
     --primary-text-color: rgba(0,0,0,0.85);
     --secondary-text-color: rgba(0,0,0,0.7);
+    --border-color: #d2d2d2;
     --divider-color: #dedede;
 }
 
@@ -12,8 +14,10 @@
         --theme-color: #983323;
         --background-color: #171717;
         --navbar-color: #1f1f1f;
+        --card-color: #1f1f1f;
         --primary-text-color: rgba(255,255,255,0.9);
         --secondary-text-color: rgba(255,255,255,0.7);
+        --border-color: #686868;
         --divider-color: #323232;
     }
 }

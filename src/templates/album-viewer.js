@@ -28,7 +28,7 @@ export default function AlbumViewer({ data }) {
                                 (photo, index) => {
                                     const image = getImage(photo.localFile)
                                     return (
-                                        <li onClick={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></li>
+                                        <li onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></li>
                                     )
                                 }
                             )}

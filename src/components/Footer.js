@@ -72,7 +72,6 @@ const Footer = () => {
       </div>
       <div className={style.externalLinks}>
         <p className={style.websiteInfo}>2022 © All Right Reserved</p>
-        <p className={style.websiteInfo}>备案信息</p>
         <ul className={style.socialMedia}>
           <li>
             <a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzIxOTM1NzIzNw==&hid=1&sn=173a6a61a9cafb6ac2e7d36ee0efe411&scene=18#wechat_redirect" target="_blank" rel="noreferrer">
