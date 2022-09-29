@@ -6,7 +6,7 @@
     align-items: center;
     background-color: var(--navbar-color);
     padding-top: 16px;
-    color: var(--primary-text-color)
+    color: var(--primary-text-color);
 }
 
 .internal-links {
@@ -39,7 +39,7 @@
 
 .catalog-title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-color);
     margin-top: 16px;
     margin-bottom: 16px;

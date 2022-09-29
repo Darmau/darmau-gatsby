@@ -6,7 +6,7 @@
     --primary-text-color: rgba(0,0,0,0.85);
     --secondary-text-color: rgba(0,0,0,0.7);
     --border-color: #d2d2d2;
-    --divider-color: #dedede;
+    --divider-color: #f1f1f1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +30,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 a {

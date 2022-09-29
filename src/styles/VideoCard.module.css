@@ -6,9 +6,10 @@
 
 .video-grid {
     display: inline-flex;
+    max-width: 1440px;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 56px auto 24px auto;
+    margin: 36px auto 24px auto;
     align-content: stretch;
 }
 
@@ -17,9 +18,16 @@
     background-color: var(--card-color);
     padding: 16px;
     margin: 8px;
-    max-width: 420px;
+    width: 100%;
+    max-width: 390px;
     align-content: stretch;
     flex: auto;
+}
+
+.video-card:hover, .video-card:active {
+    transform: scale(1.02, 1.02);
+    transition: all 0.1s ease-in;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .video-cover {
@@ -38,10 +46,4 @@
     font-size: 14px;
     color: var(--secondary-text-color);
     margin: 0;
-}
-
-@media (min-width: 768px) {
-    .video-grid {
-        margin: 96px auto 24px auto;
-    }
 }

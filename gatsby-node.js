@@ -60,5 +60,35 @@ exports.createPages = async ({ actions, graphql }) => {
             context: {strapi_id: album.node.strapi_id},
         })
     });
+    
+    // 创建文章话题页
+    const categoryArticleTemplete = path.resolve(`./src/templates/category-article.js`)
 
+    const resultCategoryArticle = await graphql(`
+         {
+            allStrapiCategoryArticle {
+            edges {
+                node {
+                strapi_id
+                slug
+                }
+            }
+            }
+        } 
+    `)
+
+    if (resultCategoryArticle.errors) {
+        reporter.panicOnBuild(`Error while running GraphQL query.`)
+        return
+    }
+
+    const categoryArticle = resultCategoryArticle.data.allStrapiCategoryArticle.edges
+
+    categoryArticle.forEach((category) => {
+        createPage({
+            path: `/article/category/${category.node.slug}`,
+            component: categoryArticleTemplete,
+            context: {strapi_id: category.node.strapi_id},
+        })
+    });
 }
