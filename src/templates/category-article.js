@@ -1,21 +1,23 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react"
 import Layout from "../components/Layout";
 import Head from "../components/Head"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function CategoryArticle({ data }) {
-    const articles = date.allStrapiArticle.nodes[0]
+
+    const articles = data.allStrapiArticle.nodes[0]
+    const category = data.allStrapiCategoryArticle.nodes[0]
 
     return (
         <>
-            <Head title={articles.basic.title} />
+            <Head title={category.title} />
             <Layout>
                 {articles.map(article => {
                     const image = getImage(article.cover.localFile)
                     return (
                         <article>
-                            <Link to={node.slug}>
+                            <Link to={article.slug}>
                             <GatsbyImage image={image} alt={article.basic.title} />
                             <h4>{article.basic.title}</h4>
                             <p>{article.basic.description}</p>
@@ -47,6 +49,12 @@ query ArticlesByCategory($strapi_id: Int) {
             }
             slug
           }
+    }
+    allStrapiCategoryArticle(filter: {strapi_id: {eq: $strapi_id}}) {
+      nodes {
+        title
+        slug
+      }
     }
   }
 `

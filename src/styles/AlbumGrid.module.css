@@ -1,14 +1,16 @@
 .grid-container {
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
 }
 
 .photo-grid {
-    display: flex;
+    display: inline-flex;
+    max-width: 1440px;
     flex-wrap: wrap;
-    justify-content: start;
-    margin: 16px auto 24px auto;
-    width: 100%;
-    max-width: 1280px;
+    justify-content: center;
+    margin: 36px auto 24px auto;
+    align-content: stretch;
 }
 
 .photo-card {

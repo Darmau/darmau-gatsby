@@ -21,22 +21,51 @@
     display: flex;
     height: 120px;
     width: 100%;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .album-photo {
-    height: 120px;
-    width: 180px;
-    overflow: scroll;
+    width: 160px;
+    object-fit: contain;
 }
 
 .inner-image {
-    object-fit: contain;
+
 }
 
 
 .album-information {
-    padding: 48px;
+    padding-left: 16px;
+}
+
+.album-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+}
+
+.album-description {
+    font-size: 16px;
+    color: var(--secondary-text-color);
+}
+
+.album-relative {
+    display: flex;
+    align-items: center;
+}
+
+.album-category {
+    display: inline-block;
+    background-color: var(--divider-color);
+    padding: 4px 8px 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.album-date {
+    font-size: 14px;
+    color: var(--secondary-text-color);
 }
 
 @media (min-width: 768px) {

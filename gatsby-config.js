@@ -67,7 +67,7 @@ module.exports = {
         web: [
           {
             name: `Noto Serif SC`,
-            file: `https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap`,
+            file: `https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap`,
           },
         ],
       },
