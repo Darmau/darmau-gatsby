@@ -1,87 +1,85 @@
 .album-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .album-main {
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
 }
 
 .gallery {
-    width: 100%;
+  width: 100%;
 }
 
 .album-active {
-    width: 100%;
+  width: 100%;
 }
 
 .album-list {
-    display: flex;
-    height: 120px;
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
+  display: flex;
+  height: 120px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .album-photo {
-    width: 160px;
-    object-fit: contain;
+  width: 160px;
+  object-fit: contain;
 }
 
-.inner-image {
-
-}
+.inner-image {}
 
 
 .album-information {
-    padding-left: 16px;
+  padding-left: 16px;
 }
 
 .album-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--primary-text-color);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-text-color);
 }
 
 .album-description {
-    font-size: 16px;
-    color: var(--secondary-text-color);
+  font-size: 16px;
+  color: var(--secondary-text-color);
 }
 
 .album-relative {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .album-category {
-    display: inline-block;
-    background-color: var(--divider-color);
-    padding: 4px 8px 4px 8px;
-    border-radius: 4px;
-    margin-right: 8px;
+  display: inline-block;
+  background-color: var(--divider-color);
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
 .album-date {
-    font-size: 14px;
-    color: var(--secondary-text-color);
+  font-size: 14px;
+  color: var(--secondary-text-color);
 }
 
 @media (min-width: 768px) {
-    .album-main {
-        flex-direction: row;
-        max-width: 1280px;
-    }
+  .album-main {
+    flex-direction: row;
+    max-width: 1280px;
+  }
 
-    .gallery {
-        flex-basis: 60%;
-        flex-grow: 1;
-    }
+  .gallery {
+    flex-basis: 60%;
+    flex-grow: 1;
+  }
 
-    .album-information {
-        flex-basis: 40%;
-        flex-grow: 0;
-        padding: 48px;
-    }
+  .album-information {
+    flex-basis: 40%;
+    flex-grow: 0;
+    padding: 48px;
+  }
 }

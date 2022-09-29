@@ -6,29 +6,29 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function CategoryArticle({ data }) {
 
-    const articles = data.allStrapiArticle.nodes
-    const category = data.allStrapiCategoryArticle.nodes[0]
+  const articles = data.allStrapiArticle.nodes
+  const category = data.allStrapiCategoryArticle.nodes[0]
 
-    return (
-        <>
-            <Head title={category.title} />
-            <Layout>
-                {articles.map(article => {
-                    const image = getImage(article.cover.localFile)
-                    return (
-                        <article>
-                            <Link to={article.slug}>
-                            <GatsbyImage image={image} alt={article.basic.title} />
-                            <h4>{article.basic.title}</h4>
-                            <p>{article.basic.description}</p>
-                            <p>{article.basic.date}</p>
-                            </Link>
-                        </article>
-                    )
-                })}
-            </Layout>
-        </>
-    )
+  return (
+    <>
+      <Head title={category.title} />
+      <Layout>
+        {articles.map(article => {
+          const image = getImage(article.cover.localFile)
+          return (
+            <article>
+              <Link to={article.slug}>
+                <GatsbyImage image={image} alt={article.basic.title} />
+                <h4>{article.basic.title}</h4>
+                <p>{article.basic.description}</p>
+                <p>{article.basic.date}</p>
+              </Link>
+            </article>
+          )
+        })}
+      </Layout>
+    </>
+  )
 }
 
 export const categoryArticleQuery = graphql`

@@ -1,15 +1,15 @@
 .main-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--background-color);
-    margin-top: 56px;
-    min-height: 100vh;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--background-color);
+  margin-top: 56px;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
-    .main-container {
-        margin-top: 80px;
-    }
+  .main-container {
+    margin-top: 80px;
+  }
 }
