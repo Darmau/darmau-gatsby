@@ -3,16 +3,15 @@ import Layout from '../components/Layout'
 import VideoCard from "../components/VideoCard";
 import Head from "../components/Head"
 
-
 const Video = () => {
-return (
+  return (
     <>
-        <Head title="所有视频" />
-        <Layout>
-            <VideoCard />
-        </Layout>
+      <Head title="所有视频" />
+      <Layout>
+        <VideoCard />
+      </Layout>
     </>
-)
+  )
 }
 
 export default Video

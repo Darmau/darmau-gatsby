@@ -3,32 +3,41 @@ import React from "react"
 import Layout from "../components/Layout";
 import Head from "../components/Head"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as style from "../styles/ArticleList.module.css"
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function CategoryArticle({ data }) {
 
-    const articles = data.allStrapiArticle.nodes
-    const category = data.allStrapiCategoryArticle.nodes[0]
+  const articles = data.allStrapiArticle.nodes
+  const category = data.allStrapiCategoryArticle.nodes[0]
 
-    return (
-        <>
-            <Head title={category.title} />
-            <Layout>
-                {articles.map(article => {
-                    const image = getImage(article.cover.localFile)
-                    return (
-                        <article>
-                            <Link to={article.slug}>
-                            <GatsbyImage image={image} alt={article.basic.title} />
-                            <h4>{article.basic.title}</h4>
-                            <p>{article.basic.description}</p>
-                            <p>{article.basic.date}</p>
-                            </Link>
-                        </article>
-                    )
-                })}
-            </Layout>
-        </>
-    )
+  return (
+    <>
+      <Head title={category.title} />
+      <Layout>
+        <Breadcrumbs upLevel="article" active={category.title}/>
+        <main className={style.articleContainer}>
+          <div>
+            {articles.map(article => {
+              const image = getImage(article.cover.localFile)
+              return (
+                <Link to={'/article/' + article.slug}>
+                  <article className={style.articleCard}>
+                    <GatsbyImage className={style.articleCover} image={image} alt={article.basic.title} />
+                    <div className={style.articleInfo}>
+                      <h4 className={style.articleTitle}>{article.basic.title}</h4>
+                      <p className={style.articleDescription}>{article.basic.description}</p>
+                      <p className={style.articleDate}>{article.basic.date}</p>
+                    </div>
+                  </article>
+                </Link>
+              )
+            })}
+          </div>
+        </main>
+      </Layout>
+    </>
+  )
 }
 
 export const categoryArticleQuery = graphql`

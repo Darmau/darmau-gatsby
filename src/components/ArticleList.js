@@ -32,7 +32,7 @@ export default function ArticleList() {
 
   return (
     <main className={style.articleContainer}>
-      <div>
+      <div className={style.articleWrap}>
         {
           allStrapiArticle.nodes.map(node => {
             const image = getImage(node.cover.localFile)
@@ -44,8 +44,8 @@ export default function ArticleList() {
                     <h4 className={style.articleTitle}>{node.basic.title}</h4>
                     <p className={style.articleDescription}>{node.basic.description}</p>
                     <div className={style.articleRelative}>
-                    <p className={style.articleCategory}>{node.category_article.title}</p>
-                    <p className={style.articleDate}>{node.basic.date}</p>
+                      <p className={style.articleCategory}><Link to={'category/' + node.category_article.slug}>{node.category_article.title}</Link></p>
+                      <p className={style.articleDate}>{node.basic.date}</p>
                     </div>
                   </div>
                 </article>

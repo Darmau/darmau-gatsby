@@ -1,49 +1,51 @@
 .grid-container {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex: 1 0 auto;
 }
 
 .video-grid {
-    display: inline-flex;
-    max-width: 1440px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 36px auto 24px auto;
-    align-content: stretch;
+  display: inline-flex;
+  max-width: 1440px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 16px auto 24px auto;
+  align-content: stretch;
 }
 
 .video-card {
-    border-radius: 8px;
-    background-color: var(--card-color);
-    padding: 16px;
-    margin: 8px;
-    width: 100%;
-    max-width: 390px;
-    align-content: stretch;
-    flex: auto;
+  border-radius: 8px;
+  background-color: var(--card-color);
+  padding: 16px;
+  margin: 0;
+  width: 100%;
+  max-width: 390px;
+  align-content: stretch;
+  flex: auto;
 }
 
-.video-card:hover, .video-card:active {
-    transform: scale(1.02, 1.02);
-    transition: all 0.1s ease-in;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+.video-card:hover,
+.video-card:active {
+  transform: scale(1.02, 1.02);
+  transition: all 0.1s ease-in;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .video-cover {
-    border-radius: 8px;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .video-title {
-    font-size: 20px;
-    color: var(--primary-text-color);
-    margin: 16px 0 16px 0;
+  font-size: 20px;
+  color: var(--primary-text-color);
+  margin: 16px 0 16px 0;
 }
 
 .video-date {
-    font-size: 14px;
-    color: var(--secondary-text-color);
-    margin: 0;
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin: 0;
 }
