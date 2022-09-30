@@ -37,11 +37,11 @@ const VideoCards = () => {
               const image = getImage(node.cover.localFile)
               return (
                 <div className={style.videoCard}>
+                  <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
                   <Link to={node.slug}>
-                    <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
                     <h4 className={style.videoTitle}>{node.basic.title}</h4>
-                    <p className={style.videoDate}>{node.basic.date}</p>
                   </Link>
+                  <p className={style.videoDate}>{node.basic.date}</p>
                 </div>
               )
             }
