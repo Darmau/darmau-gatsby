@@ -3,6 +3,14 @@
   margin: 0 auto 16px auto;
   padding: 0;
   background-color: var(--card-color);
+  box-sizing: border-box;
+  flex: 1 0 auto;
+}
+
+button {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
 }
 
 .video-frame {
@@ -11,7 +19,7 @@
 }
 
 .video-info {
-  padding: 0 16px 24px 16px;
+  padding: 0 16px 0 16px;
 }
 
 .video-title {
@@ -64,13 +72,17 @@
 @media (min-width: 768px) {
   .video-container {
     max-width: 840px;
-    padding: 24px;
-    margin: 24px auto 32px auto;
+    padding: 0 24px;
+    margin: 0 auto 32px auto;
     border-radius: 8px;
   }
 
   .video-frame {
     height: 512px;
+  }
+
+  .video-info {
+    padding: 0;
   }
 }
 

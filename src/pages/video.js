@@ -3,7 +3,6 @@ import Layout from '../components/Layout'
 import VideoCard from "../components/VideoCard";
 import Head from "../components/Head"
 
-
 const Video = () => {
   return (
     <>

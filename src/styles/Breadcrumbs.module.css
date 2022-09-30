@@ -1,0 +1,35 @@
+.bread-list {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 16px 0 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.parent {
+  color: var(--secondary-text-color);
+}
+
+.separator {
+  margin: 0 4px 0 4px;
+}
+
+.active-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--theme-color);
+}
+
+@media (min-width: 768px) {
+  .bread-list {
+    padding: 0 36px 0 36px;
+    font-size: 16px;
+  }
+}

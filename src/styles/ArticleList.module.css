@@ -1,6 +1,16 @@
 .article-container {
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+.article-wrap {
+  display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .article-card {
@@ -10,6 +20,7 @@
   background-color: var(--card-color);
   padding: 16px;
   margin: 12px 0 12px 0;
+  width: 100%;
 }
 
 .article-cover {
@@ -71,6 +82,7 @@
     align-items: start;
     justify-content: start;
     gap: 16px;
+    min-width: 600px;
     max-width: 840px;
     border-radius: 8px;
   }
@@ -80,11 +92,9 @@
     grid-column: 1/2;
   }
 
-  .article-title {
-    font-size: 24px;
-  }
 
   .article-info {
     grid-column: 2/3;
+    
   }
 }

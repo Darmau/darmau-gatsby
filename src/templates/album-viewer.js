@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Head from "../components/Head"
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as style from "../styles/album-viewer.module.css"
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function AlbumViewer({ data }) {
 
@@ -21,6 +22,7 @@ export default function AlbumViewer({ data }) {
     <>
       <Head title={album.basic.title} />
       <Layout>
+        <Breadcrumbs upLevel="album" active={album.basic.title} />
         <main className={style.albumContainer}>
           <div className={style.albumMain}>
             <div clsssName={style.gallery}>

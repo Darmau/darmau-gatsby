@@ -1,5 +1,5 @@
 .nav-bar {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 99;
+  flex: 0 0 auto;
   background-color: var(--navbar-color);
   margin: 0;
   box-sizing: border-box;

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  flex: 1 0 auto;
 }
 
 .video-grid {
@@ -9,7 +10,7 @@
   max-width: 1440px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 36px auto 24px auto;
+  margin: 16px auto 24px auto;
   align-content: stretch;
 }
 

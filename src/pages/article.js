@@ -6,7 +6,7 @@ import ArticleList from "../components/ArticleList";
 const Album = () => {
   return (
     <>
-      <Head title="所有摄影" />
+      <Head title="所有文章" />
       <Layout>
         <ArticleList />
       </Layout>

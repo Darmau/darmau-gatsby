@@ -1,6 +1,6 @@
 :root {
   --theme-color: #B23D2B;
-  --background-color: #F6F6F6;
+  --background-color: #ffffff;
   --navbar-color: #ffffff;
   --card-color: #ffffff;
   --primary-text-color: rgba(0, 0, 0, 0.85);
@@ -11,10 +11,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --theme-color: #983323;
+    --theme-color: #e45d48;
     --background-color: #171717;
     --navbar-color: #1f1f1f;
-    --card-color: #1f1f1f;
+    --card-color: #171717;
     --primary-text-color: rgba(255, 255, 255, 0.9);
     --secondary-text-color: rgba(255, 255, 255, 0.7);
     --border-color: #2f2f2f;
@@ -25,12 +25,13 @@
 html {
   font-family: 'Noto Serif SC', serif;
   margin: 0;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100%;
 }
 
 a {
