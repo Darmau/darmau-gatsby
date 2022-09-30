@@ -39,7 +39,7 @@ const VideoCards = () => {
                 <div className={style.videoCard}>
                   <Link to={node.slug}>
                     <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
-                    <h6 className={style.videoTitle}>{node.basic.title}</h6>
+                    <h4 className={style.videoTitle}>{node.basic.title}</h4>
                     <p className={style.videoDate}>{node.basic.date}</p>
                   </Link>
                 </div>
