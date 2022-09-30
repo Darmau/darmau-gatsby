@@ -1,10 +1,10 @@
-import { graphql } from "gatsby";
 import React from "react"
-import Layout from "../components/Layout";
-import Head from "../components/Head"
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as style from "../styles/album-viewer.module.css"
-import Breadcrumbs from "../components/Breadcrumbs";
+import * as style from "./index.module.css"
+import Head from "../../components/Head";
+import Layout from "../../components/layout/layout";
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 
 export default function AlbumViewer({ data }) {
 

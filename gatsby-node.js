@@ -4,7 +4,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions
 
     // 创建视频详情页
-    const videoPlayerTemplete = path.resolve(`./src/templates/video-player.js`)
+    const videoPlayerTemplete = path.resolve(`./src/templates/video-player/video-player.js`)
     const resultVideo = await graphql(`
          {
             allStrapiVideo {
@@ -31,7 +31,7 @@ exports.createPages = async ({ actions, graphql }) => {
     });
 
     // 创建相册详情页
-    const albumViewerTemplete = path.resolve(`./src/templates/album-viewer.js`)
+    const albumViewerTemplete = path.resolve(`./src/templates/album-viewer/album-viewer.js`)
 
     const resultAlbum = await graphql(`
          {
@@ -62,7 +62,7 @@ exports.createPages = async ({ actions, graphql }) => {
     });
     
     // 创建文章话题页
-    const categoryArticleTemplete = path.resolve(`./src/templates/category-article.js`)
+    const categoryArticleTemplete = path.resolve(`./src/templates/category-article/category-article.js`)
 
     const resultCategoryArticle = await graphql(`
          {

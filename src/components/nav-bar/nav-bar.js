@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import * as style from "../styles/Navbar.module.css"
+import * as style from "./index.module.css"
 
 const Navbar = (props) => {
   return (

@@ -1,0 +1,219 @@
+/* 首页的CSS文件 */
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cover {
+  background-image: url("https://darmau-images.oss-cn-chengdu.aliyuncs.com/head-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 480px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.cover-title {
+  font-size: 40px;
+  color: white;
+}
+
+.cover-caption {
+  font-size: 24px;
+  color: white;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+.article-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 100%;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.article-cover {
+  aspect-ratio: 4 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.article-info {
+  margin-top: 12px;
+}
+
+.article-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+
+.article-description {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin: 8px 0 12px 0;
+}
+
+.article-category {
+  background-color: var(--divider-color);
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 12px;
+  color: var(--secondary-text-color);
+}
+
+button {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+  color: var(--theme-color);
+}
+
+.article-date {
+  font-size: 12px;
+  color: var(--secondary-text-color);
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.photo-cover {
+  width: 210px;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+
+.video-grid {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.video-card {
+  margin-bottom: 16px;
+}
+
+.video-cover {
+  width: 100%;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0 0 0;
+  color: var(--primary-text-color);
+}
+
+.video-date {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  .content-block {
+    max-width: 1300px;
+  }
+
+  .cover {
+    height: 768px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .content-header {
+    margin-bottom: 16px;
+  }
+
+  .article-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 1fr 1fr;
+    padding: 16px;
+  }
+
+  button {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  button > svg {
+    margin-left: 4px;
+  }
+
+  .article-card {
+    display: grid;
+    grid-template-columns: 210px auto;
+    gap: 16px;
+  }
+
+  .article-cover {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+
+  .article-info {
+    margin-top: 0;
+  }
+
+  .article-title {
+    font-size: 24px;
+  }
+
+  .article-description {
+    font-size: 16px;
+  }
+
+  .article-category {
+    font-size: 14px;
+  }
+
+  .article-date {
+    font-size: 14px;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  .video-date {
+    margin-bottom: 0;
+  }
+}

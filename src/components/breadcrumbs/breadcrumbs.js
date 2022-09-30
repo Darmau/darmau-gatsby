@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
 import React from "react";
-import * as style from "../styles/Breadcrumbs.module.css"
+import { Link } from "gatsby";
+import * as style from "./index.module.css"
 
 const Breadcrumbs = (props) => {
   let parentPage = ''

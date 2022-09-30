@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as style from "../styles/ArticleList.module.css"
+import * as style from "./index.module.css"
 
 export default function ArticleList() {
   const { allStrapiArticle } = useStaticQuery(graphql`

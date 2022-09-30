@@ -1,10 +1,10 @@
-import { graphql, Link } from "gatsby";
 import React from "react"
-import Layout from "../components/Layout";
-import Head from "../components/Head"
+import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as style from "../styles/ArticleList.module.css"
-import Breadcrumbs from "../components/Breadcrumbs";
+import Layout from "../../components/layout/layout";
+import Head from "../../components/Head";
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
+import * as style from "../../components/article-list/index.module.css"
 
 export default function CategoryArticle({ data }) {
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from '../components/Layout'
-import VideoCard from "../components/VideoCard";
 import Head from "../components/Head"
+import Layout from '../components/layout/layout'
+import VideoCard from "../components/video-cards/video-cards";
 
 const Video = () => {
   return (

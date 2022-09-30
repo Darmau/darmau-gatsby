@@ -23,6 +23,13 @@
   width: 100%;
 }
 
+.article-card:hover,
+.article-card:active {
+  transform: scale(1.02, 1.02);
+  transition: all 0.1s ease-in;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+}
+
 .article-cover {
   width: 100%;
   aspect-ratio: 3 / 2;

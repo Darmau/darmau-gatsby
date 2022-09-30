@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as style from "../styles/VideoCard.module.css"
+import * as style from "./index.module.css"
 
 
-export default function VideoCard() {
+const VideoCards = () => {
   const { allStrapiVideo } = useStaticQuery(graphql`
     query {
       allStrapiVideo(sort: {fields: basic___date, order: DESC}) {
@@ -39,7 +39,7 @@ export default function VideoCard() {
                 <div className={style.videoCard}>
                   <Link to={node.slug}>
                     <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
-                    <h6 className={style.videoTitle}>{node.basic.title}</h6>
+                    <h4 className={style.videoTitle}>{node.basic.title}</h4>
                     <p className={style.videoDate}>{node.basic.date}</p>
                   </Link>
                 </div>
@@ -51,3 +51,5 @@ export default function VideoCard() {
     </main>
   )
 }
+
+export default VideoCards
