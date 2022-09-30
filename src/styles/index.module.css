@@ -109,7 +109,7 @@ button {
 }
 
 .photo-cover {
-  width: 210px;
+  width: 168px;
   object-fit: cover;
   aspect-ratio: 3 / 2;
 }
