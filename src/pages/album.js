@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/layout/layout";
 import Head from "../components/Head"
-import AlbumGrid from "../components/AlbumGrid";
+import AlbumGrid from "../components/album-grid/album-grid"
 
 const Album = () => {
   return (

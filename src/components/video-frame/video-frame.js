@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function VideoFrame(props) {
+const VideoFrame = (props) => {
   return (
     <iframe
       src={props.src}
@@ -16,3 +16,5 @@ export default function VideoFrame(props) {
     ></iframe>
   )
 }
+
+export default VideoFrame

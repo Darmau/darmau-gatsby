@@ -1,10 +1,10 @@
-import { graphql } from "gatsby";
 import React from "react"
-import Layout from "../components/Layout";
-import Head from "../components/Head"
-import VideoFrame from "../components/VideoFrame";
-import * as style from "../styles/video-player.module.css"
-import Breadcrumbs from "../components/Breadcrumbs";
+import { graphql } from "gatsby";
+import Layout from "../../components/layout/layout";
+import Head from "../../components/Head";
+import VideoFrame from "../../components/video-frame/video-frame"
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
+import * as style from "./index.module.css"
 
 export default function VideoPlayer({ data }) {
 

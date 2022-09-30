@@ -1,7 +1,9 @@
 .grid-container {
   display: flex;
-  justify-content: center;
-  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
   flex: 1 0 auto;
 }
 

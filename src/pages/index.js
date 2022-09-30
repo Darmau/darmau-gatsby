@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Head from "../components/Head"
+import Head from "../components/Head";
+import Layout from "../components/layout/layout";
 
 function IndexPage() {
   return (
