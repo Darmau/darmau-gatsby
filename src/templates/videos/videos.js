@@ -57,7 +57,6 @@ export const allStrapiVideo = graphql`
           }
         }
         slug
-        strapi_id
       }
       pageInfo {
         currentPage

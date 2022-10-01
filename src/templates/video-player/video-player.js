@@ -99,8 +99,6 @@ export const videoQuery = graphql`
                         youtube
                         xigua
                     }
-                    strapi_id
-                    slug
                     basic {
                         date
                         description
