@@ -1,7 +1,38 @@
+const { reporter } = require("gatsby-cli/lib/reporter/reporter")
 const path = require("path")
 
 exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions
+
+    // 创建视频分页
+    const result = await graphql(`
+        {
+            allStrapiVideo {
+            pageInfo {
+                itemCount
+            }
+            }
+        }`)
+
+    if (result.errors) {
+        reporter.panicOnBuild(`Error while running video counts query.`)
+        return
+    }
+
+    const videoCount = result.data.allStrapiVideo.pageInfo.itemCount //视频总数
+    const videosPerPage = 12
+    const numPages = Math.ceil(videoCount / videosPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+            path: i === 0 ? `/videos` : `/videos/${i + 1}`,
+            component: path.resolve("./src/templates/videos/videos.js"),
+            context: {
+                limit: videosPerPage,
+                skip: i * videosPerPage,
+                currentPage: i + 1,
+            },
+        })
+    })
 
     // 创建视频详情页
     const videoPlayerTemplete = path.resolve(`./src/templates/video-player/video-player.js`)
@@ -18,7 +49,7 @@ exports.createPages = async ({ actions, graphql }) => {
         } 
     `)
     if (resultVideo.errors) {
-        reporter.panicOnBuild(`Error while running GraphQL query.`)
+        reporter.panicOnBuild(`Error while running video info query.`)
         return
     }
     const videos = resultVideo.data.allStrapiVideo.edges
@@ -26,7 +57,7 @@ exports.createPages = async ({ actions, graphql }) => {
         createPage({
             path: `/video/${video.node.slug}`,
             component: videoPlayerTemplete,
-            context: {strapi_id: video.node.strapi_id},
+            context: { strapi_id: video.node.strapi_id },
         })
     });
 
@@ -47,7 +78,7 @@ exports.createPages = async ({ actions, graphql }) => {
     `)
 
     if (resultAlbum.errors) {
-        reporter.panicOnBuild(`Error while running GraphQL query.`)
+        reporter.panicOnBuild(`Error while running album info query.`)
         return
     }
 
@@ -57,10 +88,10 @@ exports.createPages = async ({ actions, graphql }) => {
         createPage({
             path: `/album/${album.node.slug}`,
             component: albumViewerTemplete,
-            context: {strapi_id: album.node.strapi_id},
+            context: { strapi_id: album.node.strapi_id },
         })
     });
-    
+
     // 创建文章话题页
     const categoryArticleTemplete = path.resolve(`./src/templates/category-article/category-article.js`)
 
@@ -88,7 +119,7 @@ exports.createPages = async ({ actions, graphql }) => {
         createPage({
             path: `/article/category/${category.node.slug}`,
             component: categoryArticleTemplete,
-            context: {strapi_id: category.node.strapi_id},
+            context: { strapi_id: category.node.strapi_id },
         })
     });
 }
