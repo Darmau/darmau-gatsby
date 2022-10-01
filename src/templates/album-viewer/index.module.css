@@ -1,83 +1,47 @@
 .album-container {
-  display: flex;
-  justify-content: center;
-  flex: 1 0 auto;
-}
-
-.album-main {
-  display: flex;
-  flex-direction: column;
-  align-content: stretch;
-}
-
-.gallery {
-  width: 100%;
-}
-
-.album-active {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .album-list {
   display: flex;
-  height: 120px;
   width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
+  height: 110px;
 }
 
 .album-photo {
-  width: 160px;
-  object-fit: contain;
+  position: relative;
+  height: 100%;
+  width: fit-content;
 }
 
 .album-information {
-  padding-left: 16px;
+  box-sizing: border-box;
+  padding: 16px;
 }
 
 .album-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--primary-text-color);
 }
 
 .album-description {
-  font-size: 16px;
-  color: var(--secondary-text-color);
-}
-
-.album-relative {
-  display: flex;
-  align-items: center;
-}
-
-.album-category {
-  display: inline-block;
-  background-color: var(--divider-color);
-  padding: 4px 8px 4px 8px;
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
-.album-date {
   font-size: 14px;
   color: var(--secondary-text-color);
 }
 
-@media (min-width: 768px) {
-  .album-main {
-    flex-direction: row;
-    max-width: 1280px;
+@media(min-width: 768px) {
+  .album-container {
+    grid-template-columns: 2fr 1fr;
   }
 
-  .gallery {
-    flex-basis: 60%;
-    flex-grow: 1;
+  .album-title {
+    font-size: 24px;
   }
 
-  .album-information {
-    flex-basis: 40%;
-    flex-grow: 0;
-    padding: 48px;
+  .album-description {
+    font-size: 16px;
   }
 }

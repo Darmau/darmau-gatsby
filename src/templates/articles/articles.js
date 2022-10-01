@@ -15,7 +15,7 @@ const Articles = ({ data }) => {
       <Head title="所有文章" />
       <Layout>
         <main className={style.articleContainer}>
-          <div className={style.articleWrap}>
+          <div className={style.articleGrid}>
             {
               articles.map(node => {
                 const image = getImage(node.cover.localFile)

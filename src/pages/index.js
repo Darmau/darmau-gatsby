@@ -33,7 +33,7 @@ function IndexPage({ data }) {
                 <div className={style.articleCard}>
                   <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
                   <div className={style.articleInfo}>
-                    <h4 className={style.contentTitle}>{article.basic.title}</h4>
+                    <h4 className={style.contentTitle}><Link to={'/article/' + article.slug}>{article.basic.title}</Link></h4>
                     <p className={style.articleDescription}>{article.basic.description}</p>
                     <div>
                       <span className={style.articleCategory}>{article.category_article.title}</span>

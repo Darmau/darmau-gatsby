@@ -24,29 +24,27 @@ const AlbumViewer = ({ data }) => {
       <Layout>
         <Breadcrumbs upLevel="albums" active={album.basic.title} />
         <main className={style.albumContainer}>
-          <div className={style.albumMain}>
-            <div clsssName={style.gallery}>
-              <GatsbyImage className={style.albumActive} image={activePhoto} />
-              <div className={style.albumList}>
-                {album.gallery.map(
-                  (photo, index) => {
-                    const image = getImage(photo.localFile)
-                    return (
-                      <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></div>
-                    )
-                  }
-                )}
-              </div>
+          <div clsssName={style.gallery}>
+            <GatsbyImage className={style.albumActive} image={activePhoto} />
+            <div className={style.albumList}>
+              {album.gallery.map(
+                (photo, index) => {
+                  const image = getImage(photo.localFile)
+                  return (
+                    <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></div>
+                  )
+                }
+              )}
             </div>
-            <div clsssName={style.albumInformation}>
-              <h4 className={style.albumTitle}>{album.basic.title}</h4>
-              <p className={style.albumDescription}>{album.basic.description}</p>
-              <div className={style.albumRelative}>
-                <p className={style.albumCategory}>{album.category_album.title}</p>
-                <p className={style.albumDate}>{album.basic.date}</p>
-              </div>
-              {album.location && <p>{album.location}</p>}
+          </div>
+          <div clsssName={style.albumInformation}>
+            <h4 className={style.albumTitle}>{album.basic.title}</h4>
+            <p className={style.albumDescription}>{album.basic.description}</p>
+            <div className={style.albumRelative}>
+              <p className={style.albumCategory}>{album.category_album.title}</p>
+              <p className={style.albumDate}>{album.basic.date}</p>
             </div>
+            {album.location && <p>{album.location}</p>}
           </div>
         </main>
       </Layout>
