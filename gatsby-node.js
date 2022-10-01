@@ -34,6 +34,37 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
+  // 创建文章详情页
+  const articleContentTemplete = path.resolve(`./src/templates/article-content/article-content.js`)
+
+  const resultArticle = await graphql(`
+         {
+            allStrapiArticle {
+            edges {
+                node {
+                strapi_id
+                slug
+                }
+            }
+            }
+        } 
+    `)
+
+  if (resultArticle.errors) {
+    reporter.panicOnBuild(`Error while running article info query.`)
+    return
+  }
+
+  const articles = resultArticle.data.allStrapiArticle.edges
+
+  articles.forEach((article) => {
+    createPage({
+      path: `/article/${article.node.slug}`,
+      component: articleContentTemplete,
+      context: { strapi_id: article.node.strapi_id },
+    })
+  });
+
   //创建相册分页
   const resultAlbums = await graphql(`
         {

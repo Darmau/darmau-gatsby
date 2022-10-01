@@ -5,9 +5,9 @@ import * as style from "./index.module.css"
 const Breadcrumbs = (props) => {
   let parentPage = ''
   switch (props.upLevel) {
-    case 'article': parentPage = '全部文章'; break
+    case 'articles': parentPage = '全部文章'; break
     case 'videos': parentPage = '全部视频'; break
-    case 'album': parentPage = '全部照片';break
+    case 'albums': parentPage = '全部照片';break
     default: parentPage= '首页';
   }
 

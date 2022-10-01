@@ -21,7 +21,7 @@ const Albums = ({data}) => {
                 node => {
                   const image = getImage(node.cover.localFile)
                   return (
-                    <Link to={node.slug}>
+                    <Link to={'/album/' + node.slug}>
                       <div className={style.photoCard}>
                         <GatsbyImage className={style.photoFrame} image={image} alt={node.basic.title}></GatsbyImage>
                       </div>

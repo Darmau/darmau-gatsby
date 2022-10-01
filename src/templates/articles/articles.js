@@ -20,11 +20,12 @@ const Articles = ({ data }) => {
               articles.map(node => {
                 const image = getImage(node.cover.localFile)
                 return (
-                  <Link to={node.slug}>
                     <article className={style.articleCard}>
                       <GatsbyImage className={style.articleCover} image={image} alt={node.basic.title} />
                       <div className={style.articleInfo}>
-                        <h4 className={style.articleTitle}>{node.basic.title}</h4>
+                        <h4 className={style.articleTitle}>
+                          <Link to={'/article/' + node.slug}>{node.basic.title}</Link>
+                        </h4>
                         <p className={style.articleDescription}>{node.basic.description}</p>
                         <div className={style.articleRelative}>
                           <p className={style.articleCategory}><Link to={'category/' + node.category_article.slug}>{node.category_article.title}</Link></p>
@@ -32,7 +33,6 @@ const Articles = ({ data }) => {
                         </div>
                       </div>
                     </article>
-                  </Link>
                 )
               })
             }

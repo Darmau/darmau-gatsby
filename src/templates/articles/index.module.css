@@ -1,8 +1,7 @@
 .article-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 840px;
   width: 100%;
   flex: 1 0 auto;
 }
