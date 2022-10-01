@@ -12,7 +12,7 @@ export default function VideoPlayer({ data }) {
 
   const [activeVideo, setActiveVideo] = React.useState(
     {
-      url: video.source.bilibili,
+      url: video.source.xigua ? video.source.xigua : video.source.bilibili,
       iframeKey: 0
     }
   )
@@ -38,7 +38,7 @@ export default function VideoPlayer({ data }) {
     <>
       <Head title={video.basic.title} />
       <Layout>
-        <Breadcrumbs upLevel="video" active={video.basic.title}/>
+        <Breadcrumbs upLevel="videos" active={video.basic.title}/>
         <main className={style.videoContainer}>
           <div className={style.videoFrame}>
             <VideoFrame src={activeVideo.url} key={activeVideo.iframeKey} title={video.basic.title} />

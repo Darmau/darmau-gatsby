@@ -32,7 +32,7 @@ export default function AlbumViewer({ data }) {
                   (photo, index) => {
                     const image = getImage(photo.localFile)
                     return (
-                      <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage imgClassName={style.innerImage} image={image} alt={photo.alternativeText}></GatsbyImage></div>
+                      <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></div>
                     )
                   }
                 )}

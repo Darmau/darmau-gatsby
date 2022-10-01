@@ -6,7 +6,7 @@ const Breadcrumbs = (props) => {
   let parentPage = ''
   switch (props.upLevel) {
     case 'article': parentPage = '全部文章'; break
-    case 'video': parentPage = '全部视频'; break
+    case 'videos': parentPage = '全部视频'; break
     case 'album': parentPage = '全部照片';break
     default: parentPage= '首页';
   }

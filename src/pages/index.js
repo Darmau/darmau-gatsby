@@ -58,7 +58,7 @@ function IndexPage({ data }) {
             {photos.map(photo => {
               const cover = getImage(photo.cover.localFile)
               return (
-                <Link className={style.photoWrapper} to={'/album/' + photo.slug}>
+                <Link to={'/album/' + photo.slug}>
                   <GatsbyImage className={style.photoCover} image={cover} alt={photo.cover.alternativeText} />
                 </Link>
               )
@@ -80,7 +80,7 @@ function IndexPage({ data }) {
               return (
                 <div className={style.videoCard}>
                   <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
-                  <h5 className={style.contentTitle}>{video.basic.title}</h5>
+                  <h5 className={style.contentTitle}><Link to={'/video/' + video.slug}>{video.basic.title}</Link></h5>
                   <p className={style.videoDate}>{video.basic.date}</p>
                 </div>
               )

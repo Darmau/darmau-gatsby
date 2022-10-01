@@ -61,7 +61,7 @@ const Navbar = (props) => {
           <Link to="/album">摄影</Link>
         </li>
         <li className={style.connectItem}>
-          <Link to="/video">视频</Link>
+          <Link to="/videos">视频</Link>
         </li>
       </ul>
       <div className={style.action}>

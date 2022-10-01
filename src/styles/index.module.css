@@ -59,7 +59,6 @@
 .article-cover {
   aspect-ratio: 4 / 2;
   object-fit: cover;
-  border-radius: 4px;
 }
 
 .article-info {
@@ -131,6 +130,7 @@ button {
 
 .video-cover {
   width: 100%;
+  margin-bottom: 8px;
 }
 
 .video-date {
@@ -147,7 +147,7 @@ button {
 
 @media (min-width: 768px) {
   .content-block {
-    max-width: 1300px;
+    margin-bottom: 16px;
   }
 
   .cover {
@@ -163,9 +163,7 @@ button {
   }
 
   .article-grid {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto 1fr 1fr;
-    padding: 16px;
+    grid-template-columns: 1fr 1fr;
   }
 
   button {
@@ -225,6 +223,10 @@ button {
 }
 
 @media (min-width: 1280px) {
+  .content-block {
+    max-width: 1440px;
+  }
+
   .photo-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
