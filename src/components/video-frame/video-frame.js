@@ -13,6 +13,7 @@ const VideoFrame = (props) => {
       frameborder="no"
       framespacing="0"
       allowfullscreen="true"
+      referrerpolicy="unsafe-url"
     ></iframe>
   )
 }

@@ -13,7 +13,7 @@ function IndexPage({ data }) {
 
   return (
     <>
-      <Head title="可可托海没有海" />
+      <Head title="首页" />
       <Layout>
         <section className={style.cover}>
           <h1 className={style.coverTitle}>这里用什么图和文案都没想好</h1>
@@ -33,7 +33,7 @@ function IndexPage({ data }) {
                 <div className={style.articleCard}>
                   <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
                   <div className={style.articleInfo}>
-                    <h4 className={style.contentTitle}>{article.basic.title}</h4>
+                    <h4 className={style.contentTitle}><Link to={'/article/' + article.slug}>{article.basic.title}</Link></h4>
                     <p className={style.articleDescription}>{article.basic.description}</p>
                     <div>
                       <span className={style.articleCategory}>{article.category_article.title}</span>
@@ -58,7 +58,7 @@ function IndexPage({ data }) {
             {photos.map(photo => {
               const cover = getImage(photo.cover.localFile)
               return (
-                <Link className={style.photoWrapper} to={'/album/' + photo.slug}>
+                <Link to={'/album/' + photo.slug}>
                   <GatsbyImage className={style.photoCover} image={cover} alt={photo.cover.alternativeText} />
                 </Link>
               )
@@ -80,7 +80,7 @@ function IndexPage({ data }) {
               return (
                 <div className={style.videoCard}>
                   <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
-                  <h5 className={style.contentTitle}>{video.basic.title}</h5>
+                  <h5 className={style.contentTitle}><Link to={'/video/' + video.slug}>{video.basic.title}</Link></h5>
                   <p className={style.videoDate}>{video.basic.date}</p>
                 </div>
               )

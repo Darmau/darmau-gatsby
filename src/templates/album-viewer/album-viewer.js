@@ -6,7 +6,7 @@ import Head from "../../components/Head";
 import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 
-export default function AlbumViewer({ data }) {
+const AlbumViewer = ({ data }) => {
 
   const album = data.allStrapiAlbum.nodes[0]
 
@@ -22,30 +22,29 @@ export default function AlbumViewer({ data }) {
     <>
       <Head title={album.basic.title} />
       <Layout>
-        <Breadcrumbs upLevel="album" active={album.basic.title} />
+        <Breadcrumbs upLevel="albums" active={album.basic.title} />
         <main className={style.albumContainer}>
-          <div className={style.albumMain}>
-            <div clsssName={style.gallery}>
-              <GatsbyImage className={style.albumActive} image={activePhoto} />
-              <div className={style.albumList}>
-                {album.gallery.map(
-                  (photo, index) => {
-                    const image = getImage(photo.localFile)
-                    return (
-                      <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage imgClassName={style.innerImage} image={image} alt={photo.alternativeText}></GatsbyImage></div>
-                    )
-                  }
-                )}
-              </div>
+          <div clsssName={style.gallery}>
+            <GatsbyImage className={style.albumActive} image={activePhoto} />
+            <div className={style.albumList}>
+              {album.gallery.map(
+                (photo, index) => {
+                  const image = getImage(photo.localFile)
+                  return (
+                    <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></div>
+                  )
+                }
+              )}
             </div>
-            <div clsssName={style.albumInformation}>
-              <h4 className={style.albumTitle}>{album.basic.title}</h4>
-              <p className={style.albumDescription}>{album.basic.description}</p>
-              <div className={style.albumRelative}>
-                <p className={style.albumCategory}>{album.category_album.title}</p>
-                <p className={style.albumDate}>{album.basic.date}</p>
-              </div>
+          </div>
+          <div clsssName={style.albumInformation}>
+            <h4 className={style.albumTitle}>{album.basic.title}</h4>
+            <p className={style.albumDescription}>{album.basic.description}</p>
+            <div className={style.albumRelative}>
+              <p className={style.albumCategory}>{album.category_album.title}</p>
+              <p className={style.albumDate}>{album.basic.date}</p>
             </div>
+            {album.location && <p>{album.location}</p>}
           </div>
         </main>
       </Layout>
@@ -55,29 +54,30 @@ export default function AlbumViewer({ data }) {
 
 // 查询指定id的相册
 export const albumQuery = graphql`
-query AlbumViewerById($strapi_id: Int) {
+  query AlbumViewerById($strapi_id: Int!) {
     allStrapiAlbum(filter: {strapi_id: {eq: $strapi_id}}) {
-        nodes {
-            strapi_id
-            slug
-            basic {
-                date
-                description
-                isTop
-                title
-            }
-            gallery {
-                localFile {
-                    childImageSharp {
-                    gatsbyImageData(width: 960)
-                    }
-                    id
-                }
-                alternativeText
-            }
-            category_album {
-                title
-            }
+      nodes {
+        basic {
+          date
+          description
+          isTop
+          title
         }
+        location
+        gallery {
+          localFile {
+            childImageSharp {
+            gatsbyImageData(width: 960)
+            }
+            id
+          }
+          alternativeText
+        }
+        category_album {
+          title
+        }
+      }
     }
-}`
+  }`
+
+export default AlbumViewer
