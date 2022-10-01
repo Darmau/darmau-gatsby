@@ -55,10 +55,10 @@ const Navbar = (props) => {
       </Link>
       <ul className={style.connectList}>
         <li className={style.connectItem}>
-          <Link to="/article">文章</Link>
+          <Link to="/articles">文章</Link>
         </li>
         <li className={style.connectItem}>
-          <Link to="/album">摄影</Link>
+          <Link to="/albums">摄影</Link>
         </li>
         <li className={style.connectItem}>
           <Link to="/videos">视频</Link>

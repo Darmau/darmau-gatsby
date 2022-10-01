@@ -55,8 +55,8 @@ const Footer = () => {
           <div>
             <h5 className={style.catalogTitle}>博客</h5>
             <ul className={style.catalogList}>
-              <li className={style.catalogItem}><Link to="/article">文章</Link></li>
-              <li className={style.catalogItem}><Link to="/album">摄影</Link></li>
+              <li className={style.catalogItem}><Link to="/articles">文章</Link></li>
+              <li className={style.catalogItem}><Link to="/albums">摄影</Link></li>
               <li className={style.catalogItem}><Link to="/videos">视频 </Link></li>
             </ul>
           </div>

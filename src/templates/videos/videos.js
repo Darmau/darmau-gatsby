@@ -6,7 +6,6 @@ import Layout from "../../components/layout/layout";
 import Head from "../../components/Head";
 import Pagination from "../../components/pagination/pagination";
 
-
 const Videos = ({ data }) => {
   const videos = data.allStrapiVideo.nodes
   const pageInfo = data.allStrapiVideo.pageInfo
@@ -43,30 +42,30 @@ const Videos = ({ data }) => {
 }
 
 export const allStrapiVideo = graphql`
-query videoListQuery($skip: Int!, $limit: Int!) {
-  allStrapiVideo(sort: {fields: basic___date, order: DESC}, skip: $skip, limit: $limit) {
-    nodes {
-      basic {
-        title
-        date
-      }
-      cover {
-        localFile {
-          childImageSharp {
-            gatsbyImageData(width: 420, placeholder: BLURRED, formats: AUTO)
+  query videoListQuery($skip: Int!, $limit: Int!) {
+    allStrapiVideo(sort: {fields: basic___date, order: DESC}, skip: $skip, limit: $limit) {
+      nodes {
+        basic {
+          title
+          date
+        }
+        cover {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: AUTO)
+            }
           }
         }
+        slug
+        strapi_id
       }
-      slug
-      strapi_id
+      pageInfo {
+        currentPage
+        hasNextPage
+        hasPreviousPage
+        pageCount
+      }
     }
-    pageInfo {
-      currentPage
-      hasNextPage
-      hasPreviousPage
-      pageCount
-    }
-  }
-}`
+  }`
 
 export default Videos

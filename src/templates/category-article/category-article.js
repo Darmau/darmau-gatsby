@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout/layout";
 import Head from "../../components/Head";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
-import * as style from "../../components/article-list/index.module.css"
+import * as style from "../articles/index.module.css"
 
 export default function CategoryArticle({ data }) {
 

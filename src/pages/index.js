@@ -13,7 +13,7 @@ function IndexPage({ data }) {
 
   return (
     <>
-      <Head title="可可托海没有海" />
+      <Head title="首页" />
       <Layout>
         <section className={style.cover}>
           <h1 className={style.coverTitle}>这里用什么图和文案都没想好</h1>
