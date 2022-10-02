@@ -33,7 +33,7 @@ const ArticleContent = ({ data }) => {
             </div>
           </article>
           <address className={style.about}>
-            <div className={style.aboutAuthor}>
+            <div>
               <header className={style.aboutAuthorHeader}>
                 <small className={style.aboutAuthorTitle}>关于作者</small>
                 <div className={style.line}></div>
