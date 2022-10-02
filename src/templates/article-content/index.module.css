@@ -49,7 +49,7 @@ article {
 article h1 {
   font-size: 28px;
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 24px;
   margin-bottom: 8px;
 }
@@ -57,7 +57,7 @@ article h1 {
 article h2 {
   font-size: 24px;
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 24px;
   margin-bottom: 8px;
 }
@@ -65,7 +65,7 @@ article h2 {
 article h3 {
   font-size: 20px;
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 24px;
   margin-bottom: 8px;
 }
@@ -73,7 +73,7 @@ article h3 {
 article h4 {
   font-size: 18px;
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 22px;
   margin-bottom: 8px;
 }
@@ -81,7 +81,7 @@ article h4 {
 article h5 {
   font-size: 16px;
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 20px;
   margin-bottom: 8px;
 }
@@ -89,7 +89,7 @@ article h5 {
 article h6 {
   font-size: 15px;
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 18px;
   margin-bottom: 8px;
 }
@@ -101,7 +101,7 @@ article h6 {
 }
 
 .paragraph b {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .paragraph mark {
@@ -192,7 +192,7 @@ figure figcaption {
 
 .about-author-title {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--secondary-text-color);
   font-style: normal;
   flex: 0 0 max-content;
@@ -226,7 +226,7 @@ figure figcaption {
 
 .author-name {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
   font-style: normal;
   color: var(--primary-text-color);
   margin-bottom: 8px;
@@ -289,7 +289,7 @@ figure figcaption {
   
   .catalog header {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 8px;
   }
   

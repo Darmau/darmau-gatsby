@@ -24,7 +24,7 @@ button {
 
 .video-title {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: bold;
   margin-top: 24px;
   margin-bottom: 12px;
   color: var(--primary-text-color);
