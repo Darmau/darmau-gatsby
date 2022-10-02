@@ -231,6 +231,7 @@ figure figcaption {
 .slogan {
   font-size: 14px;
   font-style: normal;
+  line-height: 1.5;
   color: var(--secondary-text-color);
 }
 
@@ -241,11 +242,17 @@ figure figcaption {
 }
 
 @media (min-width: 768px) {
+  
   .article-container {
     grid-template-columns: 160px auto 256px;
     padding-left: 48px;
     padding-right: 48px;
     max-width: 1440px;
+  }
+  
+  .about {
+    position:sticky;
+    top: 151px;
   }
 
   .catalog {
@@ -253,7 +260,7 @@ figure figcaption {
     flex-direction: column;
     color: var(--primary-text-color);
     position:sticky;
-    top: 140px;
+    top: 151px;
   }
   
   .catalog header {
