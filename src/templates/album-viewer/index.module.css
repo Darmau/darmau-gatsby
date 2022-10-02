@@ -54,6 +54,11 @@
 }
 
 .album-information {
+  display: none;
+}
+
+/* 
+.album-information {
   box-sizing: border-box;
   padding: 16px;
 }
@@ -110,4 +115,4 @@
   .album-description {
     font-size: 16px;
   }
-}
+} */
