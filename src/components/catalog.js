@@ -34,14 +34,14 @@ const Catalog = ({ data }) => {
         num6++
         return (<a href={'#h6-' + num6.toString()}>{header.text}</a>)
       default:
-        return (<a>{data.text}</a>)
+        return (<p>{data.text}</p>)
     }
   }
 
   return (
     <aside className={style.catalog}>
-      <header className={style.aboutTitle}>
-        <small className={style.aboutAuthor}>目录</small>
+      <header className={style.aboutAuthorHeader}>
+        <small className={style.aboutAuthorTitle}>目录</small>
         <div className={style.line}></div>
       </header>
       {headersArr.map(

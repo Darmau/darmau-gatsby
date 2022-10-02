@@ -23,8 +23,8 @@ button {
 }
 
 .video-title {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 600;
   margin-top: 24px;
   margin-bottom: 12px;
   color: var(--primary-text-color);
@@ -66,6 +66,10 @@ button {
 @media (min-width: 600px) {
   .video-frame {
     height: 400px;
+  }
+
+  .video-title {
+    font-size: 24px;
   }
 }
 
