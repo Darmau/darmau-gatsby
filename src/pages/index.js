@@ -21,7 +21,7 @@ function IndexPage({ data }) {
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
             <h2 className={style.sectionTitle}>文章</h2>
-            <button><Link to="/article">更多文章</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button><Link to="/articles">更多文章</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.0002 16.6666L8.81266 15.5L13.4793 10.8333H3.3335V9.16665H13.4793L8.81266 4.49998L10.0002 3.33331L16.6668 9.99998L10.0002 16.6666Z" fill="#B23D2B" />
             </svg>
             </button>
@@ -49,7 +49,7 @@ function IndexPage({ data }) {
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
             <h2 className={style.sectionTitle}>摄影</h2>
-            <button><Link to="/album">更多照片</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button><Link to="/albums">更多照片</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.0002 16.6666L8.81266 15.5L13.4793 10.8333H3.3335V9.16665H13.4793L8.81266 4.49998L10.0002 3.33331L16.6668 9.99998L10.0002 16.6666Z" fill="#B23D2B" />
             </svg>
             </button>
@@ -69,7 +69,7 @@ function IndexPage({ data }) {
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
             <h2 className={style.sectionTitle}>视频</h2>
-            <button><Link to="/video">更多视频</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button><Link to="/videos">更多视频</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.0002 16.6666L8.81266 15.5L13.4793 10.8333H3.3335V9.16665H13.4793L8.81266 4.49998L10.0002 3.33331L16.6668 9.99998L10.0002 16.6666Z" fill="#B23D2B" />
             </svg>
             </button>

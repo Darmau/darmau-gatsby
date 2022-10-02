@@ -26,21 +26,28 @@ const MainBody = ({ data }) => {
   }
 
   //处理header
+  let num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0, num6 = 0
   function handleHeader(data) {
     const level = data.level
     switch (level) {
       case 1:
-        return (<h1>{data.text}</h1>)
+        num1++
+        return (<h1 id={'h1-' + num1.toString()}>{data.text}</h1>)
       case 2:
-        return (<h2>{data.text}</h2>)
+        num2++
+        return (<h2 id={'h2-' + num2.toString()}>{data.text}</h2>)
       case 3:
-        return (<h3>{data.text}</h3>)
+        num3++
+        return (<h3 id={'h3-' + num3.toString()}>{data.text}</h3>)
       case 4:
-        return (<h4>{data.text}</h4>)
+        num4++
+        return (<h4 id={'h4-' + num4.toString()}>{data.text}</h4>)
       case 5:
-        return (<h5>{data.text}</h5>)
+        num5++
+        return (<h5 id={'h5-' + num5.toString()}>{data.text}</h5>)
       case 6:
-        return (<h6>{data.text}</h6>)
+        num6++
+        return (<h6 id={'h6-' + num6.toString()}>{data.text}</h6>)
       default:
         return (<p>{data.text}</p>)
     }

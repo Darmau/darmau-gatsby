@@ -29,18 +29,18 @@ const AlbumViewer = ({ data }) => {
               <GatsbyImage className={style.activePhoto} image={activePhoto} />
             </div>
             <div className={style.albumFrame}>
-              <div className={style.albumList}>
-                {album.gallery.map(
-                  (photo, index) => {
-                    const image = getImage(photo.localFile)
-                    return (
-                      <div className={style.albumPhotoFrame} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}>
-                        <GatsbyImage imgClassName={style.albumPhoto} image={image} alt={photo.alternativeText} ></GatsbyImage>
-                      </div>
-                    )
-                  }
-                )}
-              </div>
+            <div className={style.albumList}>
+              {album.gallery.map(
+                (photo, index) => {
+                  const image = getImage(photo.localFile)
+                  return (
+                    <div className={style.albumPhotoFrame} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}>
+                      <GatsbyImage image={image} alt={photo.alternativeText} ></GatsbyImage>
+                    </div>
+                  )
+                }
+              )}
+            </div>
             </div>
           </div>
 
