@@ -43,7 +43,7 @@
 
 .article-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--primary-text-color);
   margin-top: 12px;
   margin-bottom: 8px;

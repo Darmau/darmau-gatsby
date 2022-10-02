@@ -59,7 +59,7 @@ module.exports = {
         icon: `./src/images/favicon.svg`, 
       },
     },
-    {
+    /* {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
@@ -71,6 +71,6 @@ module.exports = {
           },
         ],
       },
-    },
+    }, */
   ]
 };
