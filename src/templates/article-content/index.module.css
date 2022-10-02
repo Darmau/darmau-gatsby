@@ -176,9 +176,10 @@ figure figcaption {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+  justify-content: space-between;
 }
 
-.about-title {
+.about-author-header {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -186,7 +187,7 @@ figure figcaption {
   margin-bottom: 8px;
 }
 
-.about-author {
+.about-author-title {
   font-size: 13px;
   font-weight: 600;
   color: var(--secondary-text-color);
@@ -233,6 +234,26 @@ figure figcaption {
   font-style: normal;
   line-height: 1.5;
   color: var(--secondary-text-color);
+}
+
+.wechat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  border-top: 1px solid var(--divider-color);
+  padding-top: 24px;
+}
+
+.wechat-text {
+  font-size: 14px;
+  font-style: normal;
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.wechat-img {
+  width: 128px;
 }
 
 @media (min-width: 500px) {

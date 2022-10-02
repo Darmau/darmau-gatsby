@@ -4,6 +4,7 @@ import * as style from "./index.module.css"
 import SocialMedia from "../social-media";
 
 const Footer = () => {
+  const thisYear = new Date
   return (
     <footer className={style.footer}>
       <div className={style.internalLinks}>
@@ -72,7 +73,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.externalLinks}>
-        <p className={style.websiteInfo}>2022 © All Right Reserved</p>
+        <p className={style.websiteInfo}>{thisYear.getFullYear()} © Designed and Developed by Darmau</p>
         <SocialMedia/>
       </div>
     </footer>
