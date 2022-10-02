@@ -26,6 +26,15 @@
   margin: 8px 0 8px 0;
 }
 
+.article-category {
+  background-color: var(--divider-color);
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: inline-block;
+  color: var(--secondary-text-color);
+}
+
 article {
   max-width: 700px;
 }
@@ -34,7 +43,7 @@ article h1 {
   font-size: 28px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -42,7 +51,7 @@ article h2 {
   font-size: 24px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -50,7 +59,7 @@ article h3 {
   font-size: 20px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -58,7 +67,7 @@ article h4 {
   font-size: 18px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 22px;
   margin-bottom: 8px;
 }
 
@@ -66,7 +75,7 @@ article h5 {
   font-size: 16px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 20px;
   margin-bottom: 8px;
 }
 
@@ -74,13 +83,13 @@ article h6 {
   font-size: 15px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 18px;
   margin-bottom: 8px;
 }
 
 .paragraph {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 2;
   color: var(--primary-text-color);
 }
 
@@ -110,6 +119,7 @@ article h6 {
 article ol,
 article ul {
   margin-top: -8px;
+  color: var(--primary-text-color);
 }
 
 
@@ -125,7 +135,7 @@ figure {
 }
 
 figure blockquote {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--primary-text-color);
   margin: 0;
   padding: 16px;
@@ -253,5 +263,9 @@ figure figcaption {
 
   article p {
     font-size: 16px;
+  }
+
+  figure blockquote {
+    font-size: 22px;
   }
 }

@@ -16,7 +16,7 @@ function IndexPage({ data }) {
       <Head title="首页" />
       <Layout>
         <section className={style.cover}>
-          <h1 className={style.coverTitle}>这里用什么图和文案都没想好</h1>
+          <h1 className={style.coverTitle}>李大毛没有猫</h1>
         </section>
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>

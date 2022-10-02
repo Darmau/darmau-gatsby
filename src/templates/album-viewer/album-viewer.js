@@ -25,18 +25,25 @@ const AlbumViewer = ({ data }) => {
         <Breadcrumbs upLevel="albums" active={album.basic.title} />
         <main className={style.albumContainer}>
           <div clsssName={style.gallery}>
-            <GatsbyImage className={style.albumActive} image={activePhoto} />
-            <div className={style.albumList}>
-              {album.gallery.map(
-                (photo, index) => {
-                  const image = getImage(photo.localFile)
-                  return (
-                    <div className={style.albumPhoto} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}><GatsbyImage image={image} alt={photo.alternativeText}></GatsbyImage></div>
-                  )
-                }
-              )}
+            <div className={style.activePhotoFrame}>
+              <GatsbyImage className={style.activePhoto} image={activePhoto} />
+            </div>
+            <div className={style.albumFrame}>
+              <div className={style.albumList}>
+                {album.gallery.map(
+                  (photo, index) => {
+                    const image = getImage(photo.localFile)
+                    return (
+                      <div className={style.albumPhotoFrame} onClick={switchActive(index)} onKeyDown={switchActive(index)} key={index}>
+                        <GatsbyImage imgClassName={style.albumPhoto} image={image} alt={photo.alternativeText} ></GatsbyImage>
+                      </div>
+                    )
+                  }
+                )}
+              </div>
             </div>
           </div>
+
           <div clsssName={style.albumInformation}>
             <h4 className={style.albumTitle}>{album.basic.title}</h4>
             <p className={style.albumDescription}>{album.basic.description}</p>
@@ -44,7 +51,7 @@ const AlbumViewer = ({ data }) => {
               <p className={style.albumCategory}>{album.category_album.title}</p>
               <p className={style.albumDate}>{album.basic.date}</p>
             </div>
-            {album.location && <p>{album.location}</p>}
+            {album.location && <p className={style.albumLocation}>{album.location}</p>}
           </div>
         </main>
       </Layout>
@@ -67,7 +74,7 @@ export const albumQuery = graphql`
         gallery {
           localFile {
             childImageSharp {
-            gatsbyImageData(width: 960)
+            gatsbyImageData(width: 960, placeholder: DOMINANT_COLOR)
             }
             id
           }

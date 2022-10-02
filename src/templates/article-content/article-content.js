@@ -24,7 +24,7 @@ const ArticleContent = ({ data }) => {
             <h1>{article.basic.title}</h1>
             <p className={style.date}>{article.basic.date}</p>
             <div>
-              <p>{article.category_article.title}</p>
+              <p className={style.articleCategory}>{article.category_article.title}</p>
               <p>{article.tags.title && article.tags.title}</p>
             </div>
             <div className={style.mainContent}>

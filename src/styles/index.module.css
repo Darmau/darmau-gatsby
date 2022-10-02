@@ -28,13 +28,9 @@
   margin-bottom: 12px;
 }
 
+/* -------首页动效------ */
 .cover-title {
-  font-size: 40px;
-  color: white;
-}
-
-.cover-caption {
-  font-size: 24px;
+  font-size: 64px;
   color: white;
 }
 
@@ -172,7 +168,7 @@ button {
     align-items: center;
   }
 
-  button > svg {
+  button>svg {
     margin-left: 4px;
   }
 
