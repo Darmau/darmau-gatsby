@@ -8,6 +8,7 @@
   box-sizing: border-box;
   padding: 16px;
   align-items: start;
+  margin-bottom: 36px;
 }
 
 .catalog {
@@ -149,7 +150,7 @@ figure blockquote {
 figure figcaption {
   font-size: 16px;
   color: var(--secondary-text-color);
-  padding-left: 16px;
+  text-align: right;
 }
 
 .image-frame {
