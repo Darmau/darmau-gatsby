@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import * as style from "./footer/index.module.css"
 
 export default function SocialMedia () {

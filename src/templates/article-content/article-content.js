@@ -6,7 +6,7 @@ import Head from "../../components/Head";
 import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import MainBody from "../../components/TextTransfer";
-import SocialMedia from "../../components/social-media";
+import Catalog from "../../components/catalog";
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
@@ -19,12 +19,13 @@ const ArticleContent = ({ data }) => {
       <Layout>
         <Breadcrumbs upLevel="articles" active={article.basic.title} />
         <main className={style.articleContainer}>
+          <Catalog data={mainContentString}/>
           <article>
             <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
             <h1>{article.basic.title}</h1>
             <p className={style.date}>{article.basic.date}</p>
             <div>
-              <p>{article.category_article.title}</p>
+              <p className={style.articleCategory}>{article.category_article.title}</p>
               <p>{article.tags.title && article.tags.title}</p>
             </div>
             <div className={style.mainContent}>

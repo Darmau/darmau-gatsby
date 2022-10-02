@@ -5,9 +5,13 @@
   justify-content: center;
   flex: 1 0 auto;
   width: 100%;
-  max-width: 1440px;
   box-sizing: border-box;
   padding: 16px;
+  align-items: start;
+}
+
+.catalog {
+  display: none;
 }
 
 .main-content {
@@ -26,6 +30,15 @@
   margin: 8px 0 8px 0;
 }
 
+.article-category {
+  background-color: var(--divider-color);
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: inline-block;
+  color: var(--secondary-text-color);
+}
+
 article {
   max-width: 700px;
 }
@@ -34,7 +47,7 @@ article h1 {
   font-size: 28px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -42,7 +55,7 @@ article h2 {
   font-size: 24px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -50,7 +63,7 @@ article h3 {
   font-size: 20px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -58,7 +71,7 @@ article h4 {
   font-size: 18px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 22px;
   margin-bottom: 8px;
 }
 
@@ -66,7 +79,7 @@ article h5 {
   font-size: 16px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 20px;
   margin-bottom: 8px;
 }
 
@@ -74,13 +87,13 @@ article h6 {
   font-size: 15px;
   color: var(--primary-text-color);
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 18px;
   margin-bottom: 8px;
 }
 
 .paragraph {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 2;
   color: var(--primary-text-color);
 }
 
@@ -110,6 +123,7 @@ article h6 {
 article ol,
 article ul {
   margin-top: -8px;
+  color: var(--primary-text-color);
 }
 
 
@@ -125,7 +139,7 @@ figure {
 }
 
 figure blockquote {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--primary-text-color);
   margin: 0;
   padding: 16px;
@@ -220,11 +234,37 @@ figure figcaption {
   color: var(--secondary-text-color);
 }
 
+@media (min-width: 500px) {
+  .article-container {
+    max-width: 500px;
+  }
+}
+
 @media (min-width: 768px) {
   .article-container {
-    grid-template-columns: auto 256px;
+    grid-template-columns: 160px auto 256px;
     padding-left: 48px;
     padding-right: 48px;
+    max-width: 1440px;
+  }
+
+  .catalog {
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-text-color);
+    position:sticky;
+    top: 140px;
+  }
+  
+  .catalog header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .catalog a {
+    color: var(--primary-text-color);
+    margin: 4px 0;
   }
 
   article h1 {
@@ -253,5 +293,9 @@ figure figcaption {
 
   article p {
     font-size: 16px;
+  }
+
+  figure blockquote {
+    font-size: 22px;
   }
 }
