@@ -4,7 +4,9 @@ import * as style from "./index.module.css"
 import SocialMedia from "../social-media";
 
 const Footer = () => {
+
   const thisYear = new Date()
+
   return (
     <footer className={style.footer}>
       <div className={style.internalLinks}>
