@@ -33,11 +33,13 @@
 
 .article-category {
   background-color: var(--divider-color);
+  font-size: 12px;
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
   margin-right: 8px;
   display: inline-block;
   color: var(--secondary-text-color);
+  margin: 8px 0;
 }
 
 article {

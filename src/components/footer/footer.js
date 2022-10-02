@@ -4,7 +4,9 @@ import * as style from "./index.module.css"
 import SocialMedia from "../social-media";
 
 const Footer = () => {
-  const thisYear = new Date
+
+  const thisYear = new Date()
+
   return (
     <footer className={style.footer}>
       <div className={style.internalLinks}>
@@ -66,8 +68,6 @@ const Footer = () => {
             <h5 className={style.catalogTitle}>关于</h5>
             <ul className={style.catalogList}>
               <li className={style.catalogItem}><Link to="/changelog">本站</Link></li>
-              <li className={style.catalogItem}>简历</li>
-              <li className={style.catalogItem}>联系我</li>
             </ul>
           </div>
         </div>

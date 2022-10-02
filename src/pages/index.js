@@ -108,7 +108,7 @@ export const frontPageQuery = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 600, placeholder: BLURRED, formats: AUTO)
+              gatsbyImageData(width: 320, placeholder: BLURRED, formats: AUTO)
             }
           }
         }
@@ -138,7 +138,7 @@ export const frontPageQuery = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 360, formats: AUTO, placeholder: BLURRED)
+              gatsbyImageData(width: 320, formats: AUTO, placeholder: BLURRED)
             }
           }
         }
