@@ -56,14 +56,6 @@
   width: 100%;
 }
 
-/* *************** */
-
-/* .connect-item {
-  text-align: center;
-  text-decoration: none;
-  margin: 0 12px 0 12px;
-} */
-
 .connect-item:hover {
   color: var(--theme-color);
 }
