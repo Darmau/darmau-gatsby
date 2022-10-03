@@ -4,6 +4,7 @@ import React from "react";
 import Head from "../components/Head";
 import Layout from "../components/layout/layout";
 import * as style from "../styles/index.module.css"
+import Cover from "../components/cover/cover";
 
 function IndexPage({ data }) {
 
@@ -16,7 +17,7 @@ function IndexPage({ data }) {
       <Head title="首页" />
       <Layout>
         <section className={style.cover}>
-          <h1 className={style.coverTitle}>设计中</h1>
+          <Cover />
         </section>
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
