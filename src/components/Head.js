@@ -16,7 +16,7 @@ const Head = ({ title }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="设计师、开发者李大毛的个人网站" />
         <meta name="bytedance-verification-code" content="T4zz1O2qU5K/j1KTM25K" />
-        <meta name="sogou_site_verification" content="L0VPQ3Fuj4" />
+        <meta name="sogou_site_verification" content="CsR7Ekik82" />
       </Helmet>
     </>
   )
