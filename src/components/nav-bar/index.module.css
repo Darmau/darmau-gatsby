@@ -34,11 +34,26 @@
   color: var(--primary-text-color);
 }
 
-
 .connect-item {
-  text-align: center;
-  text-decoration: none;
-  margin: 0 12px 0 12px;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-weight: normal;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+.connect-item:after {
+  border-bottom: 2px solid var(--theme-color);
+  content: "";
+  display: block;
+  margin: 4px auto 0;
+  transition: width 250ms ease-in-out 0s;
+  width: 0;
+}
+.connect-item:hover:after {
+  transition: width 100ms ease-in-out 0s;
+  width: 100%;
 }
 
 .connect-item:hover {
