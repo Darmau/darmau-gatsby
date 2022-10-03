@@ -112,7 +112,7 @@ const MainBody = ({ data }) => {
   function handleImage(data) {
     return (
       <picture className={style.imageFrame}>
-        <img className={style.image} src={'https://darmau.media' + data.file.url} alt={data.file.alt} />
+        <img className={style.image} src={'https://api.darmau.design' + data.file.url} alt={data.file.alt} />
         {data.caption && <figcaption className={style.imageCaption}>{data.caption}</figcaption>}
       </picture>
     )

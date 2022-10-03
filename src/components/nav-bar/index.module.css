@@ -32,6 +32,7 @@
   list-style: none;
   font-size: 16px;
   color: var(--primary-text-color);
+  padding-top: 4px;
 }
 
 .connect-item {
@@ -41,7 +42,7 @@
   letter-spacing: 4px;
   font-weight: normal;
   box-sizing: border-box;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 .connect-item:after {
   border-bottom: 2px solid var(--theme-color);
@@ -78,6 +79,10 @@
   .connect-list {
     font-size: 20px;
     margin-right: 140px;
+  }
+
+  .connect-item {
+    padding: 0 16px;
   }
 
   .logo-full {
