@@ -16,14 +16,13 @@ function IndexPage({ data }) {
       <Head title="首页" />
       <Layout>
         <section className={style.cover}>
-          <h1 className={style.coverTitle}>李大毛没有猫</h1>
+          <h1 className={style.coverTitle}>设计中</h1>
         </section>
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
             <h2 className={style.sectionTitle}>文章</h2>
-            <button><Link to="/articles">更多文章</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.0002 16.6666L8.81266 15.5L13.4793 10.8333H3.3335V9.16665H13.4793L8.81266 4.49998L10.0002 3.33331L16.6668 9.99998L10.0002 16.6666Z" fill="#B23D2B" />
-            </svg>
+            <button>
+              <Link to="/articles">更多文章</Link>
             </button>
           </header>
           <div className={style.articleGrid}>
@@ -49,9 +48,8 @@ function IndexPage({ data }) {
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
             <h2 className={style.sectionTitle}>摄影</h2>
-            <button><Link to="/albums">更多照片</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.0002 16.6666L8.81266 15.5L13.4793 10.8333H3.3335V9.16665H13.4793L8.81266 4.49998L10.0002 3.33331L16.6668 9.99998L10.0002 16.6666Z" fill="#B23D2B" />
-            </svg>
+            <button>
+              <Link to="/albums">更多照片</Link>
             </button>
           </header>
           <div className={style.photoGrid}>
@@ -69,9 +67,8 @@ function IndexPage({ data }) {
         <section className={style.contentBlock}>
           <header className={style.contentHeader}>
             <h2 className={style.sectionTitle}>视频</h2>
-            <button><Link to="/videos">更多视频</Link><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.0002 16.6666L8.81266 15.5L13.4793 10.8333H3.3335V9.16665H13.4793L8.81266 4.49998L10.0002 3.33331L16.6668 9.99998L10.0002 16.6666Z" fill="#B23D2B" />
-            </svg>
+            <button>
+              <Link to="/videos">更多视频</Link>
             </button>
           </header>
           <div className={style.videoGrid}>

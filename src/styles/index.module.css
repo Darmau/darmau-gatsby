@@ -9,7 +9,7 @@
 }
 
 .cover {
-  background-image: url("https://darmau-images.oss-cn-chengdu.aliyuncs.com/head-cover.jpg");
+  background-color: bisque;
   background-size: cover;
   background-position: center;
   height: 480px;
@@ -28,7 +28,6 @@
   margin-bottom: 12px;
 }
 
-/* -------首页动效------ */
 .cover-title {
   font-size: 64px;
   color: white;
@@ -92,6 +91,23 @@ button {
   color: var(--theme-color);
 }
 
+button > a:after {
+  border-bottom: 2px solid var(--theme-color);
+  content: "";
+  display: block;
+  margin: 4px auto 0;
+  transition: width 250ms ease-in-out 0s;
+  width: 0;
+}
+button > a:hover:after {
+  transition: width 100ms ease-in-out 0s;
+  width: 100%;
+}
+
+button > a:hover {
+  color: var(--theme-color);
+}
+
 .article-date {
   font-size: 12px;
   color: var(--secondary-text-color);
@@ -109,6 +125,12 @@ button {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3 / 2;
+}
+
+.photo-cover:hover {
+  transform: scale(1.02, 1.02);
+  transition: all 0.1s ease-in;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .video-grid {
