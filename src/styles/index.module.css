@@ -8,17 +8,6 @@
   box-sizing: border-box;
 }
 
-.cover {
-  background-color: bisque;
-  background-size: cover;
-  background-position: center;
-  height: 480px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content-header {
   display: flex;
   flex-direction: row;
@@ -26,11 +15,6 @@
   align-items: center;
   height: 48px;
   margin-bottom: 12px;
-}
-
-.cover-title {
-  font-size: 64px;
-  color: white;
 }
 
 .section-title {
@@ -61,7 +45,7 @@
 }
 
 .content-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   color: var(--primary-text-color);
   margin: 0;
@@ -165,10 +149,6 @@ button > a:hover {
 @media (min-width: 768px) {
   .content-block {
     margin-bottom: 16px;
-  }
-
-  .cover {
-    height: 768px;
   }
 
   .section-title {
