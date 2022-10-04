@@ -1,28 +1,68 @@
 .cover-container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  width: 100vw;
+  grid-template-rows: 60% 40%;
+  width: 100%;
   background-color: bisque;
-  height: 480px;
+  height: 700px;
+  overflow: hidden;
 }
 
 .code-part {
-  background-color: #1c1c1c;
+  background-color: #233052;
   color: #747474;
-  font-family: monospace;
   font-size: 14px;
-  padding: 32px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: normal;
+  margin-right: 4px;
+  margin-top: 0;
+}
+
+.editor {
+  background-color: #111B3C;
+  border-radius: 8px;
+  box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+  padding-bottom: 12px;
+}
+
+.editor-title {
+  padding: 16px 24px;
+  font-size: 16px;
+  color: white;
+  border-bottom: 1px solid #2A3A63;
+  margin-bottom: 16px;
+}
+
+.code-line {
+  font-size: 12px;
+  display: flex;
+  font-family: monospace;
+  margin-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .code-line1 {
-  margin-left: 0;
+  margin-left: 12px;
 }
 
 .code-line2 {
-  margin-left: 24px;
+  margin-left: 30px;
 }
 
 .code-line3 {
@@ -30,7 +70,7 @@
 }
 
 span {
-  display:inline-block;
+  display: inline-block;
 }
 
 .mtk15 {
@@ -53,8 +93,106 @@ span {
   color: #BD8A70;
 }
 
+/* ********打字特效********* */
+.typing {
+  position: relative;
+}
+
+.typing::after {
+  content: "_";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  color: white;
+  background: #111B3C;
+  animation: typing 2s steps(6) forwards, caret 1s infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+/* ********打字特效********* */
+
+.card-part {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-frame {
+  background-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  border-image: url(../../images/frame-dot.svg);
+  border-image-slice: 5;
+  margin-top: 16px;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 16px;
+  animation: scale 1.8s cubic-bezier(0.785, 0.135, 0.150, 0.860) infinite;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.info {
+  margin-right: 8px;
+}
+
+@keyframes scale {
+  50% {
+    padding-bottom: 32px;
+  }
+}
+
+.cities {
+  font-size: 13px;
+}
+
+.slogan {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #EDEDED;
+}
+
 @media (min-width: 768px) {
   .cover-container {
     height: 768px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  @keyframes scale {
+    50% {
+      padding-bottom: 32px;
+      padding-right: 48px;
+    }
   }
 }

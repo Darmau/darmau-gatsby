@@ -13,7 +13,7 @@ function IndexPage({ data }) {
 
   return (
     <Layout>
-      <section className={style.cover}>
+      <section className={style.coverBlock}>
         <Cover />
       </section>
       <section className={style.contentBlock}>
