@@ -5,6 +5,7 @@
   background-color: bisque;
   height: 700px;
   overflow: hidden;
+  margin-bottom: 16px;
 }
 
 .code-part {

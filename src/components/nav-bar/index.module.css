@@ -38,12 +38,13 @@
 .connect-item {
   color: var(--primary-text-color);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 4px;
   font-weight: normal;
   box-sizing: border-box;
   padding: 0 8px;
 }
+
 .connect-item:after {
   border-bottom: 2px solid var(--theme-color);
   content: "";
