@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
-import Head from "../../components/Head";
 import Pagination from "../../components/pagination/pagination";
 
 const Videos = ({ data }) => {
@@ -12,32 +11,29 @@ const Videos = ({ data }) => {
 
 
   return (
-    <>
-      <Head title="所有视频" />
-      <Layout>
-        <main className={style.gridContainer}>
-          <div className={style.videoGrid}>
-            {
-              videos.map(
-                node => {
-                  const image = getImage(node.cover.localFile)
-                  return (
-                    <div className={style.videoCard}>
-                      <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
-                      <Link to={'/video/' + node.slug}>
-                        <h4 className={style.videoTitle}>{node.basic.title}</h4>
-                      </Link>
-                      <p className={style.videoDate}>{node.basic.date}</p>
-                    </div>
-                  )
-                }
-              )
-            }
-          </div>
-          <Pagination pageInfo={pageInfo} sort='videos' />
-        </main>
-      </Layout>
-    </>
+    <Layout>
+      <main className={style.gridContainer}>
+        <div className={style.videoGrid}>
+          {
+            videos.map(
+              node => {
+                const image = getImage(node.cover.localFile)
+                return (
+                  <div className={style.videoCard}>
+                    <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
+                    <Link to={'/video/' + node.slug}>
+                      <h4 className={style.videoTitle}>{node.basic.title}</h4>
+                    </Link>
+                    <p className={style.videoDate}>{node.basic.date}</p>
+                  </div>
+                )
+              }
+            )
+          }
+        </div>
+        <Pagination pageInfo={pageInfo} sort='videos' />
+      </main>
+    </Layout>
   )
 }
 
@@ -68,3 +64,14 @@ export const allStrapiVideo = graphql`
   }`
 
 export default Videos
+
+export function Head() {
+  return (
+    <>
+      <title>所有视频 | 可可托海没有海</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="设计师、开发者李大毛的个人网站" />
+    </>
+  )
+}

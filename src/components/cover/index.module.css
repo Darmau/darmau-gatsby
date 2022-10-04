@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+.code-line1 {
+  margin-left: 0;
+}
+
 .code-line2 {
   margin-left: 24px;
 }
