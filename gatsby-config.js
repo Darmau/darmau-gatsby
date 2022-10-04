@@ -54,10 +54,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'G-ZS3N1LGHWZ',
-      }
-    }
+        trackingIds: [
+        "G-ZS3N1LGHWZ", 
+        ],
+        pluginConfig: {
+          head: true
+        },
+      },
+    },
   ]
 };
