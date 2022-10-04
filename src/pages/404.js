@@ -47,22 +47,3 @@ const NotFoundPage = () => {
 export default NotFoundPage;
 
 export const Head = () => <title>Not found</title>;
-
-export function Head() {
-  return (
-    <>
-      <title>页面未找到 | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS3N1LGHWZ"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-ZS3N1LGHWZ');
-      </script>
-    </>
-  )
-}
