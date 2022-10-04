@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, Link} from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
-import Head from "../../components/Head";
 import Layout from "../../components/layout/layout";
 import Pagination from "../../components/pagination/pagination";
 
@@ -11,8 +10,6 @@ const Albums = ({data}) => {
   const pageInfo = data.allStrapiAlbum.pageInfo
 
   return (
-    <>
-      <Head title="所有摄影" />
       <Layout>
         <main className={style.gridContainer}>
           <div className={style.photoGrid}>
@@ -34,6 +31,16 @@ const Albums = ({data}) => {
           <Pagination pageInfo={pageInfo} sort='albums'/>
         </main>
       </Layout>
+  )
+}
+
+export function Head() {
+  return (
+    <>
+      <title>所有摄影 | 可可托海没有海</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="设计师、开发者李大毛的个人网站" />
     </>
   )
 }
