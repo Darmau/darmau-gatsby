@@ -17,13 +17,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        "trackingId": "G-ZS3N1LGHWZ",
-        head: true,
-      }
-    },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
