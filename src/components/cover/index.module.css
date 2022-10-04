@@ -38,15 +38,8 @@ h1 {
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
     100px 100px 80px rgba(0, 0, 0, 0.07);
-  padding-bottom: 12px;
-}
-
-.editor-title {
-  padding: 16px 24px;
-  font-size: 16px;
-  color: white;
-  border-bottom: 1px solid #2A3A63;
-  margin-bottom: 16px;
+    padding-bottom: 12px;
+    padding-top: 12px;
 }
 
 .code-line {

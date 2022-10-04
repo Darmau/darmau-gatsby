@@ -8,7 +8,6 @@ const Cover = () => {
       <div className={style.codePart}>
         <h1>Developer</h1>
         <div className={style.editor}>
-          <div className={style.editorTitle}>Code</div>
           <div className={style.codeLine}>
             <span className={style.mtk15}>1</span>
             <div className={style.codeLine1}><span><span className={style.mtk15}>&lt;</span><span className={style.mtk27}>div</span><span className={style.mtk1}>&nbsp;</span><span className={style.mtk6}>class</span><span className={style.mtk15}>=</span><span className={style.mtk5}>"card"</span><span className={style.mtk15}>&gt;</span></span></div>
