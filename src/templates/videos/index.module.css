@@ -36,7 +36,8 @@
 .video-title {
   font-size: 20px;
   color: var(--primary-text-color);
-  margin: 16px 0 16px 0;
+  margin: 12px 0 8px 0;
+  font-weight: 500;
 }
 
 .video-title:hover {
