@@ -151,6 +151,14 @@ export function Head() {
       <meta name="description" content="设计师、开发者李大毛的个人网站" />
       <meta name="bytedance-verification-code" content="hIhTTTUL4HE+gifitM4U" />
       <meta name="sogou_site_verification" content="CsR7Ekik82" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS3N1LGHWZ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZS3N1LGHWZ');
+      </script>
     </>
   )
 }
