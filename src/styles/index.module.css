@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.cover-block {
+  width: 100vw;
+}
+
 .content-header {
   display: flex;
   flex-direction: row;
