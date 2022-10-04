@@ -139,7 +139,7 @@ button > a:hover {
 }
 
 .video-date {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--secondary-text-color);
   margin-top: 4px;
 }
@@ -219,6 +219,7 @@ button > a:hover {
   }
 
   .video-date {
+    font-size: 14px;
     margin-bottom: 0;
   }
 }
