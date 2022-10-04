@@ -129,6 +129,9 @@ article ul {
   color: var(--primary-text-color);
 }
 
+article li {
+  margin-bottom: 8px;
+}
 
 .divider {
   height: 1px;
