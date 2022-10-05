@@ -70,7 +70,6 @@ query ArticlesByCategory($strapi_id: Int) {
     allStrapiCategoryArticle(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
         title
-        slug
       }
     }
   }`
