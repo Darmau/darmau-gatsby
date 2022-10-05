@@ -42,13 +42,13 @@
   background-color: var(--divider-color);
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
-  margin-right: 8px;
+  margin-right: 16px;
   display: inline-block;
   margin: 8px 16px 8px 0;
 }
 
 .article-tag {
-  
+  margin: 8px 16px 8px 0;
 }
 
 article {
@@ -274,6 +274,7 @@ figure figcaption {
 @media (min-width: 500px) {
   .article-container {
     max-width: 500px;
+    gap: 36px;
   }
 }
 

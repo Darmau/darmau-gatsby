@@ -4,38 +4,66 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout/layout";
 import Pagination from "../../components/pagination/pagination";
 import * as style from "./index.module.css"
+import * as articleStyle from "../article-content/index.module.css"
 
 const Articles = ({ data }) => {
   const articles = data.allStrapiArticle.nodes
   const pageInfo = data.allStrapiArticle.pageInfo
+  const categories = data.allStrapiCategoryArticle.nodes
+  const tags = data.allStrapiTag.nodes
 
   return (
     <Layout>
-      <main className={style.articleContainer}>
-        <div className={style.articleGrid}>
-          {
-            articles.map(node => {
-              const image = getImage(node.cover.localFile)
-              return (
-                <article className={style.articleCard}>
-                  <GatsbyImage className={style.articleCover} image={image} alt={node.basic.title} />
-                  <div className={style.articleInfo}>
-                    <h4 className={style.articleTitle}>
-                      <Link to={'/article/' + node.slug}>{node.basic.title}</Link>
-                    </h4>
-                    <p className={style.articleDescription}>{node.basic.description}</p>
-                    <div className={style.articleRelative}>
-                      <p className={style.articleCategory}><Link to={'/category/articles/' + node.category_article.slug}>{node.category_article.title}</Link></p>
-                      <p className={style.articleDate}>{node.basic.date}</p>
+      <div className={style.container}>
+        <aside className={style.sort}>
+          <header className={articleStyle.aboutAuthorHeader}>
+            <small className={articleStyle.aboutAuthorTitle}>筛选</small>
+            <div className={articleStyle.line}></div>
+          </header>
+          <div className={style.sortItem}>
+            <h4 className={style.sortTitle}>分类</h4>
+            <ul className={style.sortList}>
+              {categories.map(category => 
+              (<li className={articleStyle.articleCategory}><Link to={'/category/articles/' + category.slug}>{category.title}</Link></li>))}
+            </ul>
+          </div>
+          <div>
+            <h4 className={style.sortTitle}>标签</h4>
+            <ul className={style.sortList}>
+              {tags.map(tag => (<li className={articleStyle.articleTag}>#{tag.title}</li>))}
+            </ul>
+          </div>
+        </aside>
+        <main className={style.articleContainer}>
+          <header className={articleStyle.aboutAuthorHeader}>
+            <small className={articleStyle.aboutAuthorTitle}>全部文章</small>
+            <div className={articleStyle.line}></div>
+          </header>
+          <div className={style.articleGrid}>
+            {
+              articles.map(node => {
+                const image = getImage(node.cover.localFile)
+                return (
+                  <article className={style.articleCard}>
+                    <GatsbyImage className={style.articleCover} image={image} alt={node.basic.title} />
+                    <div className={style.articleInfo}>
+                      <h4 className={style.articleTitle}>
+                        <Link to={'/article/' + node.slug}>{node.basic.title}</Link>
+                      </h4>
+                      <p className={style.articleDescription}>{node.basic.description}</p>
+                      <div className={style.articleRelative}>
+                        <p className={style.articleCategory}><Link to={'/category/articles/' + node.category_article.slug}>{node.category_article.title}</Link></p>
+                        <p className={style.articleDate}>{node.basic.date}</p>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              )
-            })
-          }
-        </div>
-        <Pagination pageInfo={pageInfo} sort='articles' />
-      </main>
+                  </article>
+                )
+              })
+            }
+          </div>
+          <Pagination pageInfo={pageInfo} sort='articles' />
+        </main>
+      </div>
     </Layout>
   )
 }
@@ -80,6 +108,18 @@ export const allStrapiArticle = graphql`
         hasNextPage
         hasPreviousPage
         pageCount
+      }
+    }
+    allStrapiCategoryArticle {
+      nodes {
+        title
+        slug
+      }
+    }
+    allStrapiTag {
+      nodes {
+        title
+        slug
       }
     }
   }`
