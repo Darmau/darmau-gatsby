@@ -24,7 +24,9 @@ const ArticleContent = ({ data }) => {
           <div className={style.relatives}>
             <p className={style.articleCategory}><Link to={'/category/articles/' + article.category_article.slug}>{article.category_article.title}</Link></p>
             {article.tags.map(
-              tag => (<p className={style.articleTag}>#{tag.title}</p>)
+              tag => (<p className={style.articleTag}>
+                <Link to={'/tag/' + tag.slug}>#{tag.title}</Link>
+              </p>)
             )}
           </div>
           <div className={style.mainContent}>

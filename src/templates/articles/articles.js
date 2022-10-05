@@ -24,13 +24,17 @@ const Articles = ({ data }) => {
             <h4 className={style.sortTitle}>分类</h4>
             <ul className={style.sortList}>
               {categories.map(category => 
-              (<li className={articleStyle.articleCategory}><Link to={'/category/articles/' + category.slug}>{category.title}</Link></li>))}
+              (<li className={articleStyle.articleCategory}>
+                <Link to={'/category/articles/' + category.slug}>{category.title}</Link>
+              </li>))}
             </ul>
           </div>
           <div>
             <h4 className={style.sortTitle}>标签</h4>
             <ul className={style.sortList}>
-              {tags.map(tag => (<li className={articleStyle.articleTag}>#{tag.title}</li>))}
+              {tags.map(tag => (<li className={articleStyle.articleTag}>
+                <Link to={'/tag/' + tag.slug}>#{tag.title}</Link>
+              </li>))}
             </ul>
           </div>
         </aside>

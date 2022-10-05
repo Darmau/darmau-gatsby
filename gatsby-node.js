@@ -213,4 +213,36 @@ exports.createPages = async ({ actions, graphql }) => {
       context: { strapi_id: category.node.strapi_id },
     })
   });
+
+  //创建标签页
+  const tagTemplete = path.resolve(`./src/templates/tag/tag.js`)
+
+  const resultTag = await graphql(`
+         {
+            allStrapiTag {
+            edges {
+                node {
+                strapi_id
+                slug
+                }
+            }
+            }
+        } 
+    `)
+
+  if (resultTag.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const tags = resultTag.data.allStrapiTag.edges
+
+  tags.forEach((tag) => {
+    createPage({
+      path: `/tag/${tag.node.slug}`,
+      component: tagTemplete,
+      context: { strapi_id: tag.node.strapi_id },
+    })
+  });
+
 }
