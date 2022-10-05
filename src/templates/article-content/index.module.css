@@ -31,15 +31,24 @@
   margin: 8px 0 8px 0;
 }
 
+.relatives {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-text-color);
+  font-size: 13px;
+}
+
 .article-category {
   background-color: var(--divider-color);
-  font-size: 12px;
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
-  margin-right: 8px;
+  margin-right: 16px;
   display: inline-block;
-  color: var(--secondary-text-color);
-  margin: 8px 0;
+  margin: 8px 16px 8px 0;
+}
+
+.article-tag {
+  margin: 8px 16px 8px 0;
 }
 
 article {
@@ -129,6 +138,9 @@ article ul {
   color: var(--primary-text-color);
 }
 
+article li {
+  margin-bottom: 8px;
+}
 
 .divider {
   height: 1px;
@@ -262,6 +274,7 @@ figure figcaption {
 @media (min-width: 500px) {
   .article-container {
     max-width: 500px;
+    gap: 36px;
   }
 }
 

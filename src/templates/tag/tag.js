@@ -5,14 +5,14 @@ import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
 import * as style from "../articles/index.module.css"
 
-export default function CategoryArticle({ data }) {
+export default function Tag({ data }) {
 
   const articles = data.allStrapiArticle.nodes
-  const category = data.allStrapiCategoryArticle.nodes[0]
+  const tag = data.allStrapiTag.nodes[0]
 
   return (
     <Layout>
-      <Breadcrumbs upLevel="articles" active={category.title} />
+      <Breadcrumbs upLevel="articles" active={tag.title} />
       <main className={style.articleContainer}>
         <div>
           {articles.map(article => {
@@ -39,7 +39,7 @@ export default function CategoryArticle({ data }) {
 export function Head({ data }) {
   return (
     <>
-      <title>{data.allStrapiCategoryArticle.nodes[0].title} | 可可托海没有海</title>
+      <title>{data.allStrapiTag.nodes[0].title} | 可可托海没有海</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="设计师、开发者李大毛的个人网站" />
@@ -48,9 +48,9 @@ export function Head({ data }) {
 }
 
 
-export const categoryArticleQuery = graphql`
-query ArticlesByCategory($strapi_id: Int) {
-    allStrapiArticle(filter: {category_article: {strapi_id: {in: [$strapi_id]}}}) {
+export const tagQuery = graphql`
+query ArticlesByTag($strapi_id: Int) {
+    allStrapiArticle(filter: {tags: {elemMatch: {strapi_id: {eq: $strapi_id}}}}) {
         nodes {
             cover {
               localFile {
@@ -67,7 +67,7 @@ query ArticlesByCategory($strapi_id: Int) {
             slug
           }
     }
-    allStrapiCategoryArticle(filter: {strapi_id: {eq: $strapi_id}}) {
+    allStrapiTag(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
         title
       }
