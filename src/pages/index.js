@@ -30,7 +30,7 @@ function IndexPage({ data }) {
               <div className={style.articleCard}>
                 <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
                 <div className={style.articleInfo}>
-                  <h4 className={style.contentTitle}><Link to={'/article/' + article.slug}>{article.basic.title}</Link></h4>
+                  <h3 className={style.contentTitle}><Link to={'/article/' + article.slug}>{article.basic.title}</Link></h3>
                   <p className={style.articleDescription}>{article.basic.description}</p>
                   <div>
                     <span className={style.articleCategory}>{article.category_article.title}</span>
@@ -75,7 +75,7 @@ function IndexPage({ data }) {
             return (
               <div className={style.videoCard}>
                 <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
-                <h4 className={style.contentTitle}><Link to={'/video/' + video.slug}>{video.basic.title}</Link></h4>
+                <h3 className={style.contentTitle}><Link to={'/video/' + video.slug}>{video.basic.title}</Link></h3>
                 <p className={style.videoDate}>{video.basic.date}</p>
               </div>
             )
