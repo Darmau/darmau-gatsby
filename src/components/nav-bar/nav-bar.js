@@ -5,7 +5,7 @@ import * as style from "./index.module.css"
 const Navbar = (props) => {
   return (
     <nav className={style.navBar}>
-      <Link to="/">
+      <Link to="/" aria-label="回到首页">
         <svg className={style.logoFull} width="190" height="80" viewBox="0 0 190 80">
           <path
             d="M28.5696 59.029L29.5399 55.7392C30.0414 54.0385 29.9242 52.2151 29.2088 50.5927C28.3016 48.535 28.3657 46.1788 29.3835 44.1735L31.2696 40.4575L28.5696 41.0979L15.2283 50.7038C14.4871 51.1841 13.593 48.9427 13.7989 47.822C14.593 43.4993 20.4695 38.6964 20.6284 36.9353C20.7554 35.5264 20.2578 34.0001 19.9931 33.4131L15.3502 35.82C14.756 36.128 14.0771 36.2323 13.4179 36.1167C11.6962 35.8149 9.92395 36.0121 8.31063 36.685L6.17532 37.5757C5.85767 39.9772 6.39768 46.2531 11.0989 52.7851C15.8001 59.3172 24.7049 59.6694 28.5696 59.029Z"
@@ -55,13 +55,13 @@ const Navbar = (props) => {
       </Link>
       <ul className={style.connectList}>
         <li className={style.connectItem}>
-          <Link to="/articles">文章</Link>
+          <Link to="/articles" aria-label="全部文章">文章</Link>
         </li>
         <li className={style.connectItem}>
-          <Link to="/albums">摄影</Link>
+          <Link to="/albums" aria-label="全部摄影">摄影</Link>
         </li>
         <li className={style.connectItem}>
-          <Link to="/videos">视频</Link>
+          <Link to="/videos" aria-label="全部视频">视频</Link>
         </li>
       </ul>
       <div className={style.action}>
