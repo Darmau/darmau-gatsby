@@ -25,7 +25,7 @@ const Articles = ({ data }) => {
                     </h4>
                     <p className={style.articleDescription}>{node.basic.description}</p>
                     <div className={style.articleRelative}>
-                      <p className={style.articleCategory}><Link to={'category/' + node.category_article.slug}>{node.category_article.title}</Link></p>
+                      <p className={style.articleCategory}><Link to={'/category/articles/' + node.category_article.slug}>{node.category_article.title}</Link></p>
                       <p className={style.articleDate}>{node.basic.date}</p>
                     </div>
                   </div>

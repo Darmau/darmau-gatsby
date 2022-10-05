@@ -12,7 +12,7 @@ export default function CategoryArticle({ data }) {
 
   return (
     <Layout>
-      <Breadcrumbs upLevel="article" active={category.title} />
+      <Breadcrumbs upLevel="articles" active={category.title} />
       <main className={style.articleContainer}>
         <div>
           {articles.map(article => {

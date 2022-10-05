@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
@@ -21,9 +21,11 @@ const ArticleContent = ({ data }) => {
           <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
           <h1>{article.basic.title}</h1>
           <p className={style.date}>{article.basic.date}</p>
-          <div>
-            <p className={style.articleCategory}>{article.category_article.title}</p>
-            <p>{article.tags.title && article.tags.title}</p>
+          <div className={style.relatives}>
+            <p className={style.articleCategory}><Link to={'/category/articles/' + article.category_article.slug}>{article.category_article.title}</Link></p>
+            {article.tags.map(
+              tag => (<p className={style.articleTag}>#{tag.title}</p>)
+            )}
           </div>
           <div className={style.mainContent}>
             <MainBody data={mainContentString} />

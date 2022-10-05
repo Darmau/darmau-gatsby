@@ -208,7 +208,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   categoryArticle.forEach((category) => {
     createPage({
-      path: `/article/category/${category.node.slug}`,
+      path: `/category/articles/${category.node.slug}`,
       component: categoryArticleTemplete,
       context: { strapi_id: category.node.strapi_id },
     })
