@@ -90,11 +90,12 @@ module.exports = {
                 const blocksObj = mainContentObject.blocks
                 let textArr = ['查看完整内容建议访问原链接。']
                 for (let i in blocksObj) {
-                  textArr.push(blocksObj[i].data.text ? blocksObj[i].data.text : '该文本不支持RSS预览')
+                  textArr.push(blocksObj[i].data.text ? blocksObj[i].data.text : '该内容不支持RSS预览')
                 }
                 const content = textArr.join('<br />')
 
                 return Object.assign({}, edge.node, {
+                  title: edge.node.basic.title,
                   description: edge.node.basic.description,
                   date: edge.node.basic.date,
                   url: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
