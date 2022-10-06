@@ -21,6 +21,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -41,6 +42,8 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
     },
+
+    //PWA配置
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -53,6 +56,8 @@ module.exports = {
         icon: `./src/images/favicon.svg`,
       },
     },
+
+    //Google Analytics配置
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -65,6 +70,7 @@ module.exports = {
       },
     },
 
+    //RSS配置
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -126,6 +132,15 @@ module.exports = {
             title: "可可托海没有海的RSS",
           },
         ],
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require("./src/utils/algolia-queries")
       },
     },
 
