@@ -9,9 +9,9 @@ import useClickOutside from "./use-click-outside"
 
 
 const theme = {
-  foreground: "#050505",
-  background: "white",
-  faded: "#888",
+  foreground: `var(--primary-text-color)`,
+  background: `var(--background-color)`,
+  faded: 'var(--divider-color)',
 }
 
 export default function Search({ indices }) {
