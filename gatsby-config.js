@@ -41,6 +41,8 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
     },
+
+    //PWA配置
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -53,6 +55,8 @@ module.exports = {
         icon: `./src/images/favicon.svg`,
       },
     },
+
+    //Google Analytics配置
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -65,6 +69,7 @@ module.exports = {
       },
     },
 
+    //RSS配置
     {
       resolve: `gatsby-plugin-feed`,
       options: {
