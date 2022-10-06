@@ -97,8 +97,8 @@ module.exports = {
                 return Object.assign({}, edge.node, {
                   description: edge.node.basic.description,
                   date: edge.node.basic.date,
-                  url: site.siteMetadata.siteUrl + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  url: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
                   custom_elements: [{ "content:encoded": content }],
                 })
               })
