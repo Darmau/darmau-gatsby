@@ -7,6 +7,7 @@ import StyledSearchResult from "./styled-search-result"
 import StyledSearchRoot from "./styled-search-root"
 import useClickOutside from "./use-click-outside"
 
+
 const theme = {
   foreground: "#050505",
   background: "white",

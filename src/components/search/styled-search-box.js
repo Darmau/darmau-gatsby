@@ -26,9 +26,10 @@ export default styled(SearchBox)`
   .SearchInput {
     outline: none;
     border: ${({ hasFocus }) => (hasFocus ? "auto" : "none")};
-    font-size: 1em;
+    font-size: 14px;
     transition: 100ms;
-    border-radius: 2px;
+    border-radius: 1px;
+    padding: 8px;
     color: ${({ theme }) => theme.foreground};
     ::placeholder {
       color: ${({ theme }) => theme.faded};
@@ -38,7 +39,7 @@ export default styled(SearchBox)`
 
   .SearchIcon {
     width: 24px;
-    margin: 0;
+    margin-left: 8px;
     color: ${({ theme }) => theme.foreground};
     pointer-events: none;
   }
