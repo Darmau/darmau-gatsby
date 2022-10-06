@@ -14,7 +14,7 @@ const HitCount = connectStateResults(({ searchResults }) => {
 
   return hitCount > 0 ? (
     <div className="HitCount">
-      {hitCount} 个结果{hitCount !== 1 ? `s` : ``}
+      {hitCount} 个结果
     </div>
   ) : null
 })

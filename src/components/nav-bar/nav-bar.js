@@ -3,7 +3,11 @@ import { Link } from "gatsby";
 import Search from "../search"
 import * as style from "./index.module.css"
 
-const searchIndices = [{ name: `Pages`, title: `Pages` }]
+const searchIndices = [
+  { name: `articles`, title: `文章` },
+  { name: `albums`, title: `摄影` },
+  { name: `videos`, title: `视频` }
+]
 
 const Navbar = (props) => {
   return (

@@ -9,11 +9,11 @@ const Popover = css`
   z-index: 2;
   right: 0;
   top: 100%;
-  margin-top: 0.5em;
+  margin-top: 16px;
   width: 80vw;
   max-width: 30em;
   box-shadow: 0 0 5px 0;
-  padding: 1em;
+  padding: 16px;
   border-radius: 2px;
   background: ${({ theme }) => theme.background};
 `
@@ -25,6 +25,8 @@ export default styled(SearchResult)`
   .HitCount {
     display: flex;
     justify-content: flex-end;
+    color: ${({ theme }) => theme.foreground};
+    font-size: 13px;
   }
 
   .Hits {
@@ -34,13 +36,15 @@ export default styled(SearchResult)`
     }
 
     li.ais-Hits-item {
-      margin-bottom: 1em;
+      margin-bottom: 8px;
 
       a {
         color: ${({ theme }) => theme.foreground};
 
         h4 {
-          margin-bottom: 0.2em;
+          margin-bottom: 4px;
+          font-size: 14px;
+          font-weight: normal;
         }
       }
     }
@@ -49,6 +53,7 @@ export default styled(SearchResult)`
   .ais-PoweredBy {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     font-size: 80%;
 
     svg {
