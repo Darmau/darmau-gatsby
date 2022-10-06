@@ -64,18 +64,28 @@ const articleToRecord = ({ node: { id, basic, slug, mainBody, ...rest } }) => {
   return {
     objectID: id,
     ...basic,
-    ...slug,
     mainBody: content,
+    link: '/article/' + slug,
     ...rest,
   };
 };
 
-const mediaToRecord = ({ node: { id, basic, slug, ...rest } }) => {
+const albumToRecord = ({ node: { id, basic, slug, ...rest } }) => {
   return {
     objectID: id,
+    type: 'album',
     ...basic,
-    ...slug,
+    link: '/album/' + slug,
     ...rest,
+  };
+};
+
+const videoToRecord = ({ node: { id, basic, slug } }) => {
+  return {
+    objectID: id,
+    type: 'video',
+    ...basic,
+    link: '/video/' + slug,
   };
 };
 
@@ -87,12 +97,12 @@ const queries = [
   },
   {
     query: albumQuery,
-    transformer: ({ data }) => data.allStrapiAlbum.edges.map(mediaToRecord),
+    transformer: ({ data }) => data.allStrapiAlbum.edges.map(albumToRecord),
     indexName: "albums",
   },
   {
     query: videoQuery,
-    transformer: ({ data }) => data.allStrapiVideo.edges.map(mediaToRecord),
+    transformer: ({ data }) => data.allStrapiVideo.edges.map(videoToRecord),
     indexName: "videos",
   },
 ]
