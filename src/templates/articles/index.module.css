@@ -152,6 +152,7 @@
   .container {
     flex-direction: row-reverse;
     align-items: start;
+    padding-top: 24px;
   }
 
   .sort {
