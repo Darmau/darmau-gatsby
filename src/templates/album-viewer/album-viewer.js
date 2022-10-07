@@ -83,6 +83,7 @@ export const albumQuery = graphql`
   query AlbumViewerById($strapi_id: Int!) {
     allStrapiAlbum(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
+        slug
         basic {
           date
           description
