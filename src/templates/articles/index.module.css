@@ -95,12 +95,21 @@
   margin-bottom: 12px;
 }
 
+.article-category,
+.article-date {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
 .article-category {
   background-color: var(--divider-color);
+  box-sizing: border-box;
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin-right: 16px;
+  margin-bottom: 12px;
 }
 
 .article-relative {
@@ -109,14 +118,6 @@
   margin-top: 0;
   margin-bottom: 0;
   align-items: baseline;
-}
-
-.article-category,
-.article-date {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-size: 14px;
-  color: var(--secondary-text-color);
 }
 
 .about-author-header {
