@@ -15,7 +15,7 @@ const ArticleContent = ({ data }) => {
 
   let disqusConfig = {
     url: `https://darmau.design/article/ + ${article.slug}`,
-    identifier: article.id,
+    identifier: `https://darmau.design/article/ + ${article.slug}`,
     title: article.basic.title,
   }
 
@@ -104,7 +104,6 @@ export const articleQuery = graphql`
   query ArticleContentById($strapi_id: Int!)  {
     allStrapiArticle(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
-        id
         basic {
           title
           description

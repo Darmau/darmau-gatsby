@@ -21,7 +21,7 @@ const AlbumViewer = ({ data }) => {
   //评论配置
   let disqusConfig = {
     url: `https://darmau.design/album/ + ${album.slug}`,
-    identifier: album.id,
+    identifier: `https://darmau.design/album/ + ${album.slug}`,
     title: album.basic.title,
   }
 

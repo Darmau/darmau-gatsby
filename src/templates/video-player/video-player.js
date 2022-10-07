@@ -36,7 +36,7 @@ export default function VideoPlayer({ data }) {
 
   let disqusConfig = {
     url: `https://darmau.design/video/ + ${video.slug}`,
-    identifier: video.id,
+    identifier: `https://darmau.design/video/ + ${video.slug}`,
     title: video.basic.title,
   }
 
