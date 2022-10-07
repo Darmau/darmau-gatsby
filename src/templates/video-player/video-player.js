@@ -111,24 +111,25 @@ export const videoQuery = graphql`
         query VideoPlayerById($strapi_id: Int) {
             allStrapiVideo(filter: {strapi_id: {eq: $strapi_id }}) {
                 nodes {
-                    source {
-                        bilibili
-                        youtube
-                        xigua
+                  slug
+                  source {
+                    bilibili
+                    youtube
+                    xigua
+                  }
+                  basic {
+                    date
+                    description
+                    isTop
+                    title
+                  }
+                  cover {
+                    localFile {
+                    childImageSharp {
+                        gatsbyImageData(width: 840)
                     }
-                    basic {
-                        date
-                        description
-                        isTop
-                        title
                     }
-                    cover {
-                        localFile {
-                        childImageSharp {
-                            gatsbyImageData(width: 840)
-                        }
-                        }
-                    }
+                  }
                 }
             }
         }`
