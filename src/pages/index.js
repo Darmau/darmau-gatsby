@@ -54,7 +54,7 @@ function IndexPage({ data }) {
           {photos.map(photo => {
             const cover = getImage(photo.cover.localFile)
             return (
-              <Link to={'/album/' + photo.slug}>
+              <Link className={style.photoLink} to={'/album/' + photo.slug}>
                 <GatsbyImage className={style.photoCover} image={cover} alt={photo.cover.alternativeText} />
               </Link>
             )

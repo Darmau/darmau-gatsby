@@ -39,6 +39,11 @@
   width: 100%;
 }
 
+/* 在移动端隐藏后3个文章卡片 */
+.article-card:nth-child(1n+4) {
+  display: none;
+}
+
 .article-cover {
   aspect-ratio: 4 / 2;
   object-fit: cover;
@@ -119,6 +124,10 @@ button > a:hover {
   aspect-ratio: 3 / 2;
 }
 
+.photo-link:nth-child(1n+13) {
+  display: none;
+}
+
 .photo-cover:hover {
   transform: scale(1.02, 1.02);
   transition: all 0.1s ease-in;
@@ -135,6 +144,11 @@ button > a:hover {
 
 .video-card {
   margin-bottom: 16px;
+}
+
+/* 隐藏移动端的后4个视频 */
+.video-card:nth-child(1n+5) {
+  display: none;
 }
 
 .video-cover {
@@ -187,6 +201,10 @@ button > a:hover {
     gap: 16px;
   }
 
+  .article-card:nth-child(1n+4) {
+    display: grid;
+  }
+
   .article-cover {
     width: 100%;
     aspect-ratio: 3 / 2;
@@ -216,10 +234,18 @@ button > a:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .photo-link:nth-child(1n+13) {
+    display: block;
+  }
+
   .video-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 24px;
+  }
+
+  .video-card:nth-child(1n+5) {
+    display: block;
   }
 
   .video-date {
