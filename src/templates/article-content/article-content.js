@@ -52,7 +52,7 @@ const ArticleContent = ({ data }) => {
           </div>
           <div className={style.wechatInfo}>
             <StaticImage className={style.wechatImg} src="../../images/qrcode.png" />
-            <p className={style.wechatText}>订阅本站更新，与作者交流，关注公众号</p>
+            <p className={style.wechatText}>订阅本站更新，发表评论，请关注公众号</p>
           </div>
         </address>
       </main>
