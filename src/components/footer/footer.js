@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
         <div className={style.websiteLinks}>
           <div>
-            <h5 className={style.catalogTitle}>博客</h5>
+            <h1 className={style.catalogTitle}>博客</h1>
             <ul className={style.catalogList}>
               <li className={style.catalogItem}><Link to="/articles" aria-label="全部文章">文章</Link></li>
               <li className={style.catalogItem}><Link to="/albums" aria-label="全部摄影">摄影</Link></li>
@@ -65,7 +65,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h5 className={style.catalogTitle}>关于</h5>
+            <h1 className={style.catalogTitle}>关于</h1>
             <ul className={style.catalogList}>
               <li className={style.catalogItem}><Link to="/changelog">本站</Link></li>
             </ul>
