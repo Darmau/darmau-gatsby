@@ -4,6 +4,7 @@ import Layout from "../../components/layout/layout";
 import VideoFrame from "../../components/video-frame/video-frame"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
 import * as style from "./index.module.css"
+import { Disqus } from 'gatsby-plugin-disqus';
 
 export default function VideoPlayer({ data }) {
 
@@ -31,6 +32,12 @@ export default function VideoPlayer({ data }) {
         }
       }
     )
+  }
+
+  let disqusConfig = {
+    url: `https://darmau.design/video/ + ${video.slug}`,
+    identifier: video.id,
+    title: video.basic.title,
   }
 
   return (
@@ -81,6 +88,9 @@ export default function VideoPlayer({ data }) {
 
           </div>
         </div>
+
+        {/* 评论 */}
+        <Disqus config={disqusConfig} />
       </main>
     </Layout>
   )
