@@ -67,7 +67,7 @@ const ArticleContent = ({ data }) => {
           </div>
           <div className={style.wechatInfo}>
             <StaticImage className={style.wechatImg} src="../../images/qrcode.png" />
-            <p className={style.wechatText}>获取本站更新，发表评论，请关注公众号</p>
+            <small className={style.wechatText}>获取本站更新，发表评论，请关注公众号</small>
             <div className={style.rss}>
               <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_230_1851)">
@@ -79,7 +79,7 @@ const ArticleContent = ({ data }) => {
                   </clipPath>
                 </defs>
               </svg>
-              <small><Link to="/rss.xml">RSS 2.0</Link></small>
+              <small className={style.wechatText}><Link to="/rss.xml">RSS 2.0</Link></small>
             </div>
           </div>
         </address>
