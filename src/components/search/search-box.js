@@ -7,7 +7,7 @@ export default connectSearchBox(
       <input
         className="SearchInput"
         type="text"
-        placeholder="Search"
+        placeholder="搜索本站"
         aria-label="Search"
         onChange={e => refine(e.target.value)}
         value={currentRefinement}
