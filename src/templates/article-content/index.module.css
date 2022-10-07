@@ -271,6 +271,11 @@ figure figcaption {
   width: 128px;
 }
 
+.rss {
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 500px) {
   .article-container {
     max-width: 500px;
