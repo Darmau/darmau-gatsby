@@ -20,6 +20,8 @@ button {
 
 .video-info {
   padding: 0 16px 0 16px;
+  border-bottom: 1px solid var(--divider-color);
+  margin-bottom: 24px;
 }
 
 .video-title {
@@ -86,7 +88,7 @@ button {
   }
 
   .video-info {
-    padding: 0;
+    padding: 0 0 24px 0;
   }
 }
 

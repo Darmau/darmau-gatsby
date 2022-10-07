@@ -6,11 +6,18 @@ import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import MainBody from "../../components/TextTransfer";
 import Catalog from "../../components/catalog";
+import { Disqus } from 'gatsby-plugin-disqus';
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
   const cover = getImage(article.cover.localFile)
   const mainContentString = article.mainBody.data.mainBody
+
+  let disqusConfig = {
+    url: `https://darmau.design/article/ + ${article.slug}`,
+    identifier: article.id,
+    title: article.basic.title,
+  }
 
   return (
     <Layout>
@@ -18,6 +25,8 @@ const ArticleContent = ({ data }) => {
       <main className={style.articleContainer}>
         <Catalog data={mainContentString} />
         <article>
+
+          {/* 文章封面、标题、分类、日期、标签 */}
           <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
           <h1>{article.basic.title}</h1>
           <p className={style.date}>{article.basic.date}</p>
@@ -29,9 +38,15 @@ const ArticleContent = ({ data }) => {
               </p>)
             )}
           </div>
+
+          {/* 文章主体 */}
           <div className={style.mainContent}>
             <MainBody data={mainContentString} />
           </div>
+
+          {/* 评论 */}
+          <Disqus config={disqusConfig}/>
+
         </article>
         <address className={style.about}>
           <div>
@@ -89,11 +104,13 @@ export const articleQuery = graphql`
   query ArticleContentById($strapi_id: Int!)  {
     allStrapiArticle(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
+        id
         basic {
           title
           description
           date
         }
+        slug
         category_article {
           title
           slug

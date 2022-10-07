@@ -90,7 +90,7 @@ module.exports = {
           {
             serialize: ({ query: { site, allStrapiArticle } }) => {
               return allStrapiArticle.edges.map(edge => {
-                
+
                 //将正文数据里的文本提取出来
                 const mainContentObject = JSON.parse(edge.node.mainBody.data.mainBody)
                 const blocksObj = mainContentObject.blocks
@@ -142,6 +142,13 @@ module.exports = {
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         queries: require("./src/utils/algolia-queries")
       },
+    },
+
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+      }
     },
 
   ]

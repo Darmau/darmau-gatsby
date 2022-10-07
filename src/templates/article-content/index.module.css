@@ -17,6 +17,9 @@
 
 .main-content {
   width: 100%;
+  border-bottom: 1px solid var(--divider-color);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .article-cover {

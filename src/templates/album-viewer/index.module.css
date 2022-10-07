@@ -109,6 +109,9 @@
 .album-location {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--divider-color);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
