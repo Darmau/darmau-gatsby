@@ -27,17 +27,19 @@ function IndexPage({ data }) {
           {articles.map(article => {
             const cover = getImage(article.cover.localFile)
             return (
-              <div className={style.articleCard}>
-                <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
-                <div className={style.articleInfo}>
-                  <h3 className={style.contentTitle}><Link to={'/article/' + article.slug}>{article.basic.title}</Link></h3>
-                  <p className={style.articleDescription}>{article.basic.description}</p>
-                  <div>
-                    <span className={style.articleCategory}>{article.category_article.title}</span>
-                    <span className={style.articleDate}>{article.basic.date}</span>
+              <Link to={'/article/' + article.slug}>
+                <div className={style.articleCard}>
+                  <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
+                  <div className={style.articleInfo}>
+                    <h3 className={style.contentTitle}>{article.basic.title}</h3>
+                    <p className={style.articleDescription}>{article.basic.description}</p>
+                    <div>
+                      <span className={style.articleCategory}>{article.category_article.title}</span>
+                      <span className={style.articleDate}>{article.basic.date}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
         </div>
@@ -73,11 +75,13 @@ function IndexPage({ data }) {
           {videos.map(video => {
             const cover = getImage(video.cover.localFile)
             return (
-              <div className={style.videoCard}>
-                <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
-                <h3 className={style.contentTitle}><Link to={'/video/' + video.slug}>{video.basic.title}</Link></h3>
-                <p className={style.videoDate}>{video.basic.date}</p>
-              </div>
+              <Link to={'/video/' + video.slug}>
+                <div className={style.videoCard}>
+                  <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
+                  <h3 className={style.contentTitle}>{video.basic.title}</h3>
+                  <p className={style.videoDate}>{video.basic.date}</p>
+                </div>
+              </Link>
             )
           })}
         </div>

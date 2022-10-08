@@ -19,13 +19,13 @@ const Videos = ({ data }) => {
               node => {
                 const image = getImage(node.cover.localFile)
                 return (
-                  <div className={style.videoCard}>
-                    <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
-                    <Link to={'/video/' + node.slug}>
+                  <Link to={'/video/' + node.slug}>
+                    <div className={style.videoCard}>
+                      <GatsbyImage imgClassName={style.videoCover} image={image} alt={node.basic.title}></GatsbyImage>
                       <h4 className={style.videoTitle}>{node.basic.title}</h4>
-                    </Link>
-                    <p className={style.videoDate}>{node.basic.date}</p>
-                  </div>
+                      <p className={style.videoDate}>{node.basic.date}</p>
+                    </div>
+                  </Link>
                 )
               }
             )
