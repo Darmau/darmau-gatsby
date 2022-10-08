@@ -90,7 +90,7 @@ export const allStrapiArticle = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: AUTO)
+              gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
             }
           }
         }

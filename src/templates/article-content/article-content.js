@@ -122,7 +122,7 @@ export const articleQuery = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(formats: AUTO, placeholder: BLURRED)
+              gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
             }
           }
         }

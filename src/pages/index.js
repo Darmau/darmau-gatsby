@@ -102,7 +102,7 @@ export const frontPageQuery = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 320, placeholder: DOMINANT_COLOR, formats: AUTO)
+              gatsbyImageData(width: 320, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
             }
           }
         }
@@ -114,7 +114,7 @@ export const frontPageQuery = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 200, formats: AUTO, placeholder: DOMINANT_COLOR)
+              gatsbyImageData(width: 200, formats: [AUTO, WEBP, AVIF], placeholder: DOMINANT_COLOR)
             }
           }
           alternativeText
@@ -132,7 +132,7 @@ export const frontPageQuery = graphql`
         cover {
           localFile {
             childImageSharp {
-              gatsbyImageData(width: 320, formats: AUTO, placeholder: DOMINANT_COLOR)
+              gatsbyImageData(width: 320, formats: [AUTO, WEBP, AVIF], placeholder: DOMINANT_COLOR)
             }
           }
         }
