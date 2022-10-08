@@ -7,7 +7,7 @@ const searchIndices = [
   { name: `articles`, title: `文章` },
 ]
 
-const Navbar = (props) => {
+const Navbar = () => {
   return (
     <nav className={style.navBar}>
       <Link to="/" aria-label="回到首页">
