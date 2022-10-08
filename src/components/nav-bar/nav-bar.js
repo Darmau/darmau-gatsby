@@ -62,13 +62,13 @@ const Navbar = (props) => {
       </Link>
       <ul className={style.connectList}>
         <li className={style.connectItem}>
-          <Link to="/articles" aria-label="全部文章">文章</Link>
+          <Link to="/articles" aria-label="全部文章">文 章</Link>
         </li>
         <li className={style.connectItem}>
-          <Link to="/albums" aria-label="全部摄影">摄影</Link>
+          <Link to="/albums" aria-label="全部摄影">摄 影</Link>
         </li>
         <li className={style.connectItem}>
-          <Link to="/videos" aria-label="全部视频">视频</Link>
+          <Link to="/videos" aria-label="全部视频">视 频</Link>
         </li>
       </ul>
       <div className={style.action}>

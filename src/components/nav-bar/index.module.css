@@ -38,10 +38,14 @@
 .connect-item {
   color: var(--primary-text-color);
   font-size: 16px;
-  letter-spacing: 4px;
   font-weight: normal;
   box-sizing: border-box;
-  padding: 0 8px;
+  padding: 0 8px 0 4px;
+  text-align: center;
+}
+
+.connect-item:hover {
+  color: var(--theme-color);
 }
 
 .connect-item:after {
@@ -55,10 +59,6 @@
 .connect-item:hover:after {
   transition: width 100ms ease-in-out 0s;
   width: 100%;
-}
-
-.connect-item:hover {
-  color: var(--theme-color);
 }
 
 .action {
