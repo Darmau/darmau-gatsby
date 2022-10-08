@@ -94,7 +94,7 @@ export const albumQuery = graphql`
         gallery {
           localFile {
             childImageSharp {
-            gatsbyImageData(width: 960, placeholder: DOMINANT_COLOR)
+            gatsbyImageData(width: 960, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
             }
             id
           }

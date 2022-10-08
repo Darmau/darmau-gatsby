@@ -55,7 +55,7 @@ query ArticlesByTag($strapi_id: Int) {
             cover {
               localFile {
                 childImageSharp {
-                  gatsbyImageData(width: 210, placeholder: BLURRED, formats: AUTO)
+                  gatsbyImageData(width: 210, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
                 }
               }
             }

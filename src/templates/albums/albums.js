@@ -55,7 +55,7 @@ export const allStrapiAlbum = graphql `
           cover {
             localFile {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, formats: AUTO, width: 345)
+                gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF], width: 345)
               }
             }
           }

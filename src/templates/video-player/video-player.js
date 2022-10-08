@@ -126,7 +126,7 @@ export const videoQuery = graphql`
                   cover {
                     localFile {
                     childImageSharp {
-                        gatsbyImageData(width: 840)
+                        gatsbyImageData(width: 840, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
                     }
                     }
                   }
