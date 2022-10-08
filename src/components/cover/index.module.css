@@ -190,7 +190,6 @@ h4 {
 
   @keyframes scale {
     50% {
-      padding-bottom: 32px;
       padding-right: 48px;
     }
   }
