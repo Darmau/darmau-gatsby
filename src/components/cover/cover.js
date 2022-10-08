@@ -40,7 +40,7 @@ const Cover = () => {
 
           <div className={style.codeLine}>
             <span className={style.mtk15}>7</span>
-            <div className={style.codeLine3}><span><span className={style.mtk15}>&lt;</span><span className={style.mtk27}>p</span><span className={style.mtk1}>&nbsp;</span><span className={style.mtk6}>class</span><span className={style.mtk15}>=</span><span className={style.mtk5}>"intro"</span><span className={style.mtk15}>&gt;</span><span className={style.mtk1}>I&nbsp;create&nbsp;and&nbsp;build&nbsp;things&nbsp;on&nbsp;screen</span><span className={style.mtk15}>&lt;/</span><span className={style.mtk27}>p</span><span className={style.mtk15}>&gt;</span></span></div>
+            <div className={style.codeLine3}><span><span className={style.mtk15}>&lt;</span><span className={style.mtk27}>p</span><span className={style.mtk1}>&nbsp;</span><span className={style.mtk6}>class</span><span className={style.mtk15}>=</span><span className={style.mtk5}>"intro"</span><span className={style.mtk15}>&gt;</span><span className={style.mtk1}>I&nbsp;create&nbsp;and&nbsp;build&nbsp;things&nbsp;for&nbsp;screen</span><span className={style.mtk15}>&lt;/</span><span className={style.mtk27}>p</span><span className={style.mtk15}>&gt;</span></span></div>
           </div>
 
           <div className={style.codeLine}>
