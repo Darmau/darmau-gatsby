@@ -269,7 +269,7 @@ figure figcaption {
   font-style: normal;
   color: var(--secondary-text-color);
   text-align: center;
-  margin-top: 16px 0;
+  margin: 16px 0;
 }
 
 .wechat-img {
