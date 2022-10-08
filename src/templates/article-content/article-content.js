@@ -100,6 +100,7 @@ export function Head({ data }) {
   )
 }
 
+
 export const articleQuery = graphql`
   query ArticleContentById($strapi_id: Int!)  {
     allStrapiArticle(filter: {strapi_id: {eq: $strapi_id}}) {
