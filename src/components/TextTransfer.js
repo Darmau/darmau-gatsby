@@ -3,11 +3,11 @@ import * as style from "../templates/article-content/index.module.css"
 
 const MainBody = ({ data }) => {
   const mainContentObject = JSON.parse(data)
-  const blocksObj = mainContentObject.blocks
-  const blocksArr = []
-  for (let i in blocksObj) {
-    blocksArr.push(blocksObj[i])
-  }
+  const blocksArr = mainContentObject.blocks
+  // const blocksArr = []
+  // for (let i in blocksObj) {
+  //   blocksArr.push(blocksObj[i])
+  // }
 
   // 将block分发到对应处理函数
   function transfer(block) {
@@ -20,8 +20,51 @@ const MainBody = ({ data }) => {
       case 'quote': return handleQuote(block.data)
       case 'raw': return handleRaw(block.data)
       case 'image': return handleImage(block.data)
+      case 'table': return handleTable(block.data)
 
       default: return (<p>{block.data.text}</p>)
+    }
+  }
+
+  //处理表格
+  function handleTable(data) {
+    if (data.withHeadings) {
+      let table = data.content
+      let th = table.shift()
+      return (
+        <table>
+          {
+            (
+              <>
+                <tr>{th.map(cell => (<th>{cell}</th>))}</tr>
+                {table.map(
+                  row => (
+                    <tr>
+                      {row.map(
+                        cell => (<td>{cell}</td>)
+                      )}
+                    </tr>
+                  )
+                )}
+              </>
+            )
+          }
+        </table>
+      )
+    } else {
+      return (
+        <table>
+          {data.content.map(
+            row => (
+              <tr>
+                {row.map(
+                  cell => (<td>{cell}</td>)
+                )}
+              </tr>
+            )
+          )}
+        </table>
+      )
     }
   }
 

@@ -190,6 +190,28 @@ figure figcaption {
   width: 100%;
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  background-color: var(--divider-color);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  color: var(--secondary-text-color);
+}
+
 /* ----------作者信息卡片---------- */
 .about {
   display: flex;
