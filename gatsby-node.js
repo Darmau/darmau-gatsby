@@ -35,7 +35,7 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   // 创建文章详情页
-  const articleContentTemplete = path.resolve(`./src/templates/article-content/article-content.js`)
+  const articleContentTemplate = path.resolve(`./src/templates/article-content/article-content.js`)
 
   const resultArticle = await graphql(`
          {
@@ -60,7 +60,7 @@ exports.createPages = async ({ actions, graphql }) => {
   articles.forEach((article) => {
     createPage({
       path: `/article/${article.node.slug}`,
-      component: articleContentTemplete,
+      component: articleContentTemplate,
       context: { strapi_id: article.node.strapi_id },
     })
   });
@@ -96,7 +96,7 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   // 创建相册详情页
-  const albumViewerTemplete = path.resolve(`./src/templates/album-viewer/album-viewer.js`)
+  const albumViewerTemplate = path.resolve(`./src/templates/album-viewer/album-viewer.js`)
 
   const resultAlbum = await graphql(`
          {
@@ -121,7 +121,7 @@ exports.createPages = async ({ actions, graphql }) => {
   albums.forEach((album) => {
     createPage({
       path: `/album/${album.node.slug}`,
-      component: albumViewerTemplete,
+      component: albumViewerTemplate,
       context: { strapi_id: album.node.strapi_id },
     })
   });
@@ -157,7 +157,7 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   // 创建视频详情页
-  const videoPlayerTemplete = path.resolve(`./src/templates/video-player/video-player.js`)
+  const videoPlayerTemplate = path.resolve(`./src/templates/video-player/video-player.js`)
   const resultVideo = await graphql(`
          {
             allStrapiVideo {
@@ -178,13 +178,13 @@ exports.createPages = async ({ actions, graphql }) => {
   videos.forEach((video) => {
     createPage({
       path: `/video/${video.node.slug}`,
-      component: videoPlayerTemplete,
+      component: videoPlayerTemplate,
       context: { strapi_id: video.node.strapi_id },
     })
   });
 
   // 创建文章话题页
-  const categoryArticleTemplete = path.resolve(`./src/templates/category-article/category-article.js`)
+  const categoryArticleTemplate = path.resolve(`./src/templates/category-article/category-article.js`)
 
   const resultCategoryArticle = await graphql(`
          {
@@ -209,13 +209,13 @@ exports.createPages = async ({ actions, graphql }) => {
   categoryArticle.forEach((category) => {
     createPage({
       path: `/category/articles/${category.node.slug}`,
-      component: categoryArticleTemplete,
+      component: categoryArticleTemplate,
       context: { strapi_id: category.node.strapi_id },
     })
   });
 
   //创建标签页
-  const tagTemplete = path.resolve(`./src/templates/tag/tag.js`)
+  const tagTemplate = path.resolve(`./src/templates/tag/tag.js`)
 
   const resultTag = await graphql(`
          {
@@ -240,8 +240,36 @@ exports.createPages = async ({ actions, graphql }) => {
   tags.forEach((tag) => {
     createPage({
       path: `/tag/${tag.node.slug}`,
-      component: tagTemplete,
+      component: tagTemplate,
       context: { strapi_id: tag.node.strapi_id },
+    })
+  });
+
+  //创建作品页
+  const portfolioTemplate = path.resolve(`./src/templates/portfolio/portfolio.js`)
+
+  const resultPortfolio = await graphql(`
+    {allStrapiPortfolio {
+      edges {
+        node {
+          strapi_id
+          slug
+        }
+      }
+    }}`)
+
+  if (resultPortfolio.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const portfolios = resultPortfolio.data.allStrapiPortfolio.edges
+
+  portfolios.forEach((portfolio) => {
+    createPage({
+      path: `/portfolio/${portfolio.node.slug}`,
+      component: portfolioTemplate,
+      context: { strapi_id: portfolio.node.strapi_id },
     })
   });
 
