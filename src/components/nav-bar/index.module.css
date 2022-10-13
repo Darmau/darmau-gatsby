@@ -42,6 +42,7 @@
   box-sizing: border-box;
   padding: 0 8px 0 4px;
   text-align: center;
+  margin-right: 8px;
 }
 
 .connect-item:hover {

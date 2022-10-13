@@ -278,32 +278,6 @@ td {
   color: var(--secondary-text-color);
 }
 
-.wechat-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 24px;
-  border-top: 1px solid var(--divider-color);
-  padding-top: 24px;
-}
-
-.wechat-text {
-  font-size: 14px;
-  font-style: normal;
-  color: var(--secondary-text-color);
-  text-align: center;
-  margin: 16px 0;
-}
-
-.wechat-img {
-  width: 128px;
-}
-
-.rss {
-  display: flex;
-  align-items: center;
-}
-
 @media (min-width: 500px) {
   .article-container {
     max-width: 500px;

@@ -73,7 +73,8 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.externalLinks}>
-        <p className={style.websiteInfo}>{thisYear.getFullYear()} © Designed and Developed by Darmau</p>
+        <p className={style.websiteInfo}>2019-{thisYear.getFullYear()} © Designed and Developed by Darmau</p>
+        <p><a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022024489</a></p>
         <SocialMedia/>
       </div>
     </footer>
