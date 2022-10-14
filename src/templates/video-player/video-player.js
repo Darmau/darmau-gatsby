@@ -4,7 +4,7 @@ import Layout from "../../components/layout/layout";
 import VideoFrame from "../../components/video-frame/video-frame"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
 import * as style from "./index.module.css"
-import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
+import { Disqus } from 'gatsby-plugin-disqus';
 
 export default function VideoPlayer({ data }) {
 
@@ -32,6 +32,12 @@ export default function VideoPlayer({ data }) {
         }
       }
     )
+  }
+
+  let disqusConfig = {
+    url: `https://darmau.design/video/ + ${video.slug}`,
+    identifier: `https://darmau.design/video/ + ${video.slug}`,
+    title: video.basic.title,
   }
 
   return (
@@ -84,7 +90,7 @@ export default function VideoPlayer({ data }) {
         </div>
 
         {/* 评论 */}
-        <TalkyardCommentsIframe />
+        <Disqus config={disqusConfig} />
       </main>
     </Layout>
   )

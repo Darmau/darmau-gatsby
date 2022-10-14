@@ -6,12 +6,18 @@ import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import MainBody from "../../components/TextTransfer";
 import Catalog from "../../components/catalog";
-import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
+import { Disqus } from 'gatsby-plugin-disqus';
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
   const cover = getImage(article.cover.localFile)
   const mainContentString = article.mainBody.data.mainBody
+
+  let disqusConfig = {
+    url: `https://darmau.design/article/ + ${article.slug}`,
+    identifier: `https://darmau.design/article/ + ${article.slug}`,
+    title: article.basic.title,
+  }
 
   return (
     <Layout>
@@ -39,7 +45,7 @@ const ArticleContent = ({ data }) => {
           </div>
 
           {/* 评论 */}
-          <TalkyardCommentsIframe />
+          <Disqus config={disqusConfig}/>
 
         </article>
         <address className={style.about}>
