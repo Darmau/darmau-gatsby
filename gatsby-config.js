@@ -145,9 +145,9 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-disqus`,
+      resolve: '@debiki/gatsby-plugin-talkyard',
       options: {
-        shortname: process.env.GATSBY_DISQUS_NAME,
+        talkyardServerUrl: 'https://site-9htoc9ala2.talkyard.net'
       }
     },
 

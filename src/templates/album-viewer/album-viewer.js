@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import * as style from "./index.module.css"
-import { Disqus } from 'gatsby-plugin-disqus';
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
 
 const AlbumViewer = ({ data }) => {
 
@@ -16,13 +16,6 @@ const AlbumViewer = ({ data }) => {
   // 获取点击列表项的index，并将展示图片state更改为相应图片
   const switchActive = (index) => (event) => {
     setActivePhoto(getImage(album.gallery[index].localFile))
-  }
-
-  //评论配置
-  let disqusConfig = {
-    url: `https://darmau.design/album/ + ${album.slug}`,
-    identifier: `https://darmau.design/album/ + ${album.slug}`,
-    title: album.basic.title,
   }
 
   return (
@@ -60,7 +53,7 @@ const AlbumViewer = ({ data }) => {
             </svg>
             {album.location && <p className={style.albumCaption}>{album.location}</p>}
           </div>
-          <Disqus config={disqusConfig}/>
+          <TalkyardCommentsIframe />
         </div>
       </main>
     </Layout>
