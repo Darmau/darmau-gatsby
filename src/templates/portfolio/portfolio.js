@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby";
 import Layout from "../../components/layout/layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/TextTransfer";
 import * as style from "./index.module.css"
@@ -13,9 +14,12 @@ const PortfolioCase = ({ data }) => {
 
   return (
     <Layout>
+      <Breadcrumbs upLevel="portfolio" active={portfolio.title} />
       <main className={style.articleContainer}>
         <Catalog data={mainContentString} />
         <article>
+
+          {/* 此处同文章样式 */}
           <GatsbyImage className={style.articleCover} image={cover} alt={portfolio.title} />
           <h1 className={style.articleTitle}>{portfolio.title}</h1>
           <p className={style.date}>{portfolio.date}</p>
@@ -37,7 +41,7 @@ const PortfolioCase = ({ data }) => {
               </svg>
               <div className={style.person}>
                 <div className={style.authorName}>李大毛没有猫</div>
-                <div className={style.slogan}>目标成为设计师中最会写代码，程序员中最会画图的。社会底层，失败中年。爱好摄影、骑摩托。现居成都。</div>
+                <div className={style.slogan}>喜欢写代码的设计师。爱好摄影、骑摩托。现居成都。</div>
               </div>
             </div>
           </div>

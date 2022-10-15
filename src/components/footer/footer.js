@@ -68,12 +68,13 @@ const Footer = () => {
             <h1 className={style.catalogTitle}>关于</h1>
             <ul className={style.catalogList}>
               <li className={style.catalogItem}><Link to="/changelog">本站</Link></li>
+              <li className={style.catalogItem}><Link to="/portfolio">作品</Link></li>
             </ul>
           </div>
         </div>
       </div>
       <div className={style.externalLinks}>
-        <p className={style.websiteInfo}>2019-{thisYear.getFullYear()} © Designed and Developed by Darmau</p>
+        <p className={style.websiteInfo}>2019-{thisYear.getFullYear()} © Designed and Developed by 李大毛</p>
         <p>蜀ICP备<a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">2022024489</a>号</p>
         <SocialMedia/>
       </div>
