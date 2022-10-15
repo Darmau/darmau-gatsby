@@ -134,17 +134,6 @@ article h6 {
   color: var(--link-text-color);
 }
 
-.block-code {
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  padding: 16px;
-  font-family: monospace;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  min-height: 256px;
-}
-
 article ol,
 article ul {
   margin-top: -8px;

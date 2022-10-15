@@ -85,17 +85,6 @@ article h3 {
   color: #0B83F2;
 }
 
-.block-code {
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  padding: 16px;
-  font-family: monospace;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  min-height: 256px;
-}
-
 article ol,
 article ul {
   margin-top: -8px;
