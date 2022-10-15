@@ -5,6 +5,7 @@ import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import * as style from "./index.module.css"
 import { Disqus } from 'gatsby-plugin-disqus';
+import { Seo } from "../../components/seo";
 
 const AlbumViewer = ({ data }) => {
 
@@ -69,12 +70,12 @@ const AlbumViewer = ({ data }) => {
 
 export function Head({ data }) {
   return (
-    <>
-      <title>{data.allStrapiAlbum.nodes[0].basic.title} | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
-    </>
+    <Seo
+      title={data.allStrapiAlbum.nodes[0].basic.title}
+      description={data.allStrapiAlbum.nodes[0].basic.description}
+      pathname={'/album/' + data.allStrapiAlbum.nodes[0].slug} 
+      cover={data.allStrapiAlbum.nodes[0].cover.url}>
+    </Seo>
   )
 }
 
@@ -84,6 +85,9 @@ export const albumQuery = graphql`
     allStrapiAlbum(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
         slug
+        cover {
+          url
+        }
         basic {
           date
           description

@@ -1,12 +1,13 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
 import Layout from "../components/layout/layout";
+import * as style from "../styles/portfolio.module.css"
 
 const Portfolios = ({data}) => {
   const portfolio = data.allStrapiPortfolio.nodes
   return (
     <Layout>
-      <h1>作品集</h1>
+      <h1>本页面仍在开发中</h1>
       <ul>
         {portfolio.map(item => (
           <li>

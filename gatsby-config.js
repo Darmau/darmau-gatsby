@@ -12,8 +12,10 @@ const strapiConfig = {
 module.exports = {
   siteMetadata: {
     title: `可可托海没有海`,
-    siteUrl: `https://darmau.design/`,
-    description: "李大毛的个人网站",
+    siteUrl: `https://darmau.design`,
+    description: `设计师、开发者李大毛的个人网站`,
+    twitterUsername: `@herac1es`,
+    image: `/default-cover.jpg`,
   },
   plugins: [
     'gatsby-plugin-postcss',
