@@ -11,28 +11,25 @@ const Catalog = ({ data }) => {
     }
   }
 
-  let num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0, num6 = 0
+  let num2 = 0, num3 = 0, num4 = 0
   function generateHeader(header) {
     const level = header.level
     switch (level) {
       case 1:
-        num1++
-        return (<a href={'#h1-' + num1.toString()}>{header.text}</a>)
+        break
       case 2:
         num2++
         return (<a href={'#h2-' + num2.toString()}>{header.text}</a>)
       case 3:
         num3++
-        return (<a href={'#h3-' + num3.toString()}>{header.text}</a>)
+        return (<a href={'#h3-' + num3.toString()}>&nbsp;&nbsp;{header.text}</a>)
       case 4:
         num4++
-        return (<a href={'#h4-' + num4.toString()}>{header.text}</a>)
+        return (<a href={'#h4-' + num4.toString()}>&nbsp;&nbsp;&nbsp;&nbsp;{header.text}</a>)
       case 5:
-        num5++
-        return (<a href={'#h5-' + num5.toString()}>{header.text}</a>)
+        break
       case 6:
-        num6++
-        return (<a href={'#h6-' + num6.toString()}>{header.text}</a>)
+        break
       default:
         return (<p>{data.text}</p>)
     }

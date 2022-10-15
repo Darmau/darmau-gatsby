@@ -1,5 +1,6 @@
 import React from "react";
 import * as style from "../templates/article-content/index.module.css"
+import Code from "./code";
 
 const MainBody = ({ data }) => {
   const mainContentObject = JSON.parse(data)
@@ -127,9 +128,7 @@ const MainBody = ({ data }) => {
   //处理代码 - 待优化
   function handleCode(data) {
     return (
-      <div className={style.blockCode}>
-        <code>{data.code}</code>
-      </div>
+      <Code data={data.code}/>
     )
   }
 

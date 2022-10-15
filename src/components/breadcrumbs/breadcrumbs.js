@@ -8,6 +8,7 @@ const Breadcrumbs = (props) => {
     case 'articles': parentPage = '全部文章'; break
     case 'videos': parentPage = '全部视频'; break
     case 'albums': parentPage = '全部照片';break
+    case 'portfolio': parentPage = '作品集';break
     default: parentPage= '首页';
   }
 

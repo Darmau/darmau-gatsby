@@ -42,7 +42,8 @@
 }
 
 .article-category {
-  background-color: var(--divider-color);
+  background-color: var(--theme-color);
+  color: white;
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
   margin-right: 16px;
@@ -58,12 +59,21 @@ article {
   max-width: 700px;
 }
 
-article h1 {
+.description {
+  font-size: 14px;
+  background-color: var(--divider-color);
+  color: var(--primary-text-color);
+  padding: 16px;
+  line-height: 1.8;
+}
+
+.article-title {
   font-size: 28px;
   color: var(--primary-text-color);
   font-weight: bold;
   margin-top: 24px;
   margin-bottom: 8px;
+  font-family: var(--typography-sans);
 }
 
 article h2 {
@@ -121,18 +131,7 @@ article h6 {
 }
 
 .paragraph a {
-  color: #0B83F2;
-}
-
-.block-code {
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  padding: 16px;
-  font-family: monospace;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  min-height: 256px;
+  color: var(--link-text-color);
 }
 
 article ol,
@@ -144,7 +143,7 @@ article ul {
 article li {
   margin-bottom: 8px;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .divider {

@@ -5,8 +5,11 @@
   --card-color: #ffffff;
   --primary-text-color: rgba(0, 0, 0, 0.85);
   --secondary-text-color: rgba(0, 0, 0, 0.7);
+  --link-text-color: #0B83F2;
   --border-color: #d2d2d2;
   --divider-color: #f1f1f1;
+  --typography-sans: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  --typography-mono: monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +26,7 @@
 }
 
 html {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-family: var(--typography-sans);
   margin: 0;
   height: 100%;
 }
@@ -34,7 +37,21 @@ body {
   height: 100%;
 }
 
+h1 {
+  color: var(--primary-text-color);
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.inline-code {
+  font-family: var(--typography-mono);
+  color: #6E261A;
+  background-color: #FFF5F3;
+  border-radius: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 6px;
 }
