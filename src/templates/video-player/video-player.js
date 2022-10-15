@@ -5,6 +5,7 @@ import VideoFrame from "../../components/video-frame/video-frame"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
 import * as style from "./index.module.css"
 import { Disqus } from 'gatsby-plugin-disqus';
+import { Seo } from "../../components/seo";
 
 export default function VideoPlayer({ data }) {
 
@@ -98,12 +99,12 @@ export default function VideoPlayer({ data }) {
 
 export function Head({ data }) {
   return (
-    <>
-      <title>{data.allStrapiVideo.nodes[0].basic.title} | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
-    </>
+    <Seo
+      title={data.allStrapiVideo.nodes[0].basic.title}
+      description={data.allStrapiVideo.nodes[0].basic.description}
+      pathname={'/video/' + data.allStrapiVideo.nodes[0].slug} 
+      cover={data.allStrapiVideo.nodes[0].cover.url}>
+    </Seo>
   )
 }
 
@@ -124,6 +125,7 @@ export const videoQuery = graphql`
                     title
                   }
                   cover {
+                    url
                     localFile {
                     childImageSharp {
                         gatsbyImageData(width: 840, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])

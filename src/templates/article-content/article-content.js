@@ -7,6 +7,7 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import MainBody from "../../components/TextTransfer";
 import Catalog from "../../components/catalog";
 import { Disqus } from 'gatsby-plugin-disqus';
+import { Seo } from "../../components/seo";
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
@@ -46,7 +47,7 @@ const ArticleContent = ({ data }) => {
           </div>
 
           {/* 评论 */}
-          <Disqus config={disqusConfig}/>
+          <Disqus config={disqusConfig} />
 
         </article>
         <address className={style.about}>
@@ -92,12 +93,12 @@ const ArticleContent = ({ data }) => {
 export function Head({ data }) {
 
   return (
-    <>
-      <title>{data.allStrapiArticle.nodes[0].basic.title} | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
-    </>
+    <Seo
+      title={data.allStrapiArticle.nodes[0].basic.title}
+      description={data.allStrapiArticle.nodes[0].basic.description}
+      pathname={'/article/' + data.allStrapiArticle.nodes[0].slug} 
+      cover={data.allStrapiArticle.nodes[0].cover.url}>
+    </Seo>
   )
 }
 
@@ -121,6 +122,7 @@ export const articleQuery = graphql`
           slug
         }
         cover {
+          url
           localFile {
             childImageSharp {
               gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
