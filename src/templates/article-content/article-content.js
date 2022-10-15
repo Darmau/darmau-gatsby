@@ -28,7 +28,7 @@ const ArticleContent = ({ data }) => {
 
           {/* 文章封面、标题、分类、日期、标签 */}
           <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
-          <h1>{article.basic.title}</h1>
+          <h1 className={style.articleTitle}>{article.basic.title}</h1>
           <p className={style.date}>{article.basic.date}</p>
           <div className={style.relatives}>
             <p className={style.articleCategory}><Link to={'/category/articles/' + article.category_article.slug}>{article.category_article.title}</Link></p>

@@ -38,3 +38,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.inline-code {
+  font-family: monospace;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 2px 4px;
+}
