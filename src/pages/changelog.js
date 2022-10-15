@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "gatsby";
 
 export default function Changelog() {
   return (
-    <h1>Changelog</h1>
+    <>
+      <p>本页面还在开发中</p>
+      <p><Link to="/">返回首页</Link></p>
+    </>
   )
 }

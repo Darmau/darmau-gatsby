@@ -37,9 +37,13 @@ body {
   height: 100%;
 }
 
+h1 {
+  color: var(--primary-text-color);
+}
+
 a {
   text-decoration: none;
-  color: var(--link-text-color);
+  color: inherit;
 }
 
 .inline-code {

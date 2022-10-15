@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby";
 import Layout from "../../components/layout/layout";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/TextTransfer";
 import * as style from "./index.module.css"

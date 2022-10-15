@@ -37,8 +37,8 @@ const ArticleContent = ({ data }) => {
                 <Link to={'/tag/' + tag.slug}>#{tag.title}</Link>
               </p>)
             )}
-          <p className={style.description}>{article.basic.description}</p>
           </div>
+          <p className={style.description}>{article.basic.description}</p>
 
           {/* 文章主体 */}
           <div className={style.mainContent}>
