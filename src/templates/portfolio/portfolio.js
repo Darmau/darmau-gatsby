@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby";
 import Layout from "../../components/layout/layout";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/TextTransfer";
 import * as style from "./index.module.css"
 
 const PortfolioCase = ({ data }) => {
   const portfolio = data.allStrapiPortfolio.nodes[0];
-  // const cover = getImage(portfolio.cover.localFile);
+  const cover = getImage(portfolio.cover.localFile);
   const mainContentString = portfolio.mainBody.data.mainBody;
 
   return (
@@ -15,10 +16,10 @@ const PortfolioCase = ({ data }) => {
       <main className={style.articleContainer}>
         <Catalog data={mainContentString} />
         <article>
-
-          <h1>{portfolio.title}</h1>
+          <GatsbyImage className={style.articleCover} image={cover} alt={portfolio.title} />
+          <h1 className={style.articleTitle}>{portfolio.title}</h1>
           <p className={style.date}>{portfolio.date}</p>
-          <p>{portfolio.description}</p>
+          <p className={style.description}>{portfolio.description}</p>
           <div className={style.mainContent}>
             <MainBody data={mainContentString} />
           </div>
@@ -68,6 +69,13 @@ export const portfolioQuery = graphql`
         mainBody {
           data {
             mainBody
+          }
+        }
+        cover {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
+            }
           }
         }
       }
