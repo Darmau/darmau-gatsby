@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/layout";
-import MainBody from "../components/TextTransfer"
+import MainBody from "../components/text-transfer/TextTransfer"
 import * as style from "../styles/changelog.module.css"
 
 export default function Changelog({ data }) {
