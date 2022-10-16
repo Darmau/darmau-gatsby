@@ -98,12 +98,26 @@ export default function VideoPlayer({ data }) {
 }
 
 export function Head({ data }) {
+  const video = data.allStrapiVideo.nodes[0]
+  const jsonld = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": video.basic.title,
+    "description": video.basic.description,
+    "thumbnailUrl": [
+      'https://image.darmau.design' + video.cover.url
+    ],
+    "uploadDate": video.basic.date + 'T08:00:00+08:00',
+    "embedUrl": video.source.xigua ? video.source.xigua : video.source.bilibili
+  }
+
   return (
     <Seo
-      title={data.allStrapiVideo.nodes[0].basic.title}
-      description={data.allStrapiVideo.nodes[0].basic.description}
-      pathname={'/video/' + data.allStrapiVideo.nodes[0].slug} 
-      cover={data.allStrapiVideo.nodes[0].cover.url}>
+      title={video.basic.title}
+      description={video.basic.description}
+      pathname={'/video/' + video.slug}
+      cover={video.cover.url}>
+      <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
     </Seo>
   )
 }

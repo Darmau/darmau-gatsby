@@ -91,13 +91,31 @@ const ArticleContent = ({ data }) => {
 }
 
 export function Head({ data }) {
+  const article = data.allStrapiArticle.nodes[0]
+  const jsonld = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": article.basic.title,
+    "image": [
+      'https://image.darmau.design' + article.cover.url,
+    ],
+    "datePublished": article.basic.date + 'T08:00:00+08:00',
+    "author": [
+      {
+        "@type": "Person",
+        "name": "李大毛",
+        "url": "https://darmau.design/"
+      }
+    ]
+  }
 
   return (
     <Seo
-      title={data.allStrapiArticle.nodes[0].basic.title}
-      description={data.allStrapiArticle.nodes[0].basic.description}
-      pathname={'/article/' + data.allStrapiArticle.nodes[0].slug} 
-      cover={data.allStrapiArticle.nodes[0].cover.url}>
+      title={article.basic.title}
+      description={article.basic.description}
+      pathname={'/article/' + article.slug}
+      cover={article.cover.url}>
+      <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
     </Seo>
   )
 }
