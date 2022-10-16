@@ -45,20 +45,6 @@ module.exports = {
       options: strapiConfig,
     },
 
-    //PWA配置
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `可可托海没有海`,
-        short_name: `可可托海没有海`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#fff`,
-        display: `standalone`,
-        icon: `./src/images/favicon.svg`,
-      },
-    },
-
     //Google Analytics配置
     {
       resolve: `gatsby-plugin-google-gtag`,
