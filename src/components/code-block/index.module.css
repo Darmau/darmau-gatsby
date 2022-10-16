@@ -1,0 +1,9 @@
+.code-block {
+  width: 100%;
+  white-space: pre-wrap;
+  overflow-x: scroll;
+}
+
+.code-line {
+  width: 100%;
+}
