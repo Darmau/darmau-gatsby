@@ -4,7 +4,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
-import MainBody from "../../components/TextTransfer";
+import MainBody from "../../components/text-transfer/TextTransfer";
 import Catalog from "../../components/catalog";
 import { Disqus } from 'gatsby-plugin-disqus';
 import { Seo } from "../../components/seo";

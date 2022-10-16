@@ -4,7 +4,7 @@ import Layout from "../../components/layout/layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Catalog from "../../components/catalog";
-import MainBody from "../../components/TextTransfer";
+import MainBody from "../../components/text-transfer/TextTransfer";
 import * as style from "./index.module.css"
 
 const PortfolioCase = ({ data }) => {
@@ -17,7 +17,7 @@ const PortfolioCase = ({ data }) => {
       <Breadcrumbs upLevel="portfolio" active={portfolio.title} />
       <main className={style.articleContainer}>
         <Catalog data={mainContentString} />
-        <article>
+        <article className={style.portfolio}>
 
           {/* 此处同文章样式 */}
           <GatsbyImage className={style.articleCover} image={cover} alt={portfolio.title} />

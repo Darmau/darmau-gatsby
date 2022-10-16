@@ -33,7 +33,7 @@
 .article-cover {
   width: 100%;
   border-radius: 8px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
 }
 
 .date {
@@ -42,8 +42,8 @@
   margin: 8px 0 8px 0;
 }
 
-article {
-  max-width: 700px;
+.portfolio {
+  width: 100%;
 }
 
 .article-title {
@@ -53,114 +53,6 @@ article {
   margin-top: 24px;
   margin-bottom: 8px;
   font-family: var(--typography-sans);
-}
-
-article h2 {
-  font-size: 24px;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-article h3 {
-  font-size: 20px;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-.paragraph {
-  font-size: 15px;
-  line-height: 2;
-  color: var(--primary-text-color);
-}
-
-.paragraph b {
-  font-weight: bold;
-}
-
-.paragraph a {
-  color: #0B83F2;
-}
-
-article ol,
-article ul {
-  margin-top: -8px;
-  color: var(--primary-text-color);
-}
-
-article li {
-  margin-bottom: 8px;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.divider {
-  height: 1px;
-  width: 75%;
-  background-color: var(--divider-color);
-}
-
-figure {
-  margin: 16px 0 16px 0;
-  box-sizing: border-box;
-}
-
-figure blockquote {
-  font-size: 20px;
-  color: var(--primary-text-color);
-  margin: 0;
-  padding: 16px;
-  border-left: 2px solid var(--border-color);
-}
-
-figure figcaption {
-  font-size: 16px;
-  color: var(--secondary-text-color);
-  text-align: right;
-}
-
-.image-frame {
-  width: 100%;
-}
-
-.image {
-  width: 100%;
-}
-
-.image-caption {
-  margin-bottom: 24px;
-  text-align: center;
-  font-size: 14px;
-  color: var(--secondary-text-color);
-}
-
-.raw-html {
-  width: 100%;
-}
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid var(--border-color);
-}
-
-th {
-  color: var(--primary-text-color);
-  font-weight: 500;
-  background-color: var(--divider-color);
-  border: 1px solid var(--border-color);
-  padding: 8px;
-  text-align: left;
-}
-
-td {
-  border: 1px solid var(--border-color);
-  padding: 8px;
-  color: var(--secondary-text-color);
 }
 
 /* ----------作者信息卡片---------- */
@@ -236,7 +128,6 @@ td {
 }
 
 @media (min-width: 768px) {
-  
   .article-container {
     grid-template-columns: 160px auto 256px;
     padding-left: 48px;
@@ -266,37 +157,5 @@ td {
   .catalog a {
     color: var(--primary-text-color);
     margin: 4px 0;
-  }
-
-  article h1 {
-    font-size: 32px;
-  }
-
-  article h2 {
-    font-size: 28px;
-  }
-
-  article h3 {
-    font-size: 24px;
-  }
-
-  article h4 {
-    font-size: 20px;
-  }
-
-  article h5 {
-    font-size: 18px;
-  }
-
-  article h6 {
-    font-size: 16px;
-  }
-
-  article p {
-    font-size: 16px;
-  }
-
-  figure blockquote {
-    font-size: 22px;
   }
 }
