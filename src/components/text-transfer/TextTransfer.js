@@ -1,6 +1,6 @@
 import React from "react";
-import * as style from "../templates/article-content/index.module.css"
-import Code from "./code";
+import * as style from "./index.module.css"
+import Code from "../code-block/code";
 
 const MainBody = ({ data }) => {
   const mainContentObject = JSON.parse(data)
@@ -33,16 +33,16 @@ const MainBody = ({ data }) => {
       let table = data.content
       let th = table.shift()
       return (
-        <table>
+        <table className={style.tableBlock}>
           {
             (
               <>
-                <tr>{th.map(cell => (<th>{cell}</th>))}</tr>
+                <tr>{th.map(cell => (<th className={style.tableHeader}>{cell}</th>))}</tr>
                 {table.map(
                   row => (
                     <tr>
                       {row.map(
-                        cell => (<td>{cell}</td>)
+                        cell => (<td className={style.tableCell}>{cell}</td>)
                       )}
                     </tr>
                   )
@@ -54,12 +54,12 @@ const MainBody = ({ data }) => {
       )
     } else {
       return (
-        <table>
+        <table className={style.tableBlock}>
           {data.content.map(
             row => (
               <tr>
                 {row.map(
-                  cell => (<td>{cell}</td>)
+                  cell => (<td className={style.tableCell}>{cell}</td>)
                 )}
               </tr>
             )
@@ -79,19 +79,19 @@ const MainBody = ({ data }) => {
         return (<h1 id={'h1-' + num1.toString()}>{data.text}</h1>)
       case 2:
         num2++
-        return (<h2 id={'h2-' + num2.toString()}>{data.text}</h2>)
+        return (<h2 className={style.header2} id={'h2-' + num2.toString()}>{data.text}</h2>)
       case 3:
         num3++
-        return (<h3 id={'h3-' + num3.toString()}>{data.text}</h3>)
+        return (<h3 className={style.header3} id={'h3-' + num3.toString()}>{data.text}</h3>)
       case 4:
         num4++
-        return (<h4 id={'h4-' + num4.toString()}>{data.text}</h4>)
+        return (<h4 className={style.header4} id={'h4-' + num4.toString()}>{data.text}</h4>)
       case 5:
         num5++
-        return (<h5 id={'h5-' + num5.toString()}>{data.text}</h5>)
+        return (<h5 className={style.header5} id={'h5-' + num5.toString()}>{data.text}</h5>)
       case 6:
         num6++
-        return (<h6 id={'h6-' + num6.toString()}>{data.text}</h6>)
+        return (<h6 className={style.header6} id={'h6-' + num6.toString()}>{data.text}</h6>)
       default:
         return (<p>{data.text}</p>)
     }
@@ -109,11 +109,11 @@ const MainBody = ({ data }) => {
   function handleList(data) {
     if (data.style === 'unordered') {
       return (
-        <ul>{data.items.map(item => (<li>{item}</li>))}</ul>
+        <ul className={style.contentList}>{data.items.map(item => (<li className={style.listItem}>{item}</li>))}</ul>
       )
     } else {
       return (
-        <ol>{data.items.map(item => (<li>{item}</li>))}</ol>
+        <ol className={style.contentList}>{data.items.map(item => (<li className={style.listItem}>{item}</li>))}</ol>
       )
     }
   }
@@ -125,7 +125,7 @@ const MainBody = ({ data }) => {
     )
   }
 
-  //处理代码 - 待优化
+  //处理代码
   function handleCode(data) {
     return (
       <Code data={data.code}/>
@@ -135,9 +135,9 @@ const MainBody = ({ data }) => {
   //处理引用
   function handleQuote(data) {
     return (
-      <figure>
-        <blockquote>{data.text}</blockquote>
-        <figcaption>{data.caption}</figcaption>
+      <figure className={style.quote}>
+        <blockquote className={style.quoteText}>{data.text}</blockquote>
+        <figcaption className={style.quotePerson}>{data.caption}</figcaption>
       </figure>
     )
   }
@@ -154,6 +154,7 @@ const MainBody = ({ data }) => {
   function handleImage(data) {
     return (
       <picture className={style.imageFrame}>
+        <source type="image/webp" srcSet={'https://image.darmau.design' + data.file.url + '?image_process=format,webp'}/>
         <img className={style.image} src={'https://image.darmau.design' + data.file.url} alt={data.file.alt} />
         {data.caption && <figcaption className={style.imageCaption}>{data.caption}</figcaption>}
       </picture>
