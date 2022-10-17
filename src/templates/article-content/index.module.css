@@ -73,7 +73,7 @@ article {
   font-weight: var(--font-bold);
   margin-top: 24px;
   margin-bottom: 8px;
-  font-family: var(--typography-sans);
+  font-family: var(--typography-serif);
 }
 
 /* ----------作者信息卡片---------- */
