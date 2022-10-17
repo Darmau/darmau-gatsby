@@ -9,7 +9,7 @@
 
 /* 封面部分 */
 .cover-section {
-  height: 720px;
+  height: 480px;
   width: 100%;
   background-color: #0E192D;
   display: flex;
@@ -28,7 +28,7 @@
 
 /* 首页大文字动效 */
 .glitch {
-  font-size: 56px;
+  font-size: 40px;
   font-weight: var(--font-bold);
   color: #2eeecb;
   animation: glitch 1s linear infinite;
@@ -219,12 +219,14 @@
 
 .tags {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tag {
   background-color: var(--theme-color);
   padding: 4px 8px;
   margin-right: 8px;
+  margin-bottom: 8px;
   color: white;
   font-size: 12px;
   border-radius: 2px;
@@ -259,8 +261,16 @@
     max-width: 960px;
   }
 
+  .cover-section {
+    height: 720px;
+  }
+
   .cover-intro {
     font-size: 22px;
+  }
+
+  .glitch {
+    font-size: 56px;
   }
 
   .section-header {
