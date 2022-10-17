@@ -1,0 +1,319 @@
+.main-content {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 封面部分 */
+.cover-section {
+  height: 720px;
+  width: 100%;
+  background-color: #0E192D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  max-width: 960px;
+  padding: 32px;
+}
+
+/* 首页大文字动效 */
+.glitch {
+  font-size: 56px;
+  font-weight: var(--font-bold);
+  color: #2eeecb;
+  animation: glitch 1s linear infinite;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+@keyframes glitch {
+
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.glitch::before,
+.glitch::after {
+  content: "李大毛没有猫";
+  position: absolute;
+  left: 0;
+}
+
+.glitch::before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.glitch::after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+/* 大文字动效结束 */
+
+.cover-intro {
+  color: white;
+  font-size: 24px;
+  line-height: 1.8;
+  font-weight: var(--font-bold);
+  margin-bottom: 8px;
+}
+
+.cover-description {
+  font-size: 18px;
+  color: white;
+  line-height: 1.8;
+}
+
+/* 关于部分 */
+.content-section {
+  margin-top: 48px;
+  padding: 16px;
+}
+
+/* 区块标题部分 */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  color: var(--primary-text-color);
+  margin: 16px 8px 8px 0;
+}
+
+.section-intro {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin-top: 8px;
+}
+
+/* 关于我部分 */
+.roles {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--card-color);
+  border: 1px solid var(--divider-color);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow:
+    0px 0.6px 1.4px rgba(0, 0, 0, 0.024),
+    0px 1.8px 4px rgba(0, 0, 0, 0.035),
+    0px 4.2px 9.6px rgba(0, 0, 0, 0.046),
+    0px 14px 32px rgba(0, 0, 0, 0.07);
+}
+
+.role {
+  border-bottom: 1px solid var(--divider-color);
+  padding: 24px 8px;
+}
+
+.role:last-child {
+  border: none;
+}
+
+.personal-title {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+  color: var(--primary-text-color);
+}
+
+.personal-text {
+  font-size: 15px;
+  color: var(--secondary-text-color);
+  line-height: 1.8;
+}
+
+.what-i-do {
+  font-size: 15px;
+  color: var(--theme-color);
+  margin-top: 32px;
+}
+
+.skill-list {
+  list-style-type: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  font-size: 15px;
+  color: var(--secondary-text-color);
+}
+
+/* 作品集部分 */
+.portfolio-item,
+.portfolio-item-2 {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.cover {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  margin-bottom: 12px;
+  border: 1px solid var(--divider-color);
+  border-radius: 4px;
+}
+
+.info,
+.info-left {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.portfolio-title {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--primary-text-color);
+}
+
+.tags {
+  display: flex;
+}
+
+.tag {
+  background-color: var(--theme-color);
+  padding: 4px 8px;
+  margin-right: 8px;
+  color: white;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.portfolio-description {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+}
+
+.mail-button {
+  background-color: var(--theme-color);
+  display: flex;
+  justify-content: center;
+  height: 48px;
+  font-size: 14px;
+  padding: 8px 32px;
+  border-radius: 4px;
+  color: white;
+  margin-top: 24px;
+  font-family: var(--typography-serif);
+}
+
+.mail-button:hover {
+  background-color: #772F21;
+}
+
+@media (min-width: 768px) {
+  .content-section {
+    margin-top: 64px;
+    max-width: 960px;
+  }
+
+  .cover-intro {
+    font-size: 22px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-intro {
+    font-size: 16px;
+  }
+
+  .roles {
+    flex-direction: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  .role {
+    border: none;
+    border-right: 1px solid var(--divider-color);
+    padding-right: 16px;
+  }
+
+  .role:last-child {
+    border: none;
+  }
+
+  .personal-title {
+    font-size: 24px;
+  }
+
+  .portfolio-item {
+    display: grid;
+    grid-template-columns: 480px auto;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .portfolio-item-2 {
+    display: grid;
+    grid-template-columns: auto 480px;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .info-left {
+    order: -1;
+  }
+
+  .portfolio-title {
+    font-size: 24px;
+  }
+}

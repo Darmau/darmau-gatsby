@@ -2,14 +2,18 @@
   --theme-color: #B23D2B;
   --background-color: #ffffff;
   --navbar-color: #ffffff;
-  --card-color: #ffffff;
+  --card-color: #f8f8f8;
   --primary-text-color: rgba(0, 0, 0, 0.85);
   --secondary-text-color: rgba(0, 0, 0, 0.7);
   --link-text-color: #0B83F2;
   --border-color: #d2d2d2;
   --divider-color: #f1f1f1;
   --typography-sans: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-  --typography-mono: monospace;
+  --typography-serif: 'Noto Serif SC', serif;
+  --typography-mono: 'Roboto Mono', monospace;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +21,7 @@
     --theme-color: #e45d48;
     --background-color: #171717;
     --navbar-color: #1f1f1f;
-    --card-color: #171717;
+    --card-color: #232323;
     --primary-text-color: rgba(255, 255, 255, 0.9);
     --secondary-text-color: rgba(255, 255, 255, 0.7);
     --border-color: #2f2f2f;
@@ -26,7 +30,7 @@
 }
 
 html {
-  font-family: var(--typography-sans);
+  font-family: var(--typography-serif);
   margin: 0;
   height: 100%;
 }

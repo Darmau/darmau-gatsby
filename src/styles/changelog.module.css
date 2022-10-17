@@ -7,50 +7,8 @@
 .page-title {
   font-size: 28px;
   color: var(--primary-text-color);
-  font-weight: bold;
+  font-weight: var(--font-bold);
   margin-top: 24px;
   margin-bottom: 8px;
-  font-family: var(--typography-sans);
-}
-
-h2 {
-  font-size: 24px;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-h3 {
-  font-size: 20px;
-  color: var(--primary-text-color);
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 16px;
-}
-
-.paragraph {
-  font-size: 15px;
-  line-height: 2;
-  color: var(--primary-text-color);
-}
-
-.paragraph b {
-  font-weight: bold;
-}
-
-.paragraph a {
-  color: var(--link-text-color);
-}
-
-main ol,
-main ul {
-  margin-top: -8px;
-  color: var(--primary-text-color);
-}
-
-main li {
-  margin-bottom: 8px;
-  font-size: 15px;
-  line-height: 1.8;
+  font-family: var(--typography-serif);
 }

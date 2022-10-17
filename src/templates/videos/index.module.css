@@ -31,13 +31,15 @@
 .video-cover {
   width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  border: 1px solid var(--divider-color);
 }
 
 .video-title {
   font-size: 20px;
   color: var(--primary-text-color);
   margin: 12px 0 8px 0;
-  font-weight: 500;
+  font-weight: var(--font-bold);
 }
 
 .video-title:hover {

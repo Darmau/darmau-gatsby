@@ -19,7 +19,7 @@ function IndexPage({ data }) {
       <section className={style.contentBlock}>
         <header className={style.contentHeader}>
           <h2 className={style.sectionTitle}>文章</h2>
-          <button>
+          <button className={style.more}>
             <Link to="/articles">更多文章</Link>
           </button>
         </header>
@@ -48,7 +48,7 @@ function IndexPage({ data }) {
       <section className={style.contentBlock}>
         <header className={style.contentHeader}>
           <h2 className={style.sectionTitle}>摄影</h2>
-          <button>
+          <button className={style.more}>
             <Link to="/albums">更多照片</Link>
           </button>
         </header>
@@ -67,7 +67,7 @@ function IndexPage({ data }) {
       <section className={style.contentBlock}>
         <header className={style.contentHeader}>
           <h2 className={style.sectionTitle}>视频</h2>
-          <button>
+          <button className={style.more}>
             <Link to="/videos">更多视频</Link>
           </button>
         </header>
