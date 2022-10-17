@@ -19,11 +19,11 @@
   align-items: center;
 }
 
-h1 {
-  font-family: monospace;
+.cover-title {
+  font-family: var(--typography-mono);
   font-size: 24px;
   color: #ffffff;
-  font-weight: normal;
+  font-weight: var(--font-normal);
   margin-right: 4px;
   margin-top: 0;
 }
@@ -45,7 +45,7 @@ h1 {
 .code-line {
   font-size: 12px;
   display: flex;
-  font-family: monospace;
+  font-family: var(--typography-mono);
   margin-bottom: 4px;
   padding-left: 16px;
   padding-right: 16px;

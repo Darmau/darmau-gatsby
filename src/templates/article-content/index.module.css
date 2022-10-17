@@ -70,7 +70,7 @@ article {
 .article-title {
   font-size: 28px;
   color: var(--primary-text-color);
-  font-weight: bold;
+  font-weight: var(--font-bold);
   margin-top: 24px;
   margin-bottom: 8px;
   font-family: var(--typography-sans);
@@ -94,7 +94,7 @@ article {
 
 .about-author-title {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: var(--font-bold);
   color: var(--secondary-text-color);
   font-style: normal;
   flex: 0 0 max-content;
@@ -128,7 +128,7 @@ article {
 
 .author-name {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: var(--font-bold);
   font-style: normal;
   color: var(--primary-text-color);
   margin-bottom: 8px;
@@ -197,7 +197,7 @@ article {
   
   .catalog header {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: var(--font-bold);
     margin-bottom: 8px;
   }
   

@@ -6,7 +6,7 @@ const Cover = () => {
     <div className={style.coverContainer}>
 
       <div className={style.codePart}>
-        <h1>Developer</h1>
+        <h1 className={style.coverTitle}>Developer</h1>
         <div className={style.editor}>
           <div className={style.codeLine}>
             <span className={style.mtk15}>1</span>

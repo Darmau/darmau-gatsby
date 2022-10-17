@@ -23,7 +23,7 @@
 
 .section-title {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: var(--font-bold);
   color: var(--primary-text-color);
 }
 
@@ -47,6 +47,8 @@
 .article-cover {
   aspect-ratio: 4 / 2;
   object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--divider-color);
 }
 
 .article-info {
@@ -55,7 +57,7 @@
 
 .content-title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: var(--font-bold);
   color: var(--primary-text-color);
   margin: 0 0 8px 0;
 }
@@ -81,7 +83,7 @@
 
 button {
   font-size: 14px;
-  font-weight: normal;
+  font-weight: var(--font-normal);
   display: inline-flex;
   justify-content: end;
   align-items: center;
@@ -122,6 +124,7 @@ button > a:hover {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3 / 2;
+  border-radius: 4px;
 }
 
 .photo-link:nth-child(1n+13) {
@@ -154,6 +157,7 @@ button > a:hover {
 .video-cover {
   width: 100%;
   margin-bottom: 8px;
+  border-radius: 4px;
 }
 
 .video-date {

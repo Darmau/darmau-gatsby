@@ -38,7 +38,7 @@
 .connect-item {
   color: var(--primary-text-color);
   font-size: 16px;
-  font-weight: normal;
+  font-weight: var(--font-normal);
   box-sizing: border-box;
   padding: 0 8px 0 4px;
   text-align: center;
