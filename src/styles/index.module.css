@@ -81,7 +81,7 @@
   color: var(--secondary-text-color);
 }
 
-button {
+.more {
   font-size: 14px;
   font-weight: var(--font-normal);
   display: inline-flex;
@@ -91,7 +91,7 @@ button {
   font-family: var(--typography-serif);
 }
 
-button > a:after {
+.more > a:after {
   border-bottom: 2px solid var(--theme-color);
   content: "";
   display: block;
@@ -99,12 +99,12 @@ button > a:after {
   transition: width 250ms ease-in-out 0s;
   width: 0;
 }
-button > a:hover:after {
+.more > a:hover:after {
   transition: width 100ms ease-in-out 0s;
   width: 100%;
 }
 
-button > a:hover {
+.more > a:hover {
   color: var(--theme-color);
 }
 

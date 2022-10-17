@@ -147,8 +147,9 @@ span {
   animation: scale 1.8s cubic-bezier(0.785, 0.135, 0.150, 0.860) infinite;
 }
 
-h4 {
+.name {
   font-size: 24px;
+  margin: 0;
 }
 
 .info {
@@ -163,11 +164,13 @@ h4 {
 
 .cities {
   font-size: 13px;
+  font-family: var(--typography-sans);
 }
 
 .slogan {
   font-size: 18px;
   margin-bottom: 0;
+  font-family: var(--typography-sans);
 }
 
 
