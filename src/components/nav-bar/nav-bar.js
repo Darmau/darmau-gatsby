@@ -3,10 +3,6 @@ import { Link } from "gatsby";
 import Search from "../search"
 import * as style from "./index.module.css"
 
-const searchIndices = [
-  { name: `articles`, title: `文章` },
-]
-
 const Navbar = () => {
   return (
     <nav className={style.navBar}>
@@ -69,9 +65,6 @@ const Navbar = () => {
           <Link to="/videos" aria-label="全部视频">视 频</Link>
         </li>
       </ul>
-      <div className={style.action}>
-        <Search indices={searchIndices} />
-      </div>
     </nav>
   );
 };
