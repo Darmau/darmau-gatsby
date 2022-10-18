@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import Search from "../search"
 import * as style from "./index.module.css"
 
 const Navbar = () => {
