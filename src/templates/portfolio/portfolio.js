@@ -15,13 +15,13 @@ const PortfolioCase = ({ data }) => {
   return (
     <Layout>
       <Breadcrumbs upLevel="portfolio" active={portfolio.title} />
-      <main className={style.articleContainer}>
+      <main className={style.portfolioContainer}>
         <Catalog data={mainContentString} />
         <article className={style.portfolio}>
 
           {/* 此处同文章样式 */}
-          <GatsbyImage className={style.articleCover} image={cover} alt={portfolio.title} />
-          <h1 className={style.articleTitle}>{portfolio.title}</h1>
+          <GatsbyImage className={style.portfolioCover} image={cover} alt={portfolio.title} />
+          <h1 className={style.portfolioTitle}>{portfolio.title}</h1>
           <p className={style.date}>{portfolio.date}</p>
           <p className={style.description}>{portfolio.description}</p>
           <div className={style.mainContent}>

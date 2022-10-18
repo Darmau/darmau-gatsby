@@ -242,6 +242,7 @@
   background-color: var(--theme-color);
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 48px;
   font-size: 14px;
   padding: 8px 32px;
