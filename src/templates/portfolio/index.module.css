@@ -1,4 +1,4 @@
-.article-container {
+.portfolio-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -30,7 +30,7 @@
   line-height: 1.8;
 }
 
-.article-cover {
+.portfolio-cover {
   width: 100%;
   border-radius: 8px;
   aspect-ratio: 16 / 9;
@@ -46,7 +46,7 @@
   width: 100%;
 }
 
-.article-title {
+.portfolio-title {
   font-size: 28px;
   color: var(--primary-text-color);
   font-weight: var(--font-bold);
@@ -121,14 +121,14 @@
 }
 
 @media (min-width: 500px) {
-  .article-container {
+  .portfolio-container {
     max-width: 500px;
     gap: 36px;
   }
 }
 
 @media (min-width: 768px) {
-  .article-container {
+  .portfolio-container {
     grid-template-columns: 160px auto 256px;
     padding-left: 48px;
     padding-right: 48px;

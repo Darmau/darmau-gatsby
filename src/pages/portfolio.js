@@ -28,7 +28,7 @@ const Portfolios = ({ data }) => {
 
         <section className={style.contentSection}>
           <div className={style.sectionHeader}>
-            <h1 className={style.sectionTitle}>我是……</h1>
+            <h1 className={style.sectionTitle}>我是一个……</h1>
           </div>
           <div className={style.roles}>
 
@@ -182,6 +182,17 @@ const Portfolios = ({ data }) => {
         </section>
       </main>
     </Layout>
+  )
+}
+
+export function Head() {
+  return (
+    <>
+      <title>李大毛的作品集</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="设计师、开发者李大毛的部分作品展示" />
+    </>
   )
 }
 
