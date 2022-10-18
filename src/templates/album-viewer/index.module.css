@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: 100%;
   display: grid;
-  max-width: 1024px;
+  max-width: 1280px;
   justify-content: center;
   flex: 1 0 auto;
 }
@@ -22,6 +22,7 @@
   justify-content: center;
   margin-bottom: 4px;
   object-fit: contain;
+  border: 1px solid var(--divider-color);
 }
 
 .active-photo {
@@ -117,7 +118,7 @@
 @media (min-width: 768px) {
   .album-container {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 360px;
     justify-content: center;
     flex: 1 0 auto;
     padding-bottom: 36px;
