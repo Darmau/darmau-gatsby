@@ -23,16 +23,19 @@
 
 .logo-mini {
   display: block;
+  position: absolute;
+  top: 10px;
 }
 
 .connect-list {
   display: flex;
   justify-content: center;
-  margin-right: 24px;
+  margin: 0 auto;
   list-style: none;
   font-size: 16px;
   color: var(--primary-text-color);
   padding-top: 8px;
+  padding-inline-start: 0;
 }
 
 .connect-item {
@@ -79,7 +82,7 @@
 
   .connect-list {
     font-size: 20px;
-    margin-right: 140px;
+    margin: 0 auto;
   }
 
   .connect-item {
@@ -88,6 +91,8 @@
 
   .logo-full {
     display: block;
+    position: absolute;
+    top: 0;
   }
 
   .logo-mini {

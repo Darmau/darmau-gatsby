@@ -19,7 +19,6 @@
     "algoliasearch": "^4.14.2",
     "gatsby": "^4.23.0",
     "gatsby-omni-font-loader": "^2.0.2",
-    "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.24.0",
     "gatsby-plugin-google-gtag": "^4.24.0",
     "gatsby-plugin-image": "^2.23.0",
