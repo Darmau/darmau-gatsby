@@ -141,5 +141,19 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "可可托海没有海",
+        short_name: "可可托海没有海",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#B23D2B",
+        display: "standalone",
+        icon: "src/images/favicon.svg",
+        crossOrigin: `use-credentials`,
+      },
+    },
+
   ]
 };
