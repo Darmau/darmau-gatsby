@@ -9,7 +9,7 @@
 
 /* 封面部分 */
 .cover-section {
-  height: 480px;
+  height: 400px;
   width: 100%;
   background-color: #0E192D;
   display: flex;
@@ -193,6 +193,9 @@
 .portfolio-item-2 {
   width: 100%;
   margin-bottom: 24px;
+  border-bottom: 1px solid var(--divider-color);
+  padding-bottom: 16px;
+  padding-top: 8px;
 }
 
 .cover {
@@ -233,9 +236,20 @@
 }
 
 .portfolio-description {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--secondary-text-color);
   line-height: 1.6;
+  margin: 8px 0;
+}
+
+.read-more {
+  color: var(--theme-color);
+  font-weight: var(--font-bold);
+  margin-top: 8px;
+}
+
+.read-more:hover {
+  color: var(--secondary-text-color);
 }
 
 .mail-button {
@@ -263,7 +277,7 @@
   }
 
   .cover-section {
-    height: 720px;
+    height: 640px;
   }
 
   .cover-intro {
@@ -308,16 +322,16 @@
 
   .portfolio-item {
     display: grid;
-    grid-template-columns: 480px auto;
+    grid-template-columns: 520px auto;
     gap: 24px;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
   }
 
   .portfolio-item-2 {
     display: grid;
-    grid-template-columns: auto 480px;
+    grid-template-columns: auto 520px;
     gap: 24px;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
   }
 
   .info-left {

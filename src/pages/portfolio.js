@@ -118,6 +118,7 @@ const Portfolios = ({ data }) => {
                   <span className={style.tag}>CDN</span>
                 </div>
                 <p className={style.portfolioDescription}>{darmau.description}</p>
+                <p className={style.readMore}>了解更多</p>
               </div>
             </div>
           </Link>
@@ -135,6 +136,7 @@ const Portfolios = ({ data }) => {
                   <span className={style.tag}>项目管理</span>
                 </div>
                 <p className={style.portfolioDescription}>{vanke.description}</p>
+                <p className={style.readMore}>了解更多</p>
               </div>
             </div>
           </Link>
@@ -151,6 +153,7 @@ const Portfolios = ({ data }) => {
                   <span className={style.tag}>概念设计</span>
                 </div>
                 <p className={style.portfolioDescription}>{mindmark.description}</p>
+                <p className={style.readMore}>了解更多</p>
               </div>
             </div>
           </Link>
@@ -167,6 +170,7 @@ const Portfolios = ({ data }) => {
                   <span className={style.tag}>分析</span>
                 </div>
                 <p className={style.portfolioDescription}>{ubisoft.description}</p>
+                <p className={style.readMore}>了解更多</p>
               </div>
             </div>
           </Link>
