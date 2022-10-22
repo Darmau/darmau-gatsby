@@ -5,6 +5,7 @@
   --card-color: #ffffff;
   --primary-text-color: rgba(0, 0, 0, 0.85);
   --secondary-text-color: rgba(0, 0, 0, 0.7);
+  --disable-text-color: rgba(0, 0, 0, 0.25);
   --link-text-color: #0B83F2;
   --border-color: #d2d2d2;
   --divider-color: #f1f1f1;
@@ -24,6 +25,7 @@
     --card-color: #171717;
     --primary-text-color: rgba(255, 255, 255, 0.9);
     --secondary-text-color: rgba(255, 255, 255, 0.7);
+    --disable-text-color: rgba(255, 255, 255, 0.25);
     --border-color: #2f2f2f;
     --divider-color: #323232;
   }
