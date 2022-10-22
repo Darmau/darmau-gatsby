@@ -8,6 +8,7 @@ import MainBody from "../../components/text-transfer/TextTransfer";
 import Catalog from "../../components/catalog";
 import { Seo } from "../../components/seo";
 import Comments from "../../components/comments";
+import { PreviousAndNext } from "../../components/previousAndNext/previousAndNext";
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
@@ -39,6 +40,8 @@ const ArticleContent = ({ data }) => {
           <div className={style.mainContent}>
             <MainBody data={mainContentString} />
           </div>
+
+          <PreviousAndNext strapiId={article.strapi_id}/>
 
           {/* 评论 */}
           <Comments />
@@ -119,6 +122,7 @@ export const articleQuery = graphql`
   query ArticleContentById($strapi_id: Int!)  {
     allStrapiArticle(filter: {strapi_id: {eq: $strapi_id}}) {
       nodes {
+        strapi_id
         basic {
           title
           description

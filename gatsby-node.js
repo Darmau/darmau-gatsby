@@ -7,7 +7,7 @@ exports.createPages = async ({ actions, graphql }) => {
   //创建文章分页
   const resultArticles = await graphql(`
         {
-            allStrapiArticle {
+            allStrapiArticle(sort: {order: DESC, fields: basic___date}) {
             pageInfo {
                 itemCount
             }
@@ -39,7 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const resultArticle = await graphql(`
          {
-            allStrapiArticle {
+            allStrapiArticle(sort: {order: DESC, fields: basic___date}) {
             edges {
                 node {
                 strapi_id
