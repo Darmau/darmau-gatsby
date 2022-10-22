@@ -39,6 +39,7 @@ export const PreviousAndNext = (props) => {
 
   return (
     <div className={style.prevNext}>
+
       {currentArticle.previous ? (
         <Link to={"/article/" + currentArticle.previous.slug}>
           <div className={style.prev}>
@@ -54,6 +55,7 @@ export const PreviousAndNext = (props) => {
           <h3 className={style.articleDisable}>已经是最新</h3>
         </div>
       )}
+
       {currentArticle.next ? (
         <Link to={"/article/" + currentArticle.next.slug}>
           <div className={style.next}>
@@ -69,6 +71,7 @@ export const PreviousAndNext = (props) => {
           <h3 className={style.articleDisable}>已经是第一篇</h3>
         </div>
       )}
+      
     </div>
   );
 };
