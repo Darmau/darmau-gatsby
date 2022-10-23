@@ -181,7 +181,7 @@ const Portfolios = ({ data }) => {
           <div className={style.sectionHeader}>
             <h3 className={style.sectionTitle}>想聊聊？</h3>
             <div className={style.sectionIntro}>你可以通过邮件、微信公众号，甚至是在评论区留言，总有办法能找到我。</div>
-            <button className={style.mailButton}><a href="mailto:liaoqifan@foxmail.com">发邮件</a></button>
+            <button className={style.mailButton}><a href="mailto:dev@darmau.design">发邮件</a></button>
           </div>
         </section>
       </main>
@@ -193,8 +193,6 @@ export function Head() {
   return (
     <>
       <title>李大毛的作品集</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="设计师、开发者李大毛的部分作品展示" />
     </>
   )

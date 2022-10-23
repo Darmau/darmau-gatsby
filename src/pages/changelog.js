@@ -29,9 +29,7 @@ export function Head() {
   return (
     <>
       <title>关于本站 | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
+      <meta name="description" content="设计师、开发者李大毛个人网站的更新记录和技术栈" />
     </>
   )
 }
