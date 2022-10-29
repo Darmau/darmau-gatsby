@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import * as style from "./index.module.css"
 import SocialMedia from "../social-media";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
 
@@ -75,8 +76,18 @@ const Footer = () => {
       </div>
       <div className={style.externalLinks}>
         <p className={style.websiteInfo}>2019-{thisYear.getFullYear()} © Designed and Developed by 李大毛</p>
-        <p>蜀ICP备<a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">2022024489</a>号</p>
-        <SocialMedia/>
+
+        <div className={style.gov}>
+          <p className={style.websiteInfo}>蜀ICP备<a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">2022024489</a>号</p>
+          <div className={style.police}>
+            <StaticImage className={style.policeImg} src="../../images/备案图标.png" />
+            <a target="_blank" rel="noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51015602000444">
+              <p className={style.websiteInfo}>川公网安备 51015602000444号</p>
+            </a>
+          </div>
+        </div>
+
+        <SocialMedia />
       </div>
     </footer>
   );

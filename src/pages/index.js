@@ -149,7 +149,7 @@ export default IndexPage;
 export function Head() {
   return (
     <>
-      <title>首页 | 可可托海没有海</title>
+      <title>可可托海没有海</title>
       <meta name="description" content="设计师、开发者李大毛的个人网站，内容形式包括文章、摄影照片和视频，涵盖主题包括设计、开发、前端、摄影、风光、视频等" />
     </>
   )
