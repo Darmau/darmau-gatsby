@@ -39,10 +39,8 @@ export default function Tag({ data }) {
 export function Head({ data }) {
   return (
     <>
-      <title>{data.allStrapiTag.nodes[0].title} | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
+      <title>{data.allStrapiTag.nodes[0].title}</title>
+      <meta name="description" content="文章标签 按照话题浏览文章" />
     </>
   )
 }

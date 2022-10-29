@@ -39,10 +39,8 @@ export default function CategoryArticle({ data }) {
 export function Head({ data }) {
   return (
     <>
-      <title>{data.allStrapiCategoryArticle.nodes[0].title} | 可可托海没有海</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="设计师、开发者李大毛的个人网站" />
+      <title>{data.allStrapiCategoryArticle.nodes[0].title} | 文章</title>
+      <meta name="description" content="文章分类 按照大分类浏览文章" />
     </>
   )
 }
