@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby";
+import { graphql, Link, Script } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
@@ -41,7 +41,7 @@ const ArticleContent = ({ data }) => {
             <MainBody data={mainContentString} />
           </div>
 
-          <PreviousAndNext strapiId={article.strapi_id}/>
+          <PreviousAndNext strapiId={article.strapi_id} />
 
           {/* 评论 */}
           <Comments />
@@ -107,13 +107,17 @@ export function Head({ data }) {
   }
 
   return (
-    <Seo
-      title={article.basic.title}
-      description={article.basic.description}
-      pathname={'/article/' + article.slug}
-      cover={article.cover.url}>
-      <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
-    </Seo>
+    <>
+      <Seo
+        title={article.basic.title}
+        description={article.basic.description}
+        pathname={'/article/' + article.slug}
+        cover={article.cover.url}>
+        <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
+      </Seo>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
+        crossorigin="anonymous" />
+    </>
   )
 }
 

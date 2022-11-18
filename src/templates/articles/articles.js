@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, Script } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout/layout";
 import Pagination from "../../components/pagination/pagination";
@@ -78,6 +78,8 @@ export function Head() {
     <>
       <title>文章 | 可可托海没有海</title>
       <meta name="description" content="设计师、开发者李大毛的文章" />
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
+        crossorigin="anonymous" />
     </>
   )
 }

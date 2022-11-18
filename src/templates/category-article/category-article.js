@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby";
+import { graphql, Link, Script } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
@@ -41,6 +41,8 @@ export function Head({ data }) {
     <>
       <title>{data.allStrapiCategoryArticle.nodes[0].title} | 文章</title>
       <meta name="description" content="文章分类 按照大分类浏览文章" />
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
+        crossorigin="anonymous" />
     </>
   )
 }
