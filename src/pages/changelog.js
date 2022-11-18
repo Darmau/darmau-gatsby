@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Script } from "gatsby";
 import Layout from "../components/layout/layout";
 import MainBody from "../components/text-transfer/TextTransfer"
 import * as style from "../styles/changelog.module.css"
@@ -30,6 +30,8 @@ export function Head() {
     <>
       <title>关于本站 | 可可托海没有海</title>
       <meta name="description" content="设计师、开发者李大毛个人网站的更新记录和技术栈" />
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
+        crossorigin="anonymous" />
     </>
   )
 }

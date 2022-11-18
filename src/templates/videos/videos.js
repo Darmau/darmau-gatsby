@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, Script } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
@@ -70,6 +70,8 @@ export function Head() {
     <>
       <title>视频 | 可可托海没有海</title>
       <meta name="description" content="设计师、开发者李大毛的视频" />
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
+        crossorigin="anonymous" />
     </>
   )
 }
