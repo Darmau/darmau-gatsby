@@ -1,36 +1,36 @@
 import React from "react";
-import { graphql, Link, Script} from "gatsby";
+import { graphql, Link, Script } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
 import Pagination from "../../components/pagination/pagination";
 
-const Albums = ({data}) => {
+const Albums = ({ data }) => {
   const albums = data.allStrapiAlbum.nodes
   const pageInfo = data.allStrapiAlbum.pageInfo
 
   return (
-      <Layout>
-        <main className={style.gridContainer}>
-          <div className={style.photoGrid}>
-            {
-              albums.map(
-                node => {
-                  const image = getImage(node.cover.localFile)
-                  return (
-                    <Link to={'/album/' + node.slug}>
-                      <div className={style.photoCard}>
-                        <GatsbyImage className={style.photoFrame} image={image} alt={node.basic.title}></GatsbyImage>
-                      </div>
-                    </Link>
-                  )
-                }
-              )
-            }
-          </div>
-          <Pagination pageInfo={pageInfo} sort='albums'/>
-        </main>
-      </Layout>
+    <Layout>
+      <main className={style.gridContainer}>
+        <div className={style.photoGrid}>
+          {
+            albums.map(
+              node => {
+                const image = getImage(node.cover.localFile)
+                return (
+                  <Link to={'/album/' + node.slug}>
+                    <div className={style.photoCard}>
+                      <GatsbyImage className={style.photoFrame} image={image} alt={node.basic.title}></GatsbyImage>
+                    </div>
+                  </Link>
+                )
+              }
+            )
+          }
+        </div>
+        <Pagination pageInfo={pageInfo} sort='albums' />
+      </main>
+    </Layout>
   )
 }
 
@@ -39,13 +39,11 @@ export function Head() {
     <>
       <title>摄影 | 可可托海没有海</title>
       <meta name="description" content="设计师、开发者李大毛的摄影" />
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
-        crossorigin="anonymous" />
     </>
   )
 }
 
-export const allStrapiAlbum = graphql `
+export const allStrapiAlbum = graphql`
   query albumListQuery($skip: Int!, $limit: Int!) {
       allStrapiAlbum(sort: {fields: basic___date, order: DESC}, skip: $skip, limit: $limit) {
         nodes {

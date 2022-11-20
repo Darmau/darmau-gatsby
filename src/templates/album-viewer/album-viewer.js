@@ -63,16 +63,12 @@ const AlbumViewer = ({ data }) => {
 
 export function Head({ data }) {
   return (
-    <>
-      <Seo
-        title={data.allStrapiAlbum.nodes[0].basic.title}
-        description={data.allStrapiAlbum.nodes[0].basic.description}
-        pathname={'/album/' + data.allStrapiAlbum.nodes[0].slug}
-        cover={data.allStrapiAlbum.nodes[0].cover.url}>
-      </Seo>
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
-        crossorigin="anonymous" />
-    </>
+    <Seo
+      title={data.allStrapiAlbum.nodes[0].basic.title}
+      description={data.allStrapiAlbum.nodes[0].basic.description}
+      pathname={'/album/' + data.allStrapiAlbum.nodes[0].slug}
+      cover={data.allStrapiAlbum.nodes[0].cover.url}>
+    </Seo>
   )
 }
 

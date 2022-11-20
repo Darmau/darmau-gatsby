@@ -107,17 +107,13 @@ export function Head({ data }) {
   }
 
   return (
-    <>
-      <Seo
-        title={video.basic.title}
-        description={video.basic.description}
-        pathname={'/video/' + video.slug}
-        cover={video.cover.url}>
-        <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
-      </Seo>
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
-        crossorigin="anonymous" />
-    </>
+    <Seo
+      title={video.basic.title}
+      description={video.basic.description}
+      pathname={'/video/' + video.slug}
+      cover={video.cover.url}>
+      <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
+    </Seo>
   )
 }
 
