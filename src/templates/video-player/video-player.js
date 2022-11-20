@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Script } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/layout/layout";
 import VideoFrame from "../../components/video-frame/video-frame"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
