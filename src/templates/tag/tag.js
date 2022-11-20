@@ -41,8 +41,6 @@ export function Head({ data }) {
     <>
       <title>{data.allStrapiTag.nodes[0].title}</title>
       <meta name="description" content="文章标签 按照话题浏览文章" />
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2439295902943960"
-        crossorigin="anonymous" />
     </>
   )
 }
