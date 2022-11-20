@@ -6,12 +6,18 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/text-transfer/TextTransfer";
 import * as style from "./index.module.css"
-import Comments from "../../components/comments";
+import { Disqus } from 'gatsby-plugin-disqus';
 
 const PortfolioCase = ({ data }) => {
   const portfolio = data.allStrapiPortfolio.nodes[0];
   const cover = getImage(portfolio.cover.localFile);
   const mainContentString = portfolio.mainBody.data.mainBody;
+
+  let disqusConfig = {
+    url: `https://darmau.design/portfolio/ + ${portfolio.slug}`,
+    identifier: `https://darmau.design/portfolio/ + ${portfolio.slug}`,
+    title: portfolio.title,
+  }
 
   return (
     <Layout>
@@ -28,7 +34,8 @@ const PortfolioCase = ({ data }) => {
           <div className={style.mainContent}>
             <MainBody data={mainContentString} />
           </div>
-          <Comments />
+          {/* 评论 */}
+          <Disqus config={disqusConfig} />
         </article>
         <address className={style.about}>
           <div>
