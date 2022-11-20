@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link, Script } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
@@ -7,13 +7,19 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import MainBody from "../../components/text-transfer/TextTransfer";
 import Catalog from "../../components/catalog";
 import { Seo } from "../../components/seo";
-import Comments from "../../components/comments";
 import { PreviousAndNext } from "../../components/previousAndNext/previousAndNext";
+import { Disqus } from 'gatsby-plugin-disqus';
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
   const cover = getImage(article.cover.localFile)
   const mainContentString = article.mainBody.data.mainBody
+
+  let disqusConfig = {
+    url: `https://darmau.design/article/ + ${article.slug}`,
+    identifier: `https://darmau.design/article/ + ${article.slug}`,
+    title: article.basic.title,
+  }
 
   return (
     <Layout>
@@ -44,7 +50,7 @@ const ArticleContent = ({ data }) => {
           <PreviousAndNext strapiId={article.strapi_id} />
 
           {/* 评论 */}
-          <Comments />
+          <Disqus config={disqusConfig} />
 
         </article>
         <address className={style.about}>
