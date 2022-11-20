@@ -155,5 +155,12 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `darmau-design`
+      }
+    },
+
   ]
 };
