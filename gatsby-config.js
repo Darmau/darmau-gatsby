@@ -98,24 +98,25 @@ module.exports = {
                 })
               })
             },
-            query: `
-              {allStrapiArticle(sort: {fields: basic___date, order: DESC}) {
-                edges {
-                  node {
-                    basic {
-                      title
-                      description
-                      date
-                    }
-                    slug
-                    mainBody {
-                      data {
-                        mainBody
-                      }
-                    }
-                  }
-                }
-              }}`,
+            query: `{
+  allStrapiArticle(sort: {basic: {date: DESC}}) {
+    edges {
+      node {
+        basic {
+          title
+          description
+          date
+        }
+        slug
+        mainBody {
+          data {
+            mainBody
+          }
+        }
+      }
+    }
+  }
+}`,
             output: "/rss.xml",
             title: "可可托海没有海的RSS",
           },

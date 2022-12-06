@@ -37,31 +37,30 @@ const Videos = ({ data }) => {
   )
 }
 
-export const allStrapiVideo = graphql`
-  query videoListQuery($skip: Int!, $limit: Int!) {
-    allStrapiVideo(sort: {fields: basic___date, order: DESC}, skip: $skip, limit: $limit) {
-      nodes {
-        basic {
-          title
-          date
-        }
-        cover {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
-            }
+export const allStrapiVideo = graphql`query videoListQuery($skip: Int!, $limit: Int!) {
+  allStrapiVideo(sort: {basic: {date: DESC}}, skip: $skip, limit: $limit) {
+    nodes {
+      basic {
+        title
+        date
+      }
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
           }
         }
-        slug
       }
-      pageInfo {
-        currentPage
-        hasNextPage
-        hasPreviousPage
-        pageCount
-      }
+      slug
     }
-  }`
+    pageInfo {
+      currentPage
+      hasNextPage
+      hasPreviousPage
+      pageCount
+    }
+  }
+}`
 
 export default Videos
 
