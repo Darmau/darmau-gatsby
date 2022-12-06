@@ -43,30 +43,33 @@ export function Head() {
   )
 }
 
-export const allStrapiAlbum = graphql`
-  query albumListQuery($skip: Int!, $limit: Int!) {
-      allStrapiAlbum(sort: {fields: basic___date, order: DESC}, skip: $skip, limit: $limit) {
-        nodes {
-          basic {
-            title
+export const allStrapiAlbum = graphql`query albumListQuery($skip: Int!, $limit: Int!) {
+  allStrapiAlbum(sort: {basic: {date: DESC}}, skip: $skip, limit: $limit) {
+    nodes {
+      basic {
+        title
+      }
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: DOMINANT_COLOR
+              formats: [AUTO, WEBP, AVIF]
+              width: 345
+            )
           }
-          cover {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF], width: 345)
-              }
-            }
-          }
-          slug
-          strapi_id
-        }
-        pageInfo {
-          currentPage
-          hasNextPage
-          hasPreviousPage
-          pageCount
         }
       }
-    }`
+      slug
+      strapi_id
+    }
+    pageInfo {
+      currentPage
+      hasNextPage
+      hasPreviousPage
+      pageCount
+    }
+  }
+}`
 
 export default Albums

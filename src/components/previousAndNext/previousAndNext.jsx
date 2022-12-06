@@ -3,32 +3,30 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import * as style from "./index.module.css";
 
 export const PreviousAndNext = (props) => {
-  const data = useStaticQuery(graphql`
-    {
-      allStrapiArticle(sort: { order: DESC, fields: basic___date }) {
-        edges {
-          node {
-            basic {
-              title
-            }
-            strapi_id
-          }
-          previous {
-            basic {
-              title
-            }
-            slug
-          }
-          next {
-            basic {
-              title
-            }
-            slug
-          }
+  const data = useStaticQuery(graphql`{
+  allStrapiArticle(sort: {basic: {date: DESC}}) {
+    edges {
+      node {
+        basic {
+          title
         }
+        strapi_id
+      }
+      previous {
+        basic {
+          title
+        }
+        slug
+      }
+      next {
+        basic {
+          title
+        }
+        slug
       }
     }
-  `);
+  }
+}`);
 
   const articleList = data.allStrapiArticle.edges;
 

@@ -82,49 +82,47 @@ export function Head() {
   )
 }
 
-export const allStrapiArticle = graphql`
-  query articleListQuery($skip: Int!, $limit: Int!)
-  {
-    allStrapiArticle(sort: {fields: basic___date, order: DESC}, skip: $skip, limit: $limit) {
-      nodes {
-        cover {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
-            }
+export const allStrapiArticle = graphql`query articleListQuery($skip: Int!, $limit: Int!) {
+  allStrapiArticle(sort: {basic: {date: DESC}}, skip: $skip, limit: $limit) {
+    nodes {
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
           }
         }
-        slug
-        strapi_id
-        basic {
-          title
-          description
-          date
-        }
-        category_article {
-          title
-          slug
-        }
       }
-      pageInfo {
-        currentPage
-        hasNextPage
-        hasPreviousPage
-        pageCount
+      slug
+      strapi_id
+      basic {
+        title
+        description
+        date
       }
-    }
-    allStrapiCategoryArticle {
-      nodes {
+      category_article {
         title
         slug
       }
     }
-    allStrapiTag {
-      nodes {
-        title
-        slug
-      }
+    pageInfo {
+      currentPage
+      hasNextPage
+      hasPreviousPage
+      pageCount
     }
-  }`
+  }
+  allStrapiCategoryArticle {
+    nodes {
+      title
+      slug
+    }
+  }
+  allStrapiTag {
+    nodes {
+      title
+      slug
+    }
+  }
+}`
 
 export default Articles

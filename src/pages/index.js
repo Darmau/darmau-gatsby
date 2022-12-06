@@ -91,58 +91,69 @@ function IndexPage({ data }) {
 }
 
 // 获取6个文章、18张摄影、8个视频的相应信息,根据日期倒序提取
-export const frontPageQuery = graphql`
-  {
-    allStrapiArticle(limit: 6, sort: {order: DESC, fields: basic___date}) {
-      nodes {
-        basic {
-          title
-          description
-          date
-        }
-        category_article {
-          title
-        }
-        cover {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(width: 320, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
-            }
-          }
-        }
-        slug
+export const frontPageQuery = graphql`{
+  allStrapiArticle(limit: 6, sort: {basic: {date: DESC}}) {
+    nodes {
+      basic {
+        title
+        description
+        date
       }
-    }
-    allStrapiAlbum(sort: {order: DESC, fields: basic___date}, limit: 24) {
-      nodes {
-        cover {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(width: 200, formats: [AUTO, WEBP, AVIF], placeholder: DOMINANT_COLOR)
-            }
-          }
-          alternativeText
-        }
-        slug
+      category_article {
+        title
       }
-    }
-    allStrapiVideo(sort: {order: DESC, fields: basic___date}, limit: 8) {
-      nodes {
-        basic {
-          title
-          date
-        }
-        slug
-        cover {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(width: 320, formats: [AUTO, WEBP, AVIF], placeholder: DOMINANT_COLOR)
-            }
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              width: 320
+              placeholder: DOMINANT_COLOR
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }
+      slug
     }
-  }`
+  }
+  allStrapiAlbum(sort: {basic: {date: DESC}}, limit: 24) {
+    nodes {
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              width: 200
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: DOMINANT_COLOR
+            )
+          }
+        }
+        alternativeText
+      }
+      slug
+    }
+  }
+  allStrapiVideo(sort: {basic: {date: DESC}}, limit: 8) {
+    nodes {
+      basic {
+        title
+        date
+      }
+      slug
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              width: 320
+              formats: [AUTO, WEBP, AVIF]
+              placeholder: DOMINANT_COLOR
+            )
+          }
+        }
+      }
+    }
+  }
+}`
 
 export default IndexPage;
 

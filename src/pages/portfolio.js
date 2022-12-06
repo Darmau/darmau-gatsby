@@ -198,17 +198,25 @@ export function Head() {
   )
 }
 
-export const portfolioQuery = graphql`
-  {
-    allStrapiPortfolio(sort: {fields: date, order: DESC}) {
-      nodes {
-        title
-        slug
-        description
-        cover {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(width: 600, placeholder: DOMINANT_COLOR, formats:[AUTO, WEBP, AVIF])
-            }}}}}}`
+export const portfolioQuery = graphql`{
+  allStrapiPortfolio(sort: {date: DESC}) {
+    nodes {
+      title
+      slug
+      description
+      cover {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              width: 600
+              placeholder: DOMINANT_COLOR
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+      }
+    }
+  }
+}`
 
 export default Portfolios

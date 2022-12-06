@@ -5,14 +5,13 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   //创建文章分页
-  const resultArticles = await graphql(`
-        {
-            allStrapiArticle(sort: {order: DESC, fields: basic___date}) {
-            pageInfo {
-                itemCount
-            }
-            }
-        }`)
+  const resultArticles = await graphql(`{
+  allStrapiArticle(sort: {basic: {date: DESC}}) {
+    pageInfo {
+      itemCount
+    }
+  }
+}`)
 
   if (resultArticles.errors) {
     reporter.panicOnBuild(`Error while running article counts query.`)
@@ -37,18 +36,16 @@ exports.createPages = async ({ actions, graphql }) => {
   // 创建文章详情页
   const articleContentTemplate = path.resolve(`./src/templates/article-content/article-content.js`)
 
-  const resultArticle = await graphql(`
-         {
-            allStrapiArticle(sort: {order: DESC, fields: basic___date}) {
-            edges {
-                node {
-                strapi_id
-                slug
-                }
-            }
-            }
-        } 
-    `)
+  const resultArticle = await graphql(`{
+  allStrapiArticle(sort: {basic: {date: DESC}}) {
+    edges {
+      node {
+        strapi_id
+        slug
+      }
+    }
+  }
+}`)
 
   if (resultArticle.errors) {
     reporter.panicOnBuild(`Error while running article info query.`)
