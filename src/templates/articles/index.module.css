@@ -128,6 +128,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 8px;
+  gap: 16px;
 }
 
 .about-author-title {
@@ -137,7 +138,6 @@
   font-style: normal;
   flex: 0 0 max-content;
   width: 100%;
-  margin-right: 8px;
 }
 
 .line {
@@ -145,7 +145,7 @@
   width: 100%;
   background-color: var(--border-color);
   align-content: stretch;
-  flex: 1 1 1;
+  flex: 1 1 auto;
 }
 
 .article-tag {
