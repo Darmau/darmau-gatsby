@@ -155,7 +155,7 @@ const MainBody = ({ data }) => {
     return (
       <picture className={style.imageFrame}>
         <source type="image/webp" srcSet={'https://image.darmau.design' + data.file.url + '?image_process=format,webp'}/>
-        <img className={style.image} src={'https://image.darmau.design' + data.file.url} alt={data.file.alt} />
+        <img loading="lazy" className={style.image} src={'https://image.darmau.design' + data.file.url} alt={data.file.alt} />
         {data.caption && <figcaption className={style.imageCaption}>{data.caption}</figcaption>}
       </picture>
     )
