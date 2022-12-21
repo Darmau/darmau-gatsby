@@ -206,3 +206,9 @@ article {
     margin: 4px 0;
   }
 }
+
+@media print {
+  .about {
+    display: none;
+  }
+}
