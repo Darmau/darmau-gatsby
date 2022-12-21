@@ -206,3 +206,17 @@ article {
     margin: 4px 0;
   }
 }
+
+@media print {
+  .article-container {
+    display: block;
+    padding: 48px;
+    max-width: 90%;
+  }
+  .about {
+    display: none;
+  }
+  .catlog {
+    display: none;
+  }
+}
