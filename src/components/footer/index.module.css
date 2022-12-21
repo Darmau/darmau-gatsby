@@ -107,3 +107,9 @@
     fill: #ffffff;
   }
 }
+
+@media print {
+  .footer {
+    display: none;
+  }
+}
