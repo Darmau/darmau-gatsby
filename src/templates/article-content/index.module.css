@@ -208,6 +208,11 @@ article {
 }
 
 @media print {
+  .article-container {
+    display: block;
+    padding: 48px;
+    max-width: 90%;
+  }
   .about {
     display: none;
   }
