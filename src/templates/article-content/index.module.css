@@ -209,14 +209,23 @@ article {
 
 @media print {
   .article-container {
-    display: block;
     padding: 48px;
-    max-width: 90%;
+    max-width: 100%;
   }
   .about {
     display: none;
   }
   .catlog {
     display: none;
+  }
+  .main-content {
+    border: none;
+  }
+  a:after {
+    content: "("attr(href)")";
+  }
+  @page {
+    size: A4;
+    margin: 2cm;
   }
 }

@@ -60,3 +60,12 @@ a {
   margin: 0 4px;
   padding: 2px 4px;
 }
+
+@media print {
+  #disqus_thread {
+    display: none;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+}

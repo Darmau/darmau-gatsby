@@ -100,7 +100,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-
   .logo-mini path,
   .logo-full path {
     fill: #ffffff;
