@@ -5,10 +5,6 @@ import Code from "../code-block/code";
 const MainBody = ({ data }) => {
   const mainContentObject = JSON.parse(data)
   const blocksArr = mainContentObject.blocks
-  // const blocksArr = []
-  // for (let i in blocksObj) {
-  //   blocksArr.push(blocksObj[i])
-  // }
 
   // 将block分发到对应处理函数
   function transfer(block) {
@@ -162,13 +158,13 @@ const MainBody = ({ data }) => {
   }
 
   return (
-    <div>
+    <>
       {blocksArr.map(
         block => {
           return transfer(block)
         }
       )}
-    </div>
+    </>
   )
 }
 
