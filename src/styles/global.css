@@ -9,7 +9,7 @@
   --link-text-color: #0B83F2;
   --border-color: #d2d2d2;
   --divider-color: #f1f1f1;
-  --typography-sans: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  --typography-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif,"Apple Color Emoji","Noto Emoji", "Segoe UI Emoji","Segoe UI Symbol";
   --typography-serif: 'Noto Serif SC', serif;
   --typography-mono: 'Roboto Mono', monospace;
   --font-normal: 400;
@@ -32,7 +32,7 @@
 }
 
 html {
-  font-family: var(--typography-serif);
+  font-family: var(--typography-sans);
   margin: 0;
   height: 100%;
   scroll-padding-top: 96px;
@@ -51,6 +51,7 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
+  font-family: var(--typography-sans);
 }
 
 .inline-code {
