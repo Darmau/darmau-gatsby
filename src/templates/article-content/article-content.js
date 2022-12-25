@@ -84,7 +84,7 @@ const ArticleContent = ({ data }) => {
                   </clipPath>
                 </defs>
               </svg>
-              <small className={style.wechatText}><Link to="/rss.xml">RSS 2.0</Link></small>
+              <small className={style.wechatText}><Link to="/rss.xml">RSS</Link></small>
             </div>
           </div>
         </address>
