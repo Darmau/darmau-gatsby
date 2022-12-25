@@ -20,7 +20,7 @@ function transfer(block) {
     case 'quote': return handleQuote(block.data)
     case 'image': return handleImage(block.data)
 
-    default: return (`<p>该内容无法在RSS显示，请访问原文</p>`)
+    default: return (`<p style="margin-bottom: 16px;">该内容无法在RSS显示，请访问原文</p>`)
   }
 }
 
@@ -31,22 +31,22 @@ function handleHeader(data) {
   switch (level) {
     case 1:
       num1++
-      return (`<h1>${Object.values(data.text).join('')}</h1>`)
+      return (`<h1 style="margin-top: 16px;">${Object.values(data.text).join('')}</h1>`)
     case 2:
       num2++
-      return (`<h2>${Object.values(data.text).join('')}</h2>`)
+      return (`<h2 style="margin-top: 12px;">${Object.values(data.text).join('')}</h2>`)
     case 3:
       num3++
-      return (`<h3>${Object.values(data.text).join('')}</h3>`)
+      return (`<h3 style="margin-top: 8px;">${Object.values(data.text).join('')}</h3>`)
     case 4:
       num4++
-      return (`<h4>${Object.values(data.text).join('')}</h4>`)
+      return (`<h4 style="margin-top: 8px;">${Object.values(data.text).join('')}</h4>`)
     case 5:
       num5++
-      return (`<h5>${Object.values(data.text).join('')}</h5>`)
+      return (`<h5 style="margin-top: 8px;">${Object.values(data.text).join('')}</h5>`)
     case 6:
       num6++
-      return (`<h6>${Object.values(data.text).join('')}</h6>`)
+      return (`<h6 style="margin-top: 4px;">${Object.values(data.text).join('')}</h6>`)
     default:
       return (`<p>${Object.values(data.text).join('')}</p>`)
   }
@@ -55,7 +55,7 @@ function handleHeader(data) {
 //处理段落
 function handelParagraph(data) {
   return (
-    `<p>${Object.values(data.text).join('')}</p>`
+    `<p style="margin-bottom: 16px;">${Object.values(data.text).join('')}</p>`
   )
 }
 
@@ -63,11 +63,11 @@ function handelParagraph(data) {
 function handleList(data) {
   if (data.style === 'unordered') {
     return (
-      `<ul>${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ul>`
+      `<ul style="margin-bottom: 16px;">${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ul>`
     )
   } else {
     return (
-      `<ol>${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ol>`
+      `<ol style="margin-bottom: 16px;">${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ol>`
     )
   }
 }
@@ -82,14 +82,14 @@ function handleDivider() {
 //处理代码
 function handleCode(data) {
   return (
-    `<code>${Object.values(data.code).join('')}</code>`
+    `<code style="margin-bottom: 16px;">${Object.values(data.code).join('')}</code>`
   )
 }
 
 //处理引用
 function handleQuote(data) {
   return (
-    `<figure>
+    `<figure style="margin-bottom: 16px;">
       <blockquote>${Object.values(data.text).join('')}</blockquote>
       <figcaption>${Object.values(data.caption).join('')}</figcaption>
     </figure>`
@@ -98,8 +98,8 @@ function handleQuote(data) {
 
 function handleImage(data) {
   return (
-      `<figure><img decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
-      ${data.caption && `<figcaption style="text-align: center">${Object.values(data.caption).join('')}</figcaption></figure>`}`
+      `<figure style="margin-bottom: 16px;"><img height="360" width="auto" style="margin:0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
+      ${data.caption && `<figcaption style="text-align: center;font-size: 13px;">${Object.values(data.caption).join('')}</figcaption></figure>`}`
   )
 }
 
