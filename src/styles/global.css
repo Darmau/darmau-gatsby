@@ -35,6 +35,7 @@ html {
   font-family: var(--typography-serif);
   margin: 0;
   height: 100%;
+  scroll-padding-top: 96px;
 }
 
 body {
