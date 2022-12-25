@@ -31,22 +31,22 @@ function handleHeader(data) {
   switch (level) {
     case 1:
       num1++
-      return (`<h1 style="margin-top: 16px;">${Object.values(data.text).join('')}</h1>`)
+      return (`<h1 style="font-size:26px;margin-top: 28px;margin-bottom:16px;">${Object.values(data.text).join('')}</h1>`)
     case 2:
       num2++
-      return (`<h2 style="margin-top: 12px;">${Object.values(data.text).join('')}</h2>`)
+      return (`<h2 style="font-size:24px;margin-top: 24px;margin-bottom:16px;">${Object.values(data.text).join('')}</h2>`)
     case 3:
       num3++
-      return (`<h3 style="margin-top: 8px;">${Object.values(data.text).join('')}</h3>`)
+      return (`<h3 style="font-size:20px;margin-bottom:16px;">${Object.values(data.text).join('')}</h3>`)
     case 4:
       num4++
-      return (`<h4 style="margin-top: 8px;">${Object.values(data.text).join('')}</h4>`)
+      return (`<h4 style="margin-bottom:18px;">${Object.values(data.text).join('')}</h4>`)
     case 5:
       num5++
-      return (`<h5 style="margin-top: 8px;">${Object.values(data.text).join('')}</h5>`)
+      return (`<h5 style="margin-bottom:16px;">${Object.values(data.text).join('')}</h5>`)
     case 6:
       num6++
-      return (`<h6 style="margin-top: 4px;">${Object.values(data.text).join('')}</h6>`)
+      return (`<h6 style="margin-top: 4px;margin-bottom:16px;">${Object.values(data.text).join('')}</h6>`)
     default:
       return (`<p>${Object.values(data.text).join('')}</p>`)
   }
@@ -55,7 +55,7 @@ function handleHeader(data) {
 //处理段落
 function handelParagraph(data) {
   return (
-    `<p style="margin-bottom: 16px;">${Object.values(data.text).join('')}</p>`
+    `<p style="margin-bottom: 16px;font-size:14px;">${Object.values(data.text).join('')}</p>`
   )
 }
 
