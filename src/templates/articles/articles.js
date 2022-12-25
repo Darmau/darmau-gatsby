@@ -15,6 +15,37 @@ const Articles = ({ data }) => {
   return (
     <Layout>
       <div className={style.container}>
+        <main className={style.articleContainer}>
+          <header className={style.aboutAuthorHeader}>
+            <small className={style.aboutAuthorTitle}>全部文章</small>
+            <div className={style.line}></div>
+          </header>
+          <div className={style.articleGrid}>
+            {
+              articles.map(node => {
+                const image = getImage(node.cover.localFile)
+                return (
+                  <Link to={'/article/' + node.slug}>
+                  <article className={style.articleCard}>
+                    <GatsbyImage className={style.articleCover} image={image} alt={node.basic.title} />
+                    <div className={style.articleInfo}>
+                      <h4 className={style.articleTitle}>
+                        {node.basic.title}
+                      </h4>
+                      <p className={style.articleDescription}>{node.basic.description}</p>
+                      <div className={style.articleRelative}>
+                        <p className={style.articleCategory}><Link to={'/category/articles/' + node.category_article.slug}>{node.category_article.title}</Link></p>
+                        <p className={style.articleDate}>{node.basic.date}</p>
+                      </div>
+                    </div>
+                  </article>
+                  </Link>
+                )
+              })
+            }
+          </div>
+          <Pagination pageInfo={pageInfo} sort='articles' />
+        </main>
         <aside className={style.sort}>
           <header className={style.aboutAuthorHeader}>
             <small className={style.aboutAuthorTitle}>筛选</small>
@@ -55,37 +86,6 @@ const Articles = ({ data }) => {
             </div>
           </div>
         </aside>
-        <main className={style.articleContainer}>
-          <header className={style.aboutAuthorHeader}>
-            <small className={style.aboutAuthorTitle}>全部文章</small>
-            <div className={style.line}></div>
-          </header>
-          <div className={style.articleGrid}>
-            {
-              articles.map(node => {
-                const image = getImage(node.cover.localFile)
-                return (
-                  <Link to={'/article/' + node.slug}>
-                  <article className={style.articleCard}>
-                    <GatsbyImage className={style.articleCover} image={image} alt={node.basic.title} />
-                    <div className={style.articleInfo}>
-                      <h4 className={style.articleTitle}>
-                        {node.basic.title}
-                      </h4>
-                      <p className={style.articleDescription}>{node.basic.description}</p>
-                      <div className={style.articleRelative}>
-                        <p className={style.articleCategory}><Link to={'/category/articles/' + node.category_article.slug}>{node.category_article.title}</Link></p>
-                        <p className={style.articleDate}>{node.basic.date}</p>
-                      </div>
-                    </div>
-                  </article>
-                  </Link>
-                )
-              })
-            }
-          </div>
-          <Pagination pageInfo={pageInfo} sort='articles' />
-        </main>
       </div>
     </Layout>
   )
