@@ -63,11 +63,11 @@ function handelParagraph(data) {
 function handleList(data) {
   if (data.style === 'unordered') {
     return (
-      `<ul>${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`))}</ul>`
+      `<ul>${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ul>`
     )
   } else {
     return (
-      `<ol>${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`))}</ol>`
+      `<ol>${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ol>`
     )
   }
 }
@@ -75,7 +75,7 @@ function handleList(data) {
 //处理分割线
 function handleDivider() {
   return (
-    `<div>***</div>`
+    `<div style="margin-top: 16px;margin-bottom: 16px;">***</div>`
   )
 }
 
@@ -98,7 +98,7 @@ function handleQuote(data) {
 
 function handleImage(data) {
   return (
-      `<figure><img width="1200px" decoding="async" src=https://image.darmau.design/${data.file.url} alt=${data.file.alt} />
+      `<figure><img width="1200px" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
       ${data.caption && `<figcaption style="text-align: center">${Object.values(data.caption).join('')}</figcaption></figure>`}`
   )
 }
