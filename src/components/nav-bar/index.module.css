@@ -41,14 +41,16 @@
 .connect-item {
   color: var(--primary-text-color);
   font-size: 16px;
-  font-weight: var(--font-bold);
+  font-weight: var(--font-normal);
   box-sizing: border-box;
   padding: 0 12px;
   text-align: center;
+  transition: color 250ms ease-in;
 }
 
 .connect-item:hover {
   color: var(--theme-color);
+  font-weight: var(--font-bold);
 }
 
 .connect-item:after {
