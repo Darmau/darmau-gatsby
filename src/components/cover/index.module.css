@@ -208,7 +208,7 @@ span {
 
 @keyframes scale {
   50% {
-    padding-bottom: 32px;
+    padding-right: 36px;
   }
 }
 
@@ -255,11 +255,5 @@ span {
 
   .card {
     padding: 24px;
-  }
-
-  @keyframes scale {
-    50% {
-      padding-right: 48px;
-    }
   }
 }
