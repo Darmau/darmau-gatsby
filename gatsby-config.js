@@ -55,7 +55,7 @@ function handleHeader(data) {
 //处理段落
 function handelParagraph(data) {
   return (
-    `<p style="margin-bottom: 16px;font-size:14px;">${Object.values(data.text).join('')}</p>`
+    `<p style="margin-bottom: 16px;font-size:15px;">${Object.values(data.text).join('')}</p>`
   )
 }
 
@@ -63,11 +63,11 @@ function handelParagraph(data) {
 function handleList(data) {
   if (data.style === 'unordered') {
     return (
-      `<ul style="margin-bottom: 16px;">${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ul>`
+      `<ul style="margin-bottom: 16px;font-size:15px;">${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ul>`
     )
   } else {
     return (
-      `<ol style="margin-bottom: 16px;">${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ol>`
+      `<ol style="margin-bottom: 16px;font-size:15px;">${data.items.map(item => (`<li>${Object.values(item).join('')}</li>`)).join('')}</ol>`
     )
   }
 }
@@ -82,7 +82,7 @@ function handleDivider() {
 //处理代码
 function handleCode(data) {
   return (
-    `<code style="margin-bottom: 16px;">${Object.values(data.code).join('')}</code>`
+    `<code style="margin-bottom: 16px;font-size:14px;">${Object.values(data.code).join('')}</code>`
   )
 }
 
@@ -90,15 +90,15 @@ function handleCode(data) {
 function handleQuote(data) {
   return (
     `<figure style="margin-bottom: 16px;">
-      <blockquote>${Object.values(data.text).join('')}</blockquote>
-      <figcaption>${Object.values(data.caption).join('')}</figcaption>
+      <blockquote style="font-size: 17px;">${Object.values(data.text).join('')}</blockquote>
+      <figcaption style="font-size: 14px;text-align:end;">${Object.values(data.caption).join('')}</figcaption>
     </figure>`
   )
 }
 
 function handleImage(data) {
   return (
-      `<figure style="margin-bottom: 16px;display: flex;flex-direction:column;align-items:center;"><img height="360" width="auto" style="margin:0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
+      `<figure style="margin-bottom: 16px;display: flex;flex-direction:column;align-items:center;"><img height="360" width="auto" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
       ${data.caption && `<figcaption style="text-align: center;font-size: 13px;">${Object.values(data.caption).join('')}</figcaption>`}</figure>`
   )
 }
