@@ -66,7 +66,7 @@ const ArticleContent = ({ data }) => {
               </svg>
               <div className={style.person}>
                 <div className={style.authorName}>李大毛没有猫</div>
-                <div className={style.slogan}>目标成为设计师中最会写代码，程序员中最会画图的。社会底层，失败中年。爱好摄影、骑摩托。现居成都。</div>
+                <div className={style.slogan}>⌨️Developer, 🖌Designer, 📷Photographer, 🏍Motorcyclist, Currently living in Chengdu</div>
               </div>
             </div>
           </div>
