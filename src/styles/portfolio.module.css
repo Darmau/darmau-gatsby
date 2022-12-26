@@ -263,7 +263,7 @@
   border-radius: 4px;
   color: white;
   margin-top: 24px;
-  font-family: var(--typography-serif);
+  font-family: var(--typography-sans);
 }
 
 .mail-button:hover {
