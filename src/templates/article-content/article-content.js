@@ -66,7 +66,7 @@ const ArticleContent = ({ data }) => {
               </svg>
               <div className={style.person}>
                 <div className={style.authorName}>李大毛没有猫</div>
-                <div className={style.slogan}>⌨️Developer, 🖌Designer, 📷Photographer, 🏍Motorcyclist, Currently living in Chengdu</div>
+                <div className={style.slogan}>李大毛不是猫也不是狗，而是一种大毛。</div>
               </div>
             </div>
           </div>

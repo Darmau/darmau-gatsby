@@ -1,15 +1,20 @@
 /* 首页的CSS文件 */
 
-.content-block {
+.section-block {
   display: flex;
-  flex-direction: column;
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
+  justify-content: center;
+}
+
+.content-block {
+  width: 100%;
 }
 
 .cover-block {
   width: 100%;
+  padding: 24px 0;
 }
 
 .content-header {
@@ -17,19 +22,39 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 48px;
-  margin-bottom: 12px;
+  margin-block: 32px
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.section-des {
+  font-size: 32px;
+  color: var(--primary-text-color);
+  margin-block: 16px;
+}
+
+section:nth-of-type(2n) {
+  background-color: var(--section-bg);
+}
+
+section:first-of-type {
+  padding: 0;
+  background-color: #fff;
 }
 
 .section-title {
-  font-size: 20px;
-  font-weight: var(--font-bold);
-  color: var(--primary-text-color);
+  font-size: 12px;
+  font-weight: var(--font-medium);
+  color: var(--secondary-text-color);
 }
 
 .article-grid {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   grid-template-columns: 100%;
 }
 
@@ -47,8 +72,13 @@
 .article-cover {
   aspect-ratio: 4 / 2;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid var(--divider-color);
+}
+
+.article-cover img:hover, .photo-cover img:hover, .video-cover img:hover {
+    transform: scale(1.08);
+    overflow: hidden;
 }
 
 .article-info {
@@ -83,12 +113,13 @@
 
 .more {
   font-size: 14px;
-  font-weight: var(--font-normal);
+  font-weight: var(--font-bold);
   display: inline-flex;
   justify-content: end;
   align-items: center;
   color: var(--theme-color);
   font-family: var(--typography-sans);
+  text-transform: uppercase;
 }
 
 .more > a:after {
@@ -125,17 +156,11 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 3 / 2;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .photo-link:nth-child(1n+13) {
   display: none;
-}
-
-.photo-cover:hover {
-  transform: scale(1.02, 1.02);
-  transition: all 0.1s ease-in;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .video-grid {
@@ -158,7 +183,7 @@
 .video-cover {
   width: 100%;
   margin-bottom: 8px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .video-date {
@@ -168,22 +193,34 @@
 }
 
 @media (min-width: 425px) {
+  .article-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .photo-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 }
 
 @media (min-width: 768px) {
-  .content-block {
-    margin-bottom: 16px;
-  }
-
-  .section-title {
-    font-size: 24px;
+  .section-block {
+    padding: 36px;
   }
 
   .content-header {
-    margin-bottom: 16px;
+    flex-direction: row;
+  }
+
+  .content-header hgroup {
+    width: 50%;
+  }
+
+  .section-title {
+    font-size: 16px;
   }
 
   .article-grid {

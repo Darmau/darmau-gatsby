@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "../components/layout/layout";
 import * as style from "../styles/index.module.css"
 import Cover from "../components/cover/cover.js";
+// import SubscriptionForm from "../components/subscription/Subscription";
 
 function IndexPage({ data }) {
 
@@ -16,76 +17,95 @@ function IndexPage({ data }) {
       <section className={style.coverBlock}>
         <Cover />
       </section>
-      <section className={style.contentBlock}>
-        <header className={style.contentHeader}>
-          <h2 className={style.sectionTitle}>文章</h2>
-          <button className={style.more}>
-            <Link to="/articles">更多文章</Link>
-          </button>
-        </header>
-        <div className={style.articleGrid}>
-          {articles.map(article => {
-            const cover = getImage(article.cover.localFile)
-            return (
-              <Link to={'/article/' + article.slug}>
-                <div className={style.articleCard}>
-                  <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
-                  <div className={style.articleInfo}>
-                    <h3 className={style.contentTitle}>{article.basic.title}</h3>
-                    <p className={style.articleDescription}>{article.basic.description}</p>
-                    <div>
-                      <span className={style.articleCategory}>{article.category_article.title}</span>
-                      <span className={style.articleDate}>{article.basic.date}</span>
+      <section className={style.sectionBlock}>
+        <div className={style.contentBlock}>
+          <header className={style.contentHeader}>
+            <hgroup>
+              <span className={style.sectionTitle}>文章</span>
+              <h2 className={style.sectionDes}>一些关于设计和开发的东西，一些扯淡，一些历史地理</h2>
+            </hgroup>
+            <button className={style.more}>
+              <Link to="/articles">more</Link>
+            </button>
+          </header>
+          <div className={style.articleGrid}>
+            {articles.map(article => {
+              const cover = getImage(article.cover.localFile)
+              return (
+                <Link to={'/article/' + article.slug}>
+                  <div className={style.articleCard}>
+                    <GatsbyImage className={style.articleCover} image={cover} alt={article.basic.title} />
+                    <div className={style.articleInfo}>
+                      <h3 className={style.contentTitle}>{article.basic.title}</h3>
+                      <p className={style.articleDescription}>{article.basic.description}</p>
+                      <div>
+                        <span className={style.articleCategory}>{article.category_article.title}</span>
+                        <span className={style.articleDate}>{article.basic.date}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            )
-          })}
+                </Link>
+              )
+            })}
+          </div>
         </div>
       </section>
 
-      <section className={style.contentBlock}>
+      <section className={style.sectionBlock}>
+        <div className={style.contentBlock}>
         <header className={style.contentHeader}>
-          <h2 className={style.sectionTitle}>摄影</h2>
-          <button className={style.more}>
-            <Link to="/albums">更多照片</Link>
-          </button>
-        </header>
-        <div className={style.photoGrid}>
-          {photos.map(photo => {
-            const cover = getImage(photo.cover.localFile)
-            return (
-              <Link className={style.photoLink} to={'/album/' + photo.slug}>
-                <GatsbyImage className={style.photoCover} image={cover} alt={photo.cover.alternativeText} />
-              </Link>
-            )
-          })}
+            <hgroup>
+              <span className={style.sectionTitle}>摄影</span>
+              <h2 className={style.sectionDes}>只买得起副厂镜头的摄影爱好者。喜欢城市和自然风光</h2>
+            </hgroup>
+            <button className={style.more}>
+              <Link to="/albums">more</Link>
+            </button>
+          </header>
+          <div className={style.photoGrid}>
+            {photos.map(photo => {
+              const cover = getImage(photo.cover.localFile)
+              return (
+                <Link className={style.photoLink} to={'/album/' + photo.slug}>
+                  <GatsbyImage className={style.photoCover} image={cover} alt={photo.cover.alternativeText} />
+                </Link>
+              )
+            })}
+          </div>
         </div>
       </section>
 
-      <section className={style.contentBlock}>
+      <section className={style.sectionBlock}>
+        <div className={style.contentBlock}>
         <header className={style.contentHeader}>
-          <h2 className={style.sectionTitle}>视频</h2>
-          <button className={style.more}>
-            <Link to="/videos">更多视频</Link>
-          </button>
-        </header>
-        <div className={style.videoGrid}>
-          {videos.map(video => {
-            const cover = getImage(video.cover.localFile)
-            return (
-              <Link to={'/video/' + video.slug}>
-                <div className={style.videoCard}>
-                  <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
-                  <h3 className={style.contentTitle}>{video.basic.title}</h3>
-                  <p className={style.videoDate}>{video.basic.date}</p>
-                </div>
-              </Link>
-            )
-          })}
+            <hgroup>
+              <span className={style.sectionTitle}>视频</span>
+              <h2 className={style.sectionDes}>擅长剪辑中老年风格的旅行视频，并且没什么人观看</h2>
+            </hgroup>
+            <button className={style.more}>
+              <Link to="/videos">more</Link>
+            </button>
+          </header>
+          <div className={style.videoGrid}>
+            {videos.map(video => {
+              const cover = getImage(video.cover.localFile)
+              return (
+                <Link to={'/video/' + video.slug}>
+                  <div className={style.videoCard}>
+                    <GatsbyImage className={style.videoCover} image={cover} alt={video.basic.title} />
+                    <h3 className={style.contentTitle}>{video.basic.title}</h3>
+                    <p className={style.videoDate}>{video.basic.date}</p>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
         </div>
       </section>
+
+      {/* <section className={style.sectionBlock} id="subscribe">
+        <SubscriptionForm />
+      </section> */}
     </Layout>
   )
 }
