@@ -98,7 +98,7 @@ function handleQuote(data) {
 
 function handleImage(data) {
   return (
-      `<figure style="margin-bottom: 16px;"><img height="360" width="auto" style="display: block;margin: 0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
+    `<figure style="margin-bottom: 16px;"><img height="360" width="auto" style="display: block;margin: 0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />`
   )
 }
 
@@ -106,91 +106,91 @@ module.exports = {
   siteMetadata: {
     title: `可可托海没有海`,
     siteUrl: `https://darmau.design`,
-    description: `设计师、开发者李大毛的个人网站`,
+  description: `设计师、开发者李大毛的个人网站`,
     twitterUsername: `@herac1es`,
-    image: `/default-cover.jpg`,
+      image: `/default-cover.jpg`,
   },
-  plugins: [
-    'gatsby-plugin-postcss',
-    "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
-      },
-      __key: "images"
+plugins: [
+  'gatsby-plugin-postcss',
+  "gatsby-plugin-image",
+  "gatsby-plugin-sitemap",
+  "gatsby-plugin-sharp",
+  "gatsby-transformer-sharp",
+  `gatsby-plugin-styled-components`,
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "images",
+      "path": "./src/images/"
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "pages",
-        "path": "./src/pages/"
-      },
-      __key: "pages"
+    __key: "images"
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "pages",
+      "path": "./src/pages/"
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig,
-    },
+    __key: "pages"
+  },
+  {
+    resolve: `gatsby-source-strapi`,
+    options: strapiConfig,
+  },
 
-    //Google Analytics配置
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          process.env.GA_ID,
-        ],
-        pluginConfig: {
-          head: true
+  //Google Analytics配置
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: [
+        process.env.GA_ID,
+      ],
+      pluginConfig: {
+        head: true
+      },
+    },
+  },
+
+  {
+    resolve: `gatsby-omni-font-loader`,
+    options: {
+      enableListener: true,
+      preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+      web: [
+        {
+          name: `Roboto Mono`,
+          file: `https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap`,
         },
-      },
+      ],
     },
+  },
 
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
-        web: [
-          {
-            name: `Roboto Mono`,
-            file: `https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap`,
-          },
-        ],
-      },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: "可可托海没有海",
+      short_name: "可可托海没有海",
+      start_url: "/",
+      background_color: "#ffffff",
+      theme_color: "#B23D2B",
+      display: "standalone",
+      icon: "src/images/favicon.svg",
+      crossOrigin: `use-credentials`,
     },
+  },
 
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "可可托海没有海",
-        short_name: "可可托海没有海",
-        start_url: "/",
-        background_color: "#ffffff",
-        theme_color: "#B23D2B",
-        display: "standalone",
-        icon: "src/images/favicon.svg",
-        crossOrigin: `use-credentials`,
-      },
-    },
+  {
+    resolve: `gatsby-plugin-disqus`,
+    options: {
+      shortname: `darmau-design`
+    }
+  },
 
-    {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `darmau-design`
-      }
-    },
-
-    //RSS配置
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
+  //RSS配置
+  {
+    resolve: `gatsby-plugin-feed`,
+    options: {
+      query: `
           {
             site {
               siteMetadata {
@@ -202,29 +202,29 @@ module.exports = {
             }
           }
         `,
-        feeds: [
-          {
+      feeds: [
+        {
 
-            serialize: ({ query: { site, allStrapiArticle } }) => {
-              return allStrapiArticle.edges.map(edge => {
+          serialize: ({ query: { site, allStrapiArticle } }) => {
+            return allStrapiArticle.edges.map(edge => {
 
-                //将正文数据里的文本提取出来
-                const mainContentObject = JSON.parse(edge.node.mainBody.data.mainBody)
-                const blocksArr = mainContentObject.blocks
-                const contentArr = blocksArr.map(block => transfer(block))
-                const content = contentArr.join('')
+              //将正文数据里的文本提取出来
+              const mainContentObject = JSON.parse(edge.node.mainBody.data.mainBody)
+              const blocksArr = mainContentObject.blocks
+              const contentArr = blocksArr.map(block => transfer(block))
+              const content = contentArr.join('')
 
-                return Object.assign({}, edge.node, {
-                  title: edge.node.basic.title,
-                  description: edge.node.basic.description,
-                  date: edge.node.basic.date,
-                  url: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
-                  custom_elements: [{ "content:encoded": content }],
-                })
+              return Object.assign({}, edge.node, {
+                title: edge.node.basic.title,
+                description: edge.node.basic.description,
+                date: edge.node.basic.date,
+                url: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
+                guid: site.siteMetadata.siteUrl + '/article/' + edge.node.slug,
+                custom_elements: [{ "content:encoded": content }],
               })
-            },
-            query: `{
+            })
+          },
+          query: `{
               allStrapiArticle(sort: {basic: {date: DESC}}, limit: 10) {
                 edges {
                   node {
@@ -243,12 +243,12 @@ module.exports = {
                 }
               }
             }`,
-            output: "/rss",
-            title: "可可托海没有海",
-          },
-        ],
-      },
+          output: "/rss",
+          title: "可可托海没有海",
+        },
+      ],
     },
+  },
 
-  ]
+]
 };
