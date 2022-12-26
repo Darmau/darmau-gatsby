@@ -55,7 +55,7 @@ function handleHeader(data) {
 //处理段落
 function handelParagraph(data) {
   return (
-    `<p style="margin-bottom: 16px;font-size:15px;">${Object.values(data.text).join('')}</p>`
+    `<p style="margin-bottom: 16px;font-size:15px; line-height: 1.5;">${Object.values(data.text).join('')}</p>`
   )
 }
 
@@ -98,7 +98,7 @@ function handleQuote(data) {
 
 function handleImage(data) {
   return (
-      `<figure style="margin-bottom: 16px;display: flex;flex-direction:column;align-items:center;"><img height="360" width="auto" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
+      `<figure style="margin-bottom: 16px;"><img height="360" width="auto" style="display: block;margin: 0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
       ${data.caption && `<figcaption style="text-align: center;font-size: 13px;">${Object.values(data.caption).join('')}</figcaption>`}</figure>`
   )
 }
