@@ -1,11 +1,62 @@
 .cover-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-family: var(--typography-mono);
+}
+
+.cover-text h2 {
+  font-size: 36px;
+  color: var(--primary-text-color);
+  line-height: 1.4;
+}
+
+.who-i-am {
+  font-size: 16px;
+  font-weight: var(--font-medium);
+  color: var(--secondary-text-color);
+  display: flex;
+}
+
+.cover-text ul {
+  padding-inline-start: 4px;
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+.cover-text li::before {
+  display: inline-block;
+  width: 1em;
+  margin-inline-end: 12px;
+}
+
+.cover-text li:nth-of-type(1)::before {
+  content: "💻";
+}
+.cover-text li:nth-of-type(2)::before {
+  content: "🖌";
+}
+.cover-text li:nth-of-type(3)::before {
+  content: "📷";
+}
+.cover-text li:nth-of-type(4)::before {
+  content: "🏍";
+}
+
+.show-box {
   display: grid;
   grid-template-rows: 60% 40%;
   width: 100%;
   background-color: bisque;
   height: 700px;
   overflow: hidden;
-  margin-bottom: 16px;
+  flex: 1 1 auto;
 }
 
 .code-part {
@@ -116,7 +167,7 @@ span {
 /* ********打字特效********* */
 
 .card-part {
-  background-color: #f5f5f5;
+  background-color: var(--section-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +185,6 @@ span {
   4.5px 4.5px 3.6px -63px rgba(0, 0, 0, 0.024),
   12.5px 12.5px 10px -63px rgba(0, 0, 0, 0.035),
   30.1px 30.1px 24.1px -63px rgba(0, 0, 0, 0.046),
-  100px 100px 80px -63px rgba(0, 0, 0, 0.07);
 }
 
 .card {
@@ -180,11 +230,27 @@ span {
   border-bottom: 1px solid #EDEDED;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .cover-container {
-    height: 768px;
-    grid-template-rows: 1fr;
-    grid-template-columns: 50% 50%;
+    flex-direction: row;
+  }
+
+  .cover-text-container {
+    flex: 1 1 50%;
+  }
+
+  .cover-text {
+    width: 80%;
+  }
+
+  .cover-text h2 {
+    font-size: 40px;
+  }
+
+  .show-box {
+    flex: 1 1 50%;
+    grid-template-rows: 50% 50%;
+    /* grid-template-columns: 50% 50%; */
   }
 
   .card {

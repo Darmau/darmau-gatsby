@@ -68,7 +68,12 @@
   aspect-ratio: 3 / 2;
   object-fit: cover;
   border: 1px solid var(--divider-color);
-  border-radius: 4px;
+  border-radius: 8px;
+}
+
+.article-cover img:hover {
+  transform: scale(1.08);
+  overflow: hidden;
 }
 
 .article-info {

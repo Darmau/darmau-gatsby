@@ -3,12 +3,13 @@
   --background-color: #ffffff;
   --navbar-color: #ffffff;
   --card-color: #ffffff;
-  --primary-text-color: rgba(0, 0, 0, 0.85);
+  --primary-text-color: #31274b;
   --secondary-text-color: rgba(0, 0, 0, 0.7);
   --disable-text-color: rgba(0, 0, 0, 0.25);
   --link-text-color: #0B83F2;
   --border-color: #d2d2d2;
   --divider-color: #f1f1f1;
+  --section-bg: #f6f7f8;
   --typography-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif,"Apple Color Emoji","Noto Emoji", "Segoe UI Emoji","Segoe UI Symbol";
   --typography-serif: 'Noto Serif SC', serif;
   --typography-mono: 'Roboto Mono', monospace;
@@ -24,7 +25,7 @@
     --navbar-color: #1f1f1f;
     --card-color: #171717;
     --primary-text-color: rgba(255, 255, 255, 0.9);
-    --secondary-text-color: rgba(255, 255, 255, 0.7);
+    --secondary-text-color: rgba(255, 255, 255, 0.65);
     --disable-text-color: rgba(255, 255, 255, 0.25);
     --border-color: #2f2f2f;
     --divider-color: #323232;
@@ -36,6 +37,7 @@ html {
   margin: 0;
   height: 100%;
   scroll-padding-top: 96px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -61,6 +63,10 @@ a {
   border-radius: 4px;
   margin: 0 4px;
   padding: 2px 4px;
+}
+
+.gatsby-image-wrapper [data-main-image] {
+  transition: all 0.3s ease-in-out;
 }
 
 @media print {

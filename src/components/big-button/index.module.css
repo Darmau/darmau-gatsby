@@ -1,0 +1,19 @@
+.big-button {
+  background-color: var(--primary-text-color);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.big-button:hover {
+  background-color: var(--theme-color);
+  transition: all 250ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .big-button {
+    padding: 16px 32px;
+  }
+}

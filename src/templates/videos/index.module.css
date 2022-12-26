@@ -31,8 +31,13 @@
 .video-cover {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid var(--divider-color);
+}
+
+.video-card img:hover {
+  transform: scale(1.08);
+  overflow: hidden;
 }
 
 .video-title {
