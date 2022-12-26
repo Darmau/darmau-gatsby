@@ -181,7 +181,7 @@ const Portfolios = ({ data }) => {
           <div className={style.sectionHeader}>
             <h3 className={style.sectionTitle}>想聊聊？</h3>
             <div className={style.sectionIntro}>你可以通过邮件、微信公众号，甚至是在评论区留言，总有办法能找到我。</div>
-            <button className={style.mailButton}><a href="mailto:dev@darmau.design">发邮件</a></button>
+            <button className={style.mailButton}><a href="mailto:contact@darmau.design">发邮件</a></button>
           </div>
         </section>
       </main>
