@@ -244,7 +244,7 @@ module.exports = {
                 }
               }
             }`,
-            output: "/rss.xml",
+            output: "/rss",
             title: "可可托海没有海",
           },
         ],
