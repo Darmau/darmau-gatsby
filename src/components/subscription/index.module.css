@@ -59,6 +59,7 @@ ol {
   color: #fff;
   transition: all 0.2s ease-in-out;
   flex: 0 0 min-content;
+  box-sizing: border-box;
 }
 
 .submit-btn:hover {
