@@ -1,10 +1,10 @@
+import React from "react";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React from "react";
 import Layout from "../components/layout/layout";
-import * as style from "../styles/index.module.css"
-import Cover from "../components/cover/cover.js";
 import Subscription from "../components/subscription/subscription";
+import Cover from "../components/cover/cover.js";
+import * as style from "../styles/index.module.css"
 
 function IndexPage({ data }) {
 
