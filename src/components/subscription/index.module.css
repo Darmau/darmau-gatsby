@@ -8,30 +8,44 @@ input {
 
 .form-container {
   flex-direction: column;
-  background-color: rgba(255, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 16px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.instruction h2 {
+  font-size: 32px;
+  color: var(--primary-text-color);
   text-align: center;
+}
+
+.instruction p,
+.instruction ol {
+  font-size: 15px;
+  color: var(--secondary-text-color);
 }
 
 ol {
   text-align: start;
+  padding-inline-start: 0;
+  list-style-position: inside;
+  line-height: 1.8;
 }
 
-form {
-  display: flex;
+.subscriptionForm {
+  display: grid;
+  grid-template-columns: 1fr min-content;
   align-items: center;
   gap: 16px;
   width: 100%;
-}
-
-form label {
-  display: none;
+  margin-block: 16px;
 }
 
 .email {
   border: 1px solid var(--divider-color);
   border-radius: 4px;
   padding: 0 16px;
-  flex: 1 1 max-content;
 }
 
 .submit-btn {
@@ -48,4 +62,79 @@ form label {
 
 .submit-btn:hover {
   background-color: var(--theme-color);
+}
+
+.wechat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--divider-color);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.search-frame {
+  flex: 1 1 max-content;
+}
+
+.wechat img {
+  width: 120px;
+}
+
+.intro {
+  margin-block: 0 16px;
+  font-weight: var(--font-medium);
+  color: var(--secondary-text-color);
+}
+
+.search-bar {
+  font-size: 14px;
+  color: var(--card-color);
+  border: 1px solid var(--divider-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow:
+  0px 0.5px 0.7px rgba(0, 0, 0, 0.024),
+  0px 1.5px 1.9px rgba(0, 0, 0, 0.035),
+  0px 3.6px 4.5px rgba(0, 0, 0, 0.046),
+  0px 12px 15px rgba(0, 0, 0, 0.07);
+}
+
+.search-bar p {
+  margin-block: 0;
+  color: var(--primary-text-color);
+}
+
+.external {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 16px;
+  text-align: center;
+}
+
+.external a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 16px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.external a:first-of-type {
+  background-color: #F78422;
+}
+.external a:last-of-type {
+  background-color: rgb(25, 155, 240);
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo path {
+    fill: #ffffff;
+  }
 }
