@@ -35,7 +35,7 @@ export default function Subscription() {
         <input className={style.submitBtn} type="submit" value="订阅" />
       </form>
       <div className={style.wechat}>
-        <StaticImage src="../../images/qrcode.png" />
+        <StaticImage className={style.qrcode} src="../../images/qrcode.png" />
         <div className={style.searchFrame}>
           <p className={style.intro}>微信公众号</p>
           <div className={style.searchBar}>
