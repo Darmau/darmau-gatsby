@@ -46,10 +46,11 @@ ol {
   border: 1px solid var(--divider-color);
   border-radius: 4px;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .submit-btn {
-  background-color: var(--primary-text-color);
+  background-color: #31274b;
   color: var(--white);
   border-radius: 4px;
   padding: 16px 32px;
@@ -75,6 +76,7 @@ ol {
 
 .search-frame {
   flex: 1 1 max-content;
+  width: 100%;
 }
 
 .wechat img {
@@ -93,7 +95,7 @@ ol {
   border: 1px solid var(--divider-color);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   border-radius: 4px;
   padding: 16px;
   box-shadow:
@@ -103,7 +105,7 @@ ol {
   0px 12px 15px rgba(0, 0, 0, 0.07);
 }
 
-.search-bar p {
+.search-bar p, .search-bar span {
   margin-block: 0;
   color: var(--primary-text-color);
 }
@@ -123,6 +125,7 @@ ol {
   justify-content: center;
   padding-block: 16px;
   border-radius: 8px;
+  gap: 8px;
   color: #fff;
 }
 
@@ -131,6 +134,33 @@ ol {
 }
 .external a:last-of-type {
   background-color: rgb(25, 155, 240);
+}
+
+.external a {
+  transition: all 0.2s ease-in-out;
+}
+
+.external a:hover {
+  filter: brightness(0.8);
+}
+
+@media (max-width: 425px) {
+  .wechat {
+    flex-direction: column;
+  }
+  .intro {
+    text-align: center;
+  }
+  .search-bar {
+    justify-content: center;
+  }
+  .subscriptionForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .email, .submit-btn {
+    width: 100%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

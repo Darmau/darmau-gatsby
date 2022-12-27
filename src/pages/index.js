@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/layout/layout";
 import * as style from "../styles/index.module.css"
 import Cover from "../components/cover/cover.js";
-import SubscriptionForm from "../components/subscription/Subscription";
+import SubscriptionForm from "../components/subscription/subscription";
 
 function IndexPage({ data }) {
 
@@ -25,7 +25,7 @@ function IndexPage({ data }) {
               <h2 className={style.sectionDes}>一些关于设计和开发的东西，一些扯淡，一些历史地理</h2>
             </hgroup>
             <button className={style.more}>
-              <Link to="/articles">more</Link>
+              <Link to="/articles" aria-label="更多文章">more</Link>
             </button>
           </header>
           <div className={style.articleGrid}>
@@ -53,13 +53,13 @@ function IndexPage({ data }) {
 
       <section className={style.sectionBlock}>
         <div className={style.contentBlock}>
-        <header className={style.contentHeader}>
+          <header className={style.contentHeader}>
             <hgroup>
               <span className={style.sectionTitle}>摄影</span>
               <h2 className={style.sectionDes}>只买得起副厂镜头的摄影爱好者。喜欢城市和自然风光</h2>
             </hgroup>
             <button className={style.more}>
-              <Link to="/albums">more</Link>
+              <Link to="/albums" aria-label="更多摄影">more</Link>
             </button>
           </header>
           <div className={style.photoGrid}>
@@ -77,13 +77,13 @@ function IndexPage({ data }) {
 
       <section className={style.sectionBlock}>
         <div className={style.contentBlock}>
-        <header className={style.contentHeader}>
+          <header className={style.contentHeader}>
             <hgroup>
               <span className={style.sectionTitle}>视频</span>
               <h2 className={style.sectionDes}>擅长剪辑中老年风格的旅行视频，并且没什么人观看</h2>
             </hgroup>
             <button className={style.more}>
-              <Link to="/videos">more</Link>
+              <Link to="/videos" aria-label="更多视频">more</Link>
             </button>
           </header>
           <div className={style.videoGrid}>

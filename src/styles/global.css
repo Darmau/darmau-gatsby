@@ -12,7 +12,7 @@
   --section-bg: #f6f7f8;
   --typography-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif,"Apple Color Emoji","Noto Emoji", "Segoe UI Emoji","Segoe UI Symbol";
   --typography-serif: 'Noto Serif SC', serif;
-  --typography-mono: 'Roboto Mono', monospace;
+  --typography-mono: monospace;
   --font-normal: 400;
   --font-medium: 500;
   --font-bold: 700;
@@ -45,6 +45,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 h1 {
