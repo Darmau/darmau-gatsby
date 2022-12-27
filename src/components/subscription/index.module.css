@@ -53,13 +53,14 @@ ol {
   background-color: #31274b;
   color: var(--white);
   border-radius: 4px;
-  padding: 16px 32px;
+  padding: 16px 48px;
   border: none;
   cursor: pointer;
   color: #fff;
   transition: all 0.2s ease-in-out;
   flex: 0 0 min-content;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 .submit-btn:hover {
