@@ -2,7 +2,7 @@ import React from "react";
 import * as style from "./index.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 
-const SubscriptionForm = () => {
+const Subscription = () => {
   return (
     <div className={style.formContainer}>
       <hgroup className={style.instruction}>
@@ -83,4 +83,4 @@ const SubscriptionForm = () => {
   );
 };
 
-export default SubscriptionForm;
+export default Subscription;

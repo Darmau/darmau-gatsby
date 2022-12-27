@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/layout/layout";
 import * as style from "../styles/index.module.css"
 import Cover from "../components/cover/cover.js";
-import SubscriptionForm from "../components/subscription/subscription";
+import Subscription from "../components/subscription/subscription";
 
 function IndexPage({ data }) {
 
@@ -104,7 +104,7 @@ function IndexPage({ data }) {
       </section>
 
       <section className={style.sectionBlock} id="subscribe">
-        <SubscriptionForm />
+        <Subscription />
       </section>
     </Layout>
   )
