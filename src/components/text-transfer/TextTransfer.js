@@ -105,11 +105,11 @@ const MainBody = ({ data }) => {
   function handleList(data) {
     if (data.style === 'unordered') {
       return (
-        <ul className={style.contentList}>{data.items.map(item => (<li className={style.listItem}>{item}</li>))}</ul>
+        <ul className={style.contentList}>{data.items.map(item => (<li className={style.listItem} dangerouslySetInnerHTML={{__html: item}}></li>))}</ul>
       )
     } else {
       return (
-        <ol className={style.contentList}>{data.items.map(item => (<li className={style.listItem}>{item}</li>))}</ol>
+        <ol className={style.contentList}>{data.items.map(item => (<li className={style.listItem} dangerouslySetInnerHTML={{__html: item}}></li>))}</ol>
       )
     }
   }
@@ -132,7 +132,7 @@ const MainBody = ({ data }) => {
   function handleQuote(data) {
     return (
       <figure className={style.quote}>
-        <blockquote className={style.quoteText}>{data.text}</blockquote>
+        <blockquote className={style.quoteText} dangerouslySetInnerHTML={{__html: data.text}}></blockquote>
         <figcaption className={style.quotePerson}>{data.caption}</figcaption>
       </figure>
     )
