@@ -60,7 +60,6 @@ ol {
   transition: all 0.2s ease-in-out;
   flex: 0 0 min-content;
   box-sizing: border-box;
-  -webkit-appearance: none;
 }
 
 .submit-btn:hover {
