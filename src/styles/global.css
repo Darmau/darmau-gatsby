@@ -74,6 +74,10 @@ a {
   padding: 2px 4px;
 }
 
+input {
+  -webkit-appearance: none;
+}
+
 .gatsby-image-wrapper [data-main-image] {
   transition: all 0.3s ease-in-out !important;
 }
