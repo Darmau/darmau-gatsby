@@ -186,13 +186,6 @@ plugins: [
     },
   },
 
-  {
-    resolve: `gatsby-plugin-disqus`,
-    options: {
-      shortname: `darmau-design`
-    }
-  },
-
   //RSS配置
   {
     resolve: `gatsby-plugin-feed`,

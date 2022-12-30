@@ -5,7 +5,7 @@ import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import * as style from "./index.module.css"
 import { Seo } from "../../components/seo";
-import { Disqus } from 'gatsby-plugin-disqus';
+import Comments from "../../components/commento";
 
 const AlbumViewer = ({ data }) => {
 
@@ -61,7 +61,7 @@ const AlbumViewer = ({ data }) => {
             </svg>
             {album.location && <p className={style.albumCaption}>{album.location}</p>}
           </div>
-          <Disqus config={disqusConfig}/>
+          <Comments />
         </div>
       </main>
     </Layout>

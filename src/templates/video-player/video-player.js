@@ -5,7 +5,7 @@ import VideoFrame from "../../components/video-frame/video-frame"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
 import * as style from "./index.module.css"
 import { Seo } from "../../components/seo";
-import { Disqus } from 'gatsby-plugin-disqus';
+import Comments from "../../components/commento";
 
 export default function VideoPlayer({ data }) {
 
@@ -91,7 +91,7 @@ export default function VideoPlayer({ data }) {
         </div>
 
         {/* 评论 */}
-        <Disqus config={disqusConfig} />
+        <Comments />
       </main>
     </Layout>
   )

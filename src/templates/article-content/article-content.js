@@ -8,7 +8,7 @@ import MainBody from "../../components/text-transfer/TextTransfer";
 import Catalog from "../../components/catalog";
 import { Seo } from "../../components/seo";
 import { PreviousAndNext } from "../../components/previousAndNext/previousAndNext";
-import { Disqus } from 'gatsby-plugin-disqus';
+import Comments from "../../components/commento";
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
@@ -50,7 +50,7 @@ const ArticleContent = ({ data }) => {
           <PreviousAndNext strapiId={article.strapi_id} />
 
           {/* 评论 */}
-          <Disqus config={disqusConfig} />
+          <Comments />
 
         </article>
         <address className={style.about}>
