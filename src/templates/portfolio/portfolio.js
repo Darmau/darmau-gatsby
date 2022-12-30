@@ -6,7 +6,7 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/text-transfer/TextTransfer";
 import * as style from "./index.module.css"
-import { Comments } from '../../components/commento';
+import Comments from "../../components/commento";
 
 const PortfolioCase = ({ data }) => {
   const portfolio = data.allStrapiPortfolio.nodes[0];
