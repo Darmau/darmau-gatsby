@@ -6,7 +6,7 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/text-transfer/TextTransfer";
 import * as style from "./index.module.css"
-import { Disqus } from 'gatsby-plugin-disqus';
+import { Comments } from '../../components/commento';
 
 const PortfolioCase = ({ data }) => {
   const portfolio = data.allStrapiPortfolio.nodes[0];
@@ -35,7 +35,7 @@ const PortfolioCase = ({ data }) => {
             <MainBody data={mainContentString} />
           </div>
           {/* 评论 */}
-          <Disqus config={disqusConfig} />
+          <Comments />
         </article>
         <address className={style.about}>
           <div>
