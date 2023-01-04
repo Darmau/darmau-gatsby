@@ -138,18 +138,18 @@ plugins: [
     options: strapiConfig,
   },
 
-  //Google Analytics配置
-  {
-    resolve: `gatsby-plugin-google-gtag`,
-    options: {
-      trackingIds: [
-        process.env.GA_ID,
-      ],
-      pluginConfig: {
-        head: true
-      },
-    },
-  },
+  // //Google Analytics配置
+  // {
+  //   resolve: `gatsby-plugin-google-gtag`,
+  //   options: {
+  //     trackingIds: [
+  //       process.env.GA_ID,
+  //     ],
+  //     pluginConfig: {
+  //       head: true
+  //     },
+  //   },
+  // },
 
   {
     resolve: `gatsby-omni-font-loader`,
