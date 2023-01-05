@@ -26,6 +26,10 @@
   padding: 32px;
 }
 
+section {
+  background-color: var(--background-color);
+}
+
 /* 首页大文字动效 */
 .glitch {
   font-size: 40px;
@@ -113,6 +117,7 @@
 .content-section {
   margin-top: 48px;
   padding: 16px;
+  background-color: var(--background-color);
 }
 
 /* 区块标题部分 */
