@@ -57,7 +57,7 @@ ol {
   border: none;
   cursor: pointer;
   color: #fff;
-  transition: all 0.2s ease-in-out;
+  transition: all 250ms ease-in-out;
   flex: 0 0 min-content;
   box-sizing: border-box;
 }

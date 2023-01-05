@@ -45,7 +45,7 @@
   box-sizing: border-box;
   padding: 0 12px;
   text-align: center;
-  transition: color 250ms ease-in;
+  transition: all 250ms ease-in-out;
 }
 
 .connect-item:hover {

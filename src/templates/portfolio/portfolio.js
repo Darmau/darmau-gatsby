@@ -13,7 +13,6 @@ const PortfolioCase = ({ data }) => {
   const cover = getImage(portfolio.cover.localFile);
   const mainContentString = portfolio.mainBody.data.mainBody;
 
-
   return (
     <Layout>
       <Breadcrumbs upLevel="portfolio" active={portfolio.title} />
