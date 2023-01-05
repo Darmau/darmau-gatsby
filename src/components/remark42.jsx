@@ -5,18 +5,9 @@ const insertScript = (id, parentElement) => {
   script.type = "text/javascript"
   script.async = true
   script.id = id
-  /* For Gatsby it's important to manually provide the URL
-  and make sure it does not contain a trailing slash ("/").
-  Because otherwise the comments for paths with/without 
-  the trailing slash are stored separately in the BoltDB database.
-  When following a Gatsby Link a page is loaded without the trailing slash,
-  but when refreshing the page (F5) it is loaded with the trailing slash.
-  So essentially every URL can become duplicated in the DB and you may not see
-  your comments from the inverse URL at your present URL.
-  Making sure url is provided without the trailing slash
-  in the remark42 config solves this. */
+
   let url = window.location.origin + window.location.pathname
-  if(url.endsWith("/")) {
+  if (url.endsWith("/")) {
     url = url.slice(0, -1)
   }
   // Now the actual config and script-fetching function:
@@ -26,7 +17,7 @@ const insertScript = (id, parentElement) => {
       site_id: "darmau.design",
       url: "${url}",
       theme: "light",
-      components: ['embed' | 'last-comments' | 'counter'],
+      components: ['embed'],
       locale: "zh",
       no_footer: true,
     };
@@ -62,14 +53,14 @@ const manageScript = () => {
 Gatsby compatibility. It will ensure that each page loads its own appropriate
 comments, and that comments will be properly loaded */
 const recreateRemark42Instance = () => {
-    if (!window) {
-      return
-    }
-    const remark42 = window.REMARK42
-    if (remark42) {
-      remark42.destroy()
-      remark42.createInstance(window.remark_config)
-    }
+  if (!window) {
+    return
+  }
+  const remark42 = window.REMARK42
+  if (remark42) {
+    remark42.destroy()
+    remark42.createInstance(window.remark_config)
+  }
 }
 
 // The location prop is {props.location.pathname} from the parent component.
@@ -82,7 +73,6 @@ const Comments = ({ location }) => {
   return (
     <>
       <h2>评论</h2>
-      { /* This div is the target for actual comments insertion */ }
       <div id="remark42"></div>
     </>
   )
