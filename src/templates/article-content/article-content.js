@@ -8,18 +8,12 @@ import MainBody from "../../components/text-transfer/TextTransfer";
 import Catalog from "../../components/catalog";
 import { Seo } from "../../components/seo";
 import { PreviousAndNext } from "../../components/previousAndNext/previousAndNext";
-import Comments from "../../components/commento";
+import Comments from "../../components/remark42";
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
   const cover = getImage(article.cover.localFile)
   const mainContentString = article.mainBody.data.mainBody
-
-  let disqusConfig = {
-    url: `https://darmau.design/article/ + ${article.slug}`,
-    identifier: `https://darmau.design/article/ + ${article.slug}`,
-    title: article.basic.title,
-  }
 
   return (
     <Layout>

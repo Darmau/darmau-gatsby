@@ -5,7 +5,7 @@ import VideoFrame from "../../components/video-frame/video-frame"
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs";
 import * as style from "./index.module.css"
 import { Seo } from "../../components/seo";
-import Comments from "../../components/commento";
+import Comments from "../../components/remark42";
 
 export default function VideoPlayer({ data }) {
 
@@ -33,12 +33,6 @@ export default function VideoPlayer({ data }) {
         }
       }
     )
-  }
-
-  let disqusConfig = {
-    url: `https://darmau.design/video/ + ${video.slug}`,
-    identifier: `https://darmau.design/video/ + ${video.slug}`,
-    title: video.basic.title,
   }
 
   return (
