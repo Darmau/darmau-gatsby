@@ -98,7 +98,10 @@ function handleQuote(data) {
 
 function handleImage(data) {
   return (
-    `<figure style="margin-bottom: 16px;"><img height="360" width="auto" style="display: block;margin: 0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />`
+    `<figure style="margin-bottom: 16px;">
+      <img height="360" width="auto" style="display: block;margin: 0 auto;" decoding="async" src="https://image.darmau.design${data.file.url}" alt="${data.file.alt}" />
+      ${data.caption && `<figcaption>${Object.values(data.caption).join('')}</figcaption>`}
+     </figure>`
   )
 }
 
