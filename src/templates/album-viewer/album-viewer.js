@@ -5,7 +5,7 @@ import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import * as style from "./index.module.css"
 import { Seo } from "../../components/seo";
-import Comments from "../../components/commento";
+import Comments from "../../components/remark42";
 
 const AlbumViewer = ({ data }) => {
 
@@ -17,13 +17,6 @@ const AlbumViewer = ({ data }) => {
   // 获取点击列表项的index，并将展示图片state更改为相应图片
   const switchActive = (index) => (event) => {
     setActivePhoto(getImage(album.gallery[index].localFile))
-  }
-
-  //评论配置
-  let disqusConfig = {
-    url: `https://darmau.design/album/ + ${album.slug}`,
-    identifier: `https://darmau.design/album/ + ${album.slug}`,
-    title: album.basic.title,
   }
 
   return (
