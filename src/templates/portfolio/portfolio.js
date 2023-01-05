@@ -6,7 +6,6 @@ import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import Catalog from "../../components/catalog";
 import MainBody from "../../components/text-transfer/TextTransfer";
 import * as style from "./index.module.css"
-import { Comments } from '../../components/remark42';
 
 const PortfolioCase = ({ data }) => {
   const portfolio = data.allStrapiPortfolio.nodes[0];
@@ -28,8 +27,6 @@ const PortfolioCase = ({ data }) => {
           <div className={style.mainContent}>
             <MainBody data={mainContentString} />
           </div>
-          {/* 评论 */}
-          <Comments />
         </article>
         <address className={style.about}>
           <div>
