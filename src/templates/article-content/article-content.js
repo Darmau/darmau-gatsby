@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import * as style from "./index.module.css"
 import Layout from "../../components/layout/layout";
 import Breadcrumbs from "../../components/breadcrumbs/breadcrumbs"
 import MainBody from "../../components/text-transfer/TextTransfer";
@@ -9,6 +8,7 @@ import Catalog from "../../components/catalog";
 import { Seo } from "../../components/seo";
 import { PreviousAndNext } from "../../components/previousAndNext/previousAndNext";
 import Comments from "../../components/remark42";
+import * as style from "./index.module.css"
 
 const ArticleContent = ({ data }) => {
   const article = data.allStrapiArticle.nodes[0]
