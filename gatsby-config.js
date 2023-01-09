@@ -120,6 +120,7 @@ plugins: [
   "gatsby-plugin-sharp",
   "gatsby-transformer-sharp",
   `gatsby-plugin-styled-components`,
+  `gatsby-plugin-sitemap`,
   {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -140,19 +141,6 @@ plugins: [
     resolve: `gatsby-source-strapi`,
     options: strapiConfig,
   },
-
-  // //Google Analytics配置
-  // {
-  //   resolve: `gatsby-plugin-google-gtag`,
-  //   options: {
-  //     trackingIds: [
-  //       process.env.GA_ID,
-  //     ],
-  //     pluginConfig: {
-  //       head: true
-  //     },
-  //   },
-  // },
 
   {
     resolve: `gatsby-omni-font-loader`,

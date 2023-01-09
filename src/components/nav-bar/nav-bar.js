@@ -66,7 +66,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className={style.formBtn}>
+      <div>
         <BigBtn label="订阅" href="/#subscribe"/>
       </div>
     </nav>
